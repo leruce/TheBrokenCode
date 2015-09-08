@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="app">
+<head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+     <meta name="description" content="Source code generated using layoutit.com">
+     <meta name="Group 7" content="">
+     <link rel="icon" href="">
+
+     <title>Restaurant</title>
+
+     <!-- Bootstrap core CSS -->
+     <link href="content/bootstrap.min.css" rel="stylesheet">
+     <!-- Custom styles for this template -->
+     <link href="content/style.css" rel="stylesheet">
+
+     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+     <!--[if lt IE 9]>
+     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+     <![endif]-->
+
+</head>
+<body ng-controller="Main as vm">
+
+     <div class="container-fluid">
+
+          <!-- Header -->
+          <!-- TODO: Need to make it an actual header-->
+          <div class="row">
+               <div class="col-md-12">
+                    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                         <!-- Restaurant Logo-->
+                         <div class="navbar-header">
+                              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                   <span class="sr-only">Toggle navigation</span>
+                                   <span class="icon-bar"></span>
+                                   <span class="icon-bar"></span>
+                                   <span class="icon-bar"></span>
+                              </button> <a class="navbar-brand" href="#">Logo</a>
+                         </div>
+
+                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                              <ul class="nav navbar-nav navbar-right">
+
+                                   <!-- Links for Refill and Help-->
+                                   <!-- TODO: Create Modals for them-->
+                                   <li>
+                                        <a href="#">Refill</a>
+                                   </li>
+
+                                   <li>
+                                        <a href="#">Help</a>
+                                   </li>
+
+                                   <!--
+                                        Drop down menu for sign in and other things
+                                   -->
+                                   <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+                                        <ul class="dropdown-menu">
+                                             <li>
+                                                  <a href="#">Action</a>
+                                             </li>
+                                             <li>
+                                                  <a href="#">Another action</a>
+                                             </li>
+                                             <li>
+                                                  <a href="#">Something else here</a>
+                                             </li>
+                                             <li class="divider">
+                                             </li>
+                                             <li>
+                                                  <a href="#">Separated link</a>
+                                             </li>
+                                             <li class="divider">
+                                             </li>
+                                             <li>
+                                                  <a href="#">One more separated link</a>
+                                             </li>
+                                        </ul>
+                                   </li>
+                              </ul>
+                         </div>
+
+                    </nav>
+               </div>
+          </div>
+
+          <!-- Carousel of Specials-->
+          <div class="row">
+               <div class="col-md-15">
+                    <div class="carousel slide" id="featured_items">
+                         <ol class="carousel-indicators">
+                              <li data-slide-to="0" data-target="#featured_items">
+                              </li>
+                              <li data-slide-to="1" data-target="#featured_items">
+                              </li>
+                              <li data-slide-to="2" data-target="#featured_items" class="active">
+                              </li>
+                         </ol>
+                         <div class="carousel-inner">
+                              <div class="item">
+                                   <img alt="First_Item" src="resources/carousel_placeholder.png"> <!-- TODO: Add file/image-->
+                                   <div class="carousel-caption">
+                                        <h4>
+                                             First Thumbnail label
+                                        </h4>
+                                        <p>
+                                             Showcase featured menu item
+                                        </p>
+                                   </div>
+                              </div>
+                              <div class="item">
+                                   <img alt="Second_Item" src="resources/carousel_placeholder.png"> <!-- TODO: Add file/image-->
+                                   <div class="carousel-caption">
+                                        <h4>
+                                             Second Thumbnail label
+                                        </h4>
+                                        <p>
+                                             Showcase featured menu item
+                                        </p>
+                                   </div>
+                              </div>
+                              <div class="item active">
+                                   <img alt="Third_Item" src="resources/carousel_placeholder.png"> <!-- TODO: Add file/image-->
+                                   <div class="carousel-caption">
+                                        <h4>
+                                             Third Thumbnail label
+                                        </h4>
+                                        <p>
+                                             Showcase featured menu item
+                                        </p>
+                                   </div>
+                              </div>
+                         </div> <a class="left carousel-control" href="#featured_items" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#featured_items" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                    </div>
+               </div>
+          </div>
+
+          <!-- Time of Day -->
+          <div class="row">
+               <div class="col-md-12">
+                    <h2 align="center">
+                         Breakfast/Lunch/Dinner
+                    </h2>
+                    <p align="center">
+                         Lets try to get this to change according to the time of time and have the images below do so as well.
+                    </p>
+               </div>
+          </div>
+
+          <!-- Items Pictures with "order now" link-->
+          <div class="row">
+               <div class="col-md-4" align="center">
+                    <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
+                    <p>
+                         <button type="button" class="btn btn-lg btn-link" align="center">
+                              Order Now
+                         </button>
+                    </p>
+               </div>
+               <div class="col-md-4" align="center">
+                    <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
+                    <p>
+                         <button type="button" class="btn btn-lg btn-link" align="center">
+                              Order Now
+                         </button>
+                    </p>
+               </div>
+               <div class="col-md-4" align="center">
+                    <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
+                    <p>
+                         <button type="button" class="btn btn-lg btn-link" align="center">
+                              Order Now
+                         </button>
+                    </p>
+               </div>
+          </div>
+
+          <!-- Games -->
+          <div class="row">
+               <div class="col-md-6">
+                    <h2 align="center">
+                         Discount Games
+                    </h2>
+                    <p align="center">
+                         Make this a clickable image potentially?
+                    </p>
+                    <p align="center">
+                         <a class="btn" href="#">View details »</a>
+                    </p>
+               </div>
+               <div class="col-md-6">
+                    <h2 align="center">
+                         Kid Games
+                    </h2>
+                    <p align="center">
+                         Likewise
+                    </p>
+                    <p align="center">
+                         <a class="btn" href="#">View details »</a>
+                    </p>
+               </div>
+          </div>
+
+          <!-- Footer -->
+          <!-- TODO: Need to make it an actual footer-->
+          <div class="row">
+               <div class="col-md-12">
+                    <h2 align="center">
+                         Footer
+                    </h2>
+                    <p align="center">
+                         <a class="btn" href="views/customer/angularExample.html">Click to see an agular example »</a>
+                    </p>
+               </div>
+          </div>
+     </div>
+     <!-- Bootstrap core JavaScript
+     ================================================== -->
+     <!-- Placed at the end of the document so the pages load faster -->
+     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+     <script src="scripts/ie10-viewport-bug-workaround.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+     <script src="scripts/jquery-1.9.1.min.js"></script>
+     <script src="scripts/bootstrap.min.js"></script>
+     <script src="scripts/scripts.js"></script>
+     <script src="scripts/angular.min.js"></script>
+     <script src="scripts/customer/app.module.js"></script>
+     <script src="scripts/customer/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+C:\Users\User\Git\ERS\ERS\ERS.Tests\bin\Debug\ERS.Tests.dll
+C:\Users\User\Git\ERS\ERS\ERS.Tests\bin\Debug\ERS.Tests.pdb
+C:\Users\User\Git\ERS\ERS\ERS.Tests\bin\Debug\ERS.dll
+C:\Users\User\Git\ERS\ERS\ERS.Tests\bin\Debug\ERS.pdb
+C:\Users\User\Git\ERS\ERS\ERS.Tests\obj\Debug\ERS.Tests.csprojResolveAssemblyReference.cache
+C:\Users\User\Git\ERS\ERS\ERS.Tests\obj\Debug\ERS.Tests.dll
+C:\Users\User\Git\ERS\ERS\ERS.Tests\obj\Debug\ERS.Tests.pdb
