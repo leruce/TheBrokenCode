@@ -1,6 +1,0 @@
-C:\Users\User\Git\ERS\ERS\ERS\bin\ERS.dll.config
-C:\Users\User\Git\ERS\ERS\ERS\bin\ERS.dll
-C:\Users\User\Git\ERS\ERS\ERS\bin\ERS.pdb
-C:\Users\User\Git\ERS\ERS\ERS\obj\Debug\ERS.csprojResolveAssemblyReference.cache
-C:\Users\User\Git\ERS\ERS\ERS\obj\Debug\ERS.dll
-C:\Users\User\Git\ERS\ERS\ERS\obj\Debug\ERS.pdb
