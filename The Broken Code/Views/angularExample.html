@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="app">
+<head>
+     <title></title>
+</head>
+<body ng-controller="Main as vm">
+
+     <div class="row">
+          <div class="col-md-12">
+               <input type="text" ng-model="vm.food" placeholder="Enter food" />
+
+               <p>Sriracha sauce is great with {{vm.food}}!</p>
+          </div>
+     </div>
+
+     <div class="row">
+          <div class="col-md-12">
+               <h1 align="left">
+                    Entrees
+               </h1>
+               <li ng-repeat="entree in vm.entrees"> -{{entree.name}} </li>
+          </div>
+         
+     </div>
+
+     <div class="row">
+          <div class="col-md-12">
+               <h1 align="left">
+                    Calories
+                </h1>
+                <li ng-repeat="entree in vm.entrees"> {{entree.name}}: {{entree.calories}} </li>
+     </div>
+
+     <script src="../../Scripts/angular.js"></script>
+     <script src="../../Scripts/customer/app.module.js"></script>
+     <script src="../../Scripts/customer/main.js"></script>
+
+</body>
+</html>
