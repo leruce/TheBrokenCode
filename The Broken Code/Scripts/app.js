@@ -7,7 +7,7 @@ var restaurantApp = angular.module('restaurantApp', ['ngRoute']);
 restaurantApp
     .config(function ($routeProvider, $locationProvider) {
         $routeProvider
-            .when('/', {
+            .when('/home', {
                 templateUrl: 'View/Home.html',
                 controller: 'homeViewModel'
             });

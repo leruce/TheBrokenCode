@@ -25,13 +25,14 @@
     <![endif]-->
 </head>
 
-<body>
+<body bgcolor="#E6E6FA">
 
     <div class="container-fluid">
+
         <!-- Header -->
         <div class="row">
             <div class="col-md-16">
-                <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                     <!-- Restaurant Logo-->
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -41,18 +42,24 @@
                             <span class="icon-bar"></span>
                         </button> <a class="navbar-brand" href="#">Logo</a>
                     </div>
+
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <!-- Elements on the left -->
                         <ul class="nav navbar-nav navbar-left">
-                            <li>
-                                <a href="/Menu" target="_blank">Menu</a>
-                            </li>
+
                             <li>
                                 <a href="/Games" target="_blank">Games</a>
                             </li>
+
+                            <li>
+                                <a href="/Menu" target="_blank">Menu</a>
+                            </li>
+
                         </ul>
 
-                            <!-- Links for Refill and Help-->
-                            <!-- TODO: Create Modals for them-->
+                        <!-- Elements on the right -->
+                        <!-- Links for Refill and Help-->
+                        <!-- TODO: Create Modals for them-->
                         <ul class="nav navbar-nav navbar-right">
                             <li>
                                 <a href="/Refill">Refill</a>
@@ -92,110 +99,47 @@
                                     </li>
                                 </ul>
                             </li>
+
+                            <li><a></a></li>
                         </ul>
                     </div>
                 </nav>
             </div>
         </div>
 
-            
 
-        <!-- Showcased Menu Item -->
-        <div class="row">
-            <div class="col-md-12">
-                <div class="jumbotron">
-                    <div class="container" align="center">
-                        <h1>Showcased Menu Item</h1>
-                        <p>Description here</p>
-                        <p>
-                            <button type="button" class="btn btn-lg btn-link" align="center">
-                                Order Now
-                            </button>
+
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!--<div ng-view>
+
+        </div>-->
+            <!-- Footer -->
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-default navbar-fixed-bottom">
+                        <p align="center">
+                            <!--<a class="btn" href="Views/customer/angularExample.html">Click to see an agular example »</a>-->
+                            <a class="btn" href=""> Links for social media</a>
                         </p>
-                    </div>
+                    </nav>
                 </div>
             </div>
         </div>
-
-        <!-- Items Pictures with "order now" link-->
-        <div class="row">
-
-            <div class="col-md-4" align="center">
-                <h2 align="center">
-                    Appetizer 
-                </h2>
-                <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
-                <p>
-                    <button type="button" class="btn btn-lg btn-link" align="center">
-                        Order Now
-                    </button>
-                </p>
-            </div>
-
-            <div class="col-md-4" align="center">
-                <h2 align="center">
-                    Entree
-                </h2>
-                <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
-                <p>
-                    <button type="button" class="btn btn-lg btn-link" align="center">
-                        Order Now
-                    </button>
-                </p>
-            </div>
-
-            <div class="col-md-4" align="center">
-                <h2 align="center">
-                    Dessert
-                </h2>
-                <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
-                <p>
-                    <button type="button" class="btn btn-lg btn-link" align="center">
-                        Order Now
-                    </button>
-                </p>
-            </div>
-
-        </div>
-        <!-- Games -->
-        <div class="row">
-            <div class="col-md-6">
-                <h2 align="center">
-                    Discount Games
-                </h2>
-                <p align="center">
-                    Make this a clickable image potentially?
-                </p>
-                <p align="center">
-                    <a class="btn" href="#">View details »</a>
-                </p>
-            </div>
-            <div class="col-md-6">
-                <h2 align="center">
-                    Kid Games
-                </h2>
-                <p align="center">
-                    Likewise
-                </p>
-                <p align="center">
-                    <a class="btn" href="#">View details »</a>
-                </p>
-            </div>
-        </div>
-        <!-- Footer -->
-        <!-- TODO: Need to make it an actual footer-->
-        <div class="row">
-            <div class="col-md-12">
-                <h2 align="center">
-                    Footer
-                </h2>
-                <p align="center">
-                    <!--<a class="btn" href="Views/customer/angularExample.html">Click to see an agular example »</a>-->
-                    <a> Links for social media</a>
-                </p>
-            </div>
-        </div>
-    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
