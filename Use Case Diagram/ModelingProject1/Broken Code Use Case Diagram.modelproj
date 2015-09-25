@@ -22,7 +22,6 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
-<<<<<<< HEAD
     <Content Include="Meal Status Update.usecasediagram">
       <SubType>Content</SubType>
     </Content>
@@ -64,14 +63,6 @@
     <Content Include="Survey.usecasediagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>Survey.usecasediagram</DependentUpon>
-=======
-    <Content Include="2.usecasediagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="2.usecasediagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>2.usecasediagram</DependentUpon>
->>>>>>> 7e0ff774505866ac0fbc31295ceb3b05e0783b6e
     </Content>
     <Content Include="UMLUseCaseDiagram1.usecasediagram">
       <SubType>Content</SubType>
@@ -80,7 +71,6 @@
       <SubType>Content</SubType>
       <DependentUpon>UMLUseCaseDiagram1.usecasediagram</DependentUpon>
     </Content>
-<<<<<<< HEAD
     <Content Include="View Nutritional Information.usecasediagram">
       <SubType>Content</SubType>
     </Content>
@@ -94,49 +84,6 @@
     <Content Include="Write a request.usecasediagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>Write a request.usecasediagram</DependentUpon>
-=======
-    <Content Include="UMLUseCaseDiagram2.usecasediagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="UMLUseCaseDiagram2.usecasediagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>UMLUseCaseDiagram2.usecasediagram</DependentUpon>
-    </Content>
-    <Content Include="UMLUseCaseDiagram3.usecasediagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="UMLUseCaseDiagram3.usecasediagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>UMLUseCaseDiagram3.usecasediagram</DependentUpon>
-    </Content>
-    <Content Include="UMLUseCaseDiagram4.usecasediagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="UMLUseCaseDiagram4.usecasediagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>UMLUseCaseDiagram4.usecasediagram</DependentUpon>
-    </Content>
-    <Content Include="UMLUseCaseDiagram5.usecasediagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="UMLUseCaseDiagram5.usecasediagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>UMLUseCaseDiagram5.usecasediagram</DependentUpon>
-    </Content>
-    <Content Include="UMLUseCaseDiagram6.usecasediagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="UMLUseCaseDiagram6.usecasediagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>UMLUseCaseDiagram6.usecasediagram</DependentUpon>
-    </Content>
-    <Content Include="UMLUseCaseDiagram7.usecasediagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="UMLUseCaseDiagram7.usecasediagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>UMLUseCaseDiagram7.usecasediagram</DependentUpon>
->>>>>>> 7e0ff774505866ac0fbc31295ceb3b05e0783b6e
     </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\ModelingProject1.uml">
