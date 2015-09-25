@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="667356d6-545a-40ac-a016-f99cf586fc99"
   name="ModelingProject1" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -2293,6 +2293,776 @@
         name="Daily Summary"
         isAbstract="false"
         isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="d27a37d6-9b64-46f0-a793-9b2eb396bbb9"
+        name="Manager"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="1e376b44-6e79-46eb-9aff-5a34447f34b3"
+        name="Customer"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="adbb47e9-9829-44b5-9e54-2cdb2b18be41"
+        name="Kitchen Staff"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="6c688336-4353-4fbd-9112-716d7a817da1"
+        name="Wait Staff"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d29f2260-d528-46c5-95d6-45e0988976f8"
+        name="Write a request/comment on an order"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="d287822e-d991-46de-bc8a-1794440c6f59"
+            isDerived="false"
+            sourceEndRoleName="Write a request/comment on an order"
+            targetEndRoleName="Customer"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="1e376b44-6e79-46eb-9aff-5a34447f34b3"
+              LastKnownName="Customer"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5dc69788-bb6d-4a80-acfe-8de63c507f71"
+                  name="Write a request/comment on an order"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="587c374f-3f8a-4226-aa7c-66376383b9c2"
+                  name="Customer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="4f1bf967-1392-41d9-bae9-7b82f0398094"
+        name="Customer"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="192087e6-4521-4bb1-a2df-ddeaad2d86ba"
+            isDerived="false"
+            sourceEndRoleName="Customer"
+            targetEndRoleName="Write a request/comment on an order&#xD;&#xA;Write a request/comment on an order&#xD;&#xA;"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="19efea26-bd6c-41f1-9586-2ec0e6809e20"
+              LastKnownName="Write a request/comment on an order&#xD;&#xA;Write a request/comment on an order&#xD;&#xA;"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6658ea5e-f3b4-44c4-965d-91d7c0f9b896"
+                  name="Customer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b4afc03a-045d-4c28-80e0-45051b269d70"
+                  name="Write a request/comment on an order&#xD;&#xA;Write a request/comment on an order&#xD;&#xA;"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="19efea26-bd6c-41f1-9586-2ec0e6809e20"
+        name="Write a request/comment on an order&#xD;&#xA;Write a request/comment on an order&#xD;&#xA;"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="c29fc3bb-7e2d-4286-be3e-9311f7e6e0f8"
+        name="Customer"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="50f93051-21d0-48ab-ad14-1bd9cb82d2fa"
+            isDerived="false"
+            sourceEndRoleName="Customer"
+            targetEndRoleName="Receipts"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c5a9fb61-eb5e-4da3-9b74-1ffbe3bce81c"
+              LastKnownName="Receipts"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8a70e82a-fbb0-484c-92f5-0ab6b6907f9a"
+                  name="Customer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5c1fd4b5-2f3d-4d4e-b12d-334ce6c6c59e"
+                  name="Receipts"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="bc2294a6-7970-4582-b92c-f13a1836acbc"
+        name="Wait Staff"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="d94eac29-1a4d-4e3b-9736-cd69e85e336c"
+            isDerived="false"
+            sourceEndRoleName="Wait Staff"
+            targetEndRoleName="Receipts"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c5a9fb61-eb5e-4da3-9b74-1ffbe3bce81c"
+              LastKnownName="Receipts"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a2a76c1e-85a6-4095-9059-b354417f3943"
+                  name="Wait Staff"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="93b0ab46-f629-411b-8b77-ca301f1fd35e"
+                  name="Receipts"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c5a9fb61-eb5e-4da3-9b74-1ffbe3bce81c"
+        name="Receipts"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="80a66bf7-64c3-495a-b97d-3ec238641dd6"
+        name="Customer"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="f9237f29-0d10-4aa3-8b4f-10d3bdde61ca"
+            isDerived="false"
+            sourceEndRoleName="Customer"
+            targetEndRoleName="Survey"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="ed1ab81b-ab4b-459b-9901-eb6adf91d24c"
+              LastKnownName="Survey"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bc59b7e0-4254-4078-83cf-53d855b57855"
+                  name="Customer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c6971fe7-06f8-4f60-904f-080ec3f4d79b"
+                  name="Survey"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ed1ab81b-ab4b-459b-9901-eb6adf91d24c"
+        name="Survey"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="8ddc089c-9414-48b7-9401-11f5436c039e"
+        name="Customer"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="179fee50-fa40-43cd-9628-2340324bca8a"
+            isDerived="false"
+            sourceEndRoleName="Customer"
+            targetEndRoleName="Request Help"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a9ffe019-7f10-491b-b0b2-d8e5a9f63bc3"
+              LastKnownName="Request Help"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cf7df46c-f99c-4cab-8260-e4aa22db48b0"
+                  name="Customer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8176c476-2f51-4ff1-946b-f1dc14468784"
+                  name="Request Help"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="e567cfc6-ae07-4963-8c4d-122897edee98"
+        name="Wait Staff"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="f895af3f-1068-4263-a9f7-b5eab881cf2a"
+            isDerived="false"
+            sourceEndRoleName="Wait Staff"
+            targetEndRoleName="Request Help"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a9ffe019-7f10-491b-b0b2-d8e5a9f63bc3"
+              LastKnownName="Request Help"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="938c813c-0ea7-4d16-82f8-0dc266b86e4f"
+                  name="Wait Staff"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="64ac5099-a4ce-437d-80de-d148c864bd86"
+                  name="Request Help"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="e11e427b-ff08-431b-8f41-1d1c64ad91f2"
+        name="Manager"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="bed60095-cece-4b9e-884d-ffe40324de7a"
+            isDerived="false"
+            sourceEndRoleName="Manager"
+            targetEndRoleName="Request Help"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a9ffe019-7f10-491b-b0b2-d8e5a9f63bc3"
+              LastKnownName="Request Help"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="73612d22-5845-44b8-939c-5fe1b5ba3e1e"
+                  name="Manager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="25818d10-a612-4052-a319-add83105e8f6"
+                  name="Request Help"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a9ffe019-7f10-491b-b0b2-d8e5a9f63bc3"
+        name="Request Help"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="e14b65d0-c095-4e15-9ca8-751eb6e08542"
+        name="Customer"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="38c988c3-35f2-423b-859a-11d6dcaa4b4d"
+            isDerived="false"
+            sourceEndRoleName="Customer"
+            targetEndRoleName="Refill Drink"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e90c6820-088e-4724-9514-d0594e6e2c7a"
+              LastKnownName="Refill Drink"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bdaf473a-030c-42ec-a262-7055ee000df8"
+                  name="Customer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bffdfc4f-165e-4441-a6a1-891550bde3e2"
+                  name="Refill Drink"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="2969a2ec-1886-4034-8ef6-5a857e85f1bb"
+        name="Wait Staff"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="e300591c-9d6d-405e-a55b-32c78fd02221"
+            isDerived="false"
+            sourceEndRoleName="Wait Staff"
+            targetEndRoleName="Refill Drink"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e90c6820-088e-4724-9514-d0594e6e2c7a"
+              LastKnownName="Refill Drink"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8876b00e-1b90-46ef-b6e3-f98f5c8c876c"
+                  name="Wait Staff"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="860eee2c-69c7-49a4-b46a-82d2cce31e49"
+                  name="Refill Drink"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e90c6820-088e-4724-9514-d0594e6e2c7a"
+        name="Refill Drink"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="f6253c20-92cb-44a2-bf37-8ea5d29d078b"
+        name="Manager"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="24181f4e-8e6e-4e91-993f-6f8d2501388d"
+            isDerived="false"
+            sourceEndRoleName="Manager"
+            targetEndRoleName="Remove Item"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f8f68e4b-b25a-4615-bf58-c2e7f20b2c91"
+              LastKnownName="Remove Item"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1df120d2-e804-4956-9105-47824f20021c"
+                  name="Manager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="715c4206-ff5b-417b-8de8-a19d4804fc50"
+                  name="Remove Item"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f8f68e4b-b25a-4615-bf58-c2e7f20b2c91"
+        name="Remove Item"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="4db493d8-f169-47ce-92ca-6209add80c35"
+        name="Kitchen Staff"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="fac58a9b-ce23-4609-8580-9d4635b00e9b"
+            isDerived="false"
+            sourceEndRoleName="Kitchen Staff"
+            targetEndRoleName="Remove Item"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f8f68e4b-b25a-4615-bf58-c2e7f20b2c91"
+              LastKnownName="Remove Item"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cf65ff7f-4680-4b9b-9c5a-ebb620b15b38"
+                  name="Kitchen Staff"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6a89b75d-0249-4596-a407-e71b6395df3a"
+                  name="Remove Item"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="6206752a-eefe-4e1f-9f65-637191218916"
+        name="Customer"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="079211ad-232f-48f8-9973-d8a0ae027180"
+            isDerived="false"
+            sourceEndRoleName="Customer"
+            targetEndRoleName="View Nutritional Information"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="33163826-bc0a-4859-8620-a4e6b0c6b940"
+              LastKnownName="View Nutritional Information"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b7944e4b-eac6-4a84-94b1-ff1945aa0464"
+                  name="Customer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ee60b44f-957d-47b4-a322-a65443aecfaa"
+                  name="View Nutritional Information"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="33163826-bc0a-4859-8620-a4e6b0c6b940"
+        name="View Nutritional Information"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7d8f529c-c54a-4369-a82a-bc00ff5de33a"
+        name="Meal Status Update"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="8054ec32-f2b8-43aa-ba89-d549fd57481c"
+        name="Kitchen Staff"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="9c6bea63-6c9a-40b9-bc46-7ef735694067"
+            isDerived="false"
+            sourceEndRoleName="Kitchen Staff"
+            targetEndRoleName="Meal Status Update"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="7d8f529c-c54a-4369-a82a-bc00ff5de33a"
+              LastKnownName="Meal Status Update"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d459ab7f-05fb-4542-a0de-24fd7d33e62b"
+                  name="Kitchen Staff"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9728f1e3-7937-4e9e-8f3a-56cd34b01500"
+                  name="Meal Status Update"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

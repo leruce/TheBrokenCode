@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="ddf55975-7542-4cbf-b561-4995c705fb1b" name="Refill Drink" linkedPackageId="dab38978-8479-4247-ac1b-5444d44a2af3" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="718c34da-93b5-4c04-a60a-e6e6aa00f102">
+      <profileInstance Id="76958fd8-d85a-4be0-aea4-76642819af01" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="d82fea55-c4ed-4e8f-a42d-743bce83a43a">
+      <profileInstance Id="320f29b2-6b67-45b7-b75a-8f6f81d6c91a" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="6fdd5a6d-0a38-4653-b2a8-5a9824596fc9" name="Customer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e14b65d0-c095-4e15-9ca8-751eb6e08542" />
+        <targetEnds>
+          <association Id="7008745b-3182-4501-8fd4-79abf339b672" isDerived="false" sourceEndRoleName="Customer" targetEndRoleName="Refill Drink" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d08c3699-dac1-4a1f-ae8e-bb941ef8ac85" LastKnownName="Refill Drink" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0b5666a6-45be-475e-9e34-b0f7d84c7a1e" name="Customer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="bdaf473a-030c-42ec-a262-7055ee000df8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="64f2f5fa-6ea4-465f-bb81-421dd9c2a68f" name="Refill Drink" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bffdfc4f-165e-4441-a6a1-891550bde3e2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="38c988c3-35f2-423b-859a-11d6dcaa4b4d" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="3d8f24fe-f974-4fc2-af36-ca49f993bfd7" name="Wait Staff" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2969a2ec-1886-4034-8ef6-5a857e85f1bb" />
+        <targetEnds>
+          <association Id="813a7a2f-2a86-4bd1-90d4-776d1fda3102" isDerived="false" sourceEndRoleName="Wait Staff" targetEndRoleName="Refill Drink" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d08c3699-dac1-4a1f-ae8e-bb941ef8ac85" LastKnownName="Refill Drink" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="255fdeb1-d900-4db1-9e8a-2a3320843c94" name="Wait Staff" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8876b00e-1b90-46ef-b6e3-f98f5c8c876c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="81f1a1f9-83ab-4890-b91c-e3bc41531127" name="Refill Drink" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="860eee2c-69c7-49a4-b46a-82d2cce31e49" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e300591c-9d6d-405e-a55b-32c78fd02221" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d08c3699-dac1-4a1f-ae8e-bb941ef8ac85" name="Refill Drink" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e90c6820-088e-4724-9514-d0594e6e2c7a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="dab38978-8479-4247-ac1b-5444d44a2af3" name="ModelingProject1">
+    <elementDefinition Id="667356d6-545a-40ac-a016-f99cf586fc99" />
+  </package>
+</useCaseModelRoot>
