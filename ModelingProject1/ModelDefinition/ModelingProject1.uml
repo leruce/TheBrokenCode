@@ -375,67 +375,6 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="6c428a60-3cb3-4ced-a519-da185add37be"
-            name="PayOrder"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="669c1f92-8947-4773-a8b8-5f2bdc237929"
-                  name="orderID"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="4b78633f-4b60-40c5-940d-f7498aeacd6a"
-                      LastKnownName="int"
-                      LastKnownLocation="ModelingProject1.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="dbbdb025-748a-4b8d-bb2a-cbe964676737"
-                  direction="Return">
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="956d70ae-b1e8-4ebd-b71d-9f6337223756"
-                      LastKnownName="Order"
-                      LastKnownLocation="ModelingProject1.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="669648e6-0e0f-4a0d-a612-7547a01d523a"
-            name="UpdateTable"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="d7832db1-8083-4f9b-b7ea-dbff3ef7ee8e"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="957b50d2-22c3-4286-a3d7-a1d53fc03bda"
-                      LastKnownName="Table"
-                      LastKnownLocation="ModelingProject1.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="079e34d8-2aae-4ce7-9b81-38defe4f0cc4"
             name="ModifyOrder"
             isLeaf="false"
@@ -613,45 +552,6 @@
         </generalsInternal>
         <targetEnds>
           <association
-            Id="953dd51e-611a-4931-90a8-68ab2fe74871"
-            isDerived="false"
-            sourceEndRoleName="Wait Staff"
-            targetEndRoleName="Menu"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="2f0fcb7c-da95-4161-87eb-0e565182c91a"
-              LastKnownName="Menu"
-              LastKnownLocation="ModelingProject1.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="5162e6c0-affe-41c4-bb1a-dc3447bc7a01"
-                  name="Wait Staff"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Shared"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="81c66966-3fb4-4f3d-9820-b8edb1d7b71c"
-                  name="Menu"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
             Id="3b8919dd-abb6-48f6-ab3e-a4a1646c7755"
             isDerived="false"
             sourceEndRoleName="Wait Staff"
@@ -819,43 +719,6 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="a1ef15ec-efc8-4016-9efb-b74d8ceab1e8"
-            name="PayOrder"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="e748b41b-6095-4eb9-89c9-75f542de8fca"
-                  name="orderNum"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="4b78633f-4b60-40c5-940d-f7498aeacd6a"
-                      LastKnownName="int"
-                      LastKnownLocation="ModelingProject1.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="3952b77a-8cb5-4eba-b6d7-8f4417b87bf7"
-                  direction="Return">
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="956d70ae-b1e8-4ebd-b71d-9f6337223756"
-                      LastKnownName="Order"
-                      LastKnownLocation="ModelingProject1.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="fa61c17f-d5d7-4d2b-ae5b-f7b6f1fff982"
             name="DiscountOrder"
             isLeaf="false"
@@ -994,20 +857,20 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="a6581ca1-5da4-4d3c-8949-1ca36d1ede46"
+            Id="ef9247ed-c2bd-4d12-a25d-8ff825f329f7"
             isDerived="false"
             sourceEndRoleName="Order"
-            targetEndRoleName="Menu"
+            targetEndRoleName="Kitchen Staff"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="2f0fcb7c-da95-4161-87eb-0e565182c91a"
-              LastKnownName="Menu"
+              Id="ba6d2b09-9e4c-44a8-a25b-4adfc22529d5"
+              LastKnownName="Kitchen Staff"
               LastKnownLocation="ModelingProject1.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="c2591b0d-e33a-4067-bdf5-4fa01f801d28"
+                  Id="246eb3f6-c05c-4412-b84a-21e36fe0cd82"
                   name="Order"
                   isLeaf="false"
                   isStatic="false"
@@ -1016,19 +879,45 @@
                   isDerivedUnion="false"
                   aggregation="Shared"
                   isComposite="false"
-                  isNavigableOwned="false" />
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="3f26470d-4770-435f-90cb-7f75d1afa21a"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="39f55861-46a4-4363-87fc-89ddb9ad5933"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="878faa38-71d2-4665-97b6-b2dc86c44d1b"
-                  name="Menu"
+                  Id="cf56a4f3-3041-4187-baae-d397ba3beddc"
+                  name="Kitchen Staff"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="false" />
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="4bc01d28-6ef5-4648-b695-4cc1dd213ffb"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="88c7d082-2ca1-4045-9956-8e3cd18604db"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -1311,6 +1200,74 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="ad4b34a4-795f-4647-bdcf-3e94aa5b3551"
+            name="PlaceOrder"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2f68531c-668b-425a-b1db-b38cea879595"
+                  name="list&lt;Menu Item&gt;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bcacb987-7691-4b0f-960e-965a6f6ab35c"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="956d70ae-b1e8-4ebd-b71d-9f6337223756"
+                      LastKnownName="Order"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0e5e8cb9-0556-4c19-8eb7-9c00ea549a73"
+            name="PayOrder"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="42110fbb-8c44-4d8d-a9e7-c56237a46aed"
+                  name="orderNum"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="4b78633f-4b60-40c5-940d-f7498aeacd6a"
+                      LastKnownName="int"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e93ab35f-4956-45b4-a550-18f0786ccaa5"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="956d70ae-b1e8-4ebd-b71d-9f6337223756"
+                      LastKnownName="Order"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -1574,45 +1531,6 @@
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="d080eb7e-2a2a-401e-a59e-bd08196f9278"
-            isDerived="false"
-            sourceEndRoleName="Customer"
-            targetEndRoleName="Menu"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="2f0fcb7c-da95-4161-87eb-0e565182c91a"
-              LastKnownName="Menu"
-              LastKnownLocation="ModelingProject1.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="a203923a-3691-44d2-8afd-00e12fcb5789"
-                  name="Customer"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Shared"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="a2e04d30-4b60-4968-aab1-37cd5951f178"
-                  name="Menu"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
             Id="d0841ad8-c4d6-455e-aa61-d2c3f4307449"
             isDerived="false"
             sourceEndRoleName="Customer"
@@ -1767,124 +1685,15 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a98e73b8-4ad1-46a6-bc02-57e1edfa2f26"
+                LastKnownName="string"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation
-            Id="0c922916-7198-498d-b876-1224a4ff5042"
-            name="PlaceOrder"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="557feeaf-45d4-4ef1-b160-86706aa2cc93"
-                  name="list&lt;Menu Item&gt;"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="41583f3d-0b52-421d-9616-e9d2259fce20"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="956d70ae-b1e8-4ebd-b71d-9f6337223756"
-                      LastKnownName="Order"
-                      LastKnownLocation="ModelingProject1.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="3f478bb8-56c4-4b1c-9c7c-f78800f9bbdb"
-            name="RequestRefill"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="cb46c089-1649-4547-a11a-10779c78157b"
-                  direction="Return">
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="957b50d2-22c3-4286-a3d7-a1d53fc03bda"
-                      LastKnownName="Table"
-                      LastKnownLocation="ModelingProject1.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="5d448a97-a2c3-406a-8672-d1d5aa05e125"
-            name="PayOrder"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="393d2a3e-e552-4fdf-b832-f302fc0ff6e2"
-                  name="orderNum"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="4b78633f-4b60-40c5-940d-f7498aeacd6a"
-                      LastKnownName="int"
-                      LastKnownLocation="ModelingProject1.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="2ad56a70-3c5a-4888-bfb2-a2a6255aaecf"
-                  direction="Return">
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="956d70ae-b1e8-4ebd-b71d-9f6337223756"
-                      LastKnownName="Order"
-                      LastKnownLocation="ModelingProject1.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="6c25a51d-d115-409c-a9cd-516ee6b09050"
-            name="RequestHelp"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="c120c9fa-da26-4b69-a5bc-deb9d85f658e"
-                  direction="Return">
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="957b50d2-22c3-4286-a3d7-a1d53fc03bda"
-                      LastKnownName="Table"
-                      LastKnownLocation="ModelingProject1.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1949,6 +1758,45 @@
                       value="*" />
                   </upperValueInternal>
                 </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="489c63c8-2a41-4ead-9de8-d7c02787f755"
+            isDerived="false"
+            sourceEndRoleName="Menu"
+            targetEndRoleName="Table"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="957b50d2-22c3-4286-a3d7-a1d53fc03bda"
+              LastKnownName="Table"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="71a7324d-3fee-46a8-8aa1-d3866267e25d"
+                  name="Menu"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="43c45d17-e11d-4f91-9fa0-ada68df78383"
+                  name="Table"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -2429,6 +2277,108 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
+          <operation
+            Id="f0db206f-ff68-4a84-84b4-1c574072cc98"
+            name="ViewStatus"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6dbbecd8-6d5f-4db6-9c78-0a73fb013343"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="4b78633f-4b60-40c5-940d-f7498aeacd6a"
+                      LastKnownName="int"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e1623d8b-1e9a-4131-ab17-1be37640b0ac"
+            name="ViewMenu"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="1cfe55be-131b-45e0-aa34-f5ee03164d6d"
+            name="RequestHelp"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4c115913-eda6-4cd6-8e8b-9392117be8b0"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="957b50d2-22c3-4286-a3d7-a1d53fc03bda"
+                      LastKnownName="Table"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="776a508e-7948-40cb-b7a4-1f6c40c911a4"
+            name="RequestRefill"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e8eebc7c-f9d2-4fae-b138-5b0ed1c7a8cc"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="957b50d2-22c3-4286-a3d7-a1d53fc03bda"
+                      LastKnownName="Table"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="713722c8-9aea-4525-a309-a3fe418face8"
+            name="PayOrder"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f2f9f23d-0f06-4d47-8ca1-e9927068fb36"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="956d70ae-b1e8-4ebd-b71d-9f6337223756"
+                      LastKnownName="Order"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -2909,6 +2859,20 @@
             isQuery="false" />
         </ownedOperationsInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="761b8492-5d5a-4040-811e-be274846fe31"
+        name="Actor1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e0a72a57-9f7c-4020-bada-5c78eb13eec1"
+        name="UseCase1"
+        isAbstract="false"
+        isLeaf="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

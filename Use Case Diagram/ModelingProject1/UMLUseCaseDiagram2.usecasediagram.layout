@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="UMLUseCaseDiagram2">
+  <useCaseModelRootMoniker Id="8e2dd241-40ba-4385-8847-93c1fa821b9e" />
+  <nestedChildShapes>
+    <actorShape Id="e939c353-bb97-46f2-9f34-8f6e7e338b69" absoluteBounds="9.25, 3.875, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="78b7bbb9-df91-479d-b342-6c69b60e9984" LastKnownName="Customer" />
+      <relativeChildShapes />
+    </actorShape>
+    <actorShape Id="713351dd-d4f2-404d-9ca0-8741bbed9e51" absoluteBounds="2.75, 2, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="94ccc5fa-f561-4fbd-a93b-206b090177f8" LastKnownName="Waitstaff" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="a76dd0c6-61af-4095-b164-01074f9812f8" absoluteBounds="4.75, 2.875, 1.875, 1.375" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="fcbc3b79-29c1-44fe-9ff1-5965b2263dfd" LastKnownName="Place order if Customer doesn't want to" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(6.60658305329212 : 3.69810241769884); (9.25 : 4.08811475409836)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="31ca73dc-114b-45f2-9c51-92b096484176" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="a76dd0c6-61af-4095-b164-01074f9812f8" />
+        <actorShapeMoniker Id="e939c353-bb97-46f2-9f34-8f6e7e338b69" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseAssociationConnector edgePoints="[(4.90719914431264 : 3.18142283792012); (3.25 : 2.37209302325581)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="47d6f023-9646-4f06-a8f4-44f76da9e31b" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="a76dd0c6-61af-4095-b164-01074f9812f8" />
+        <actorShapeMoniker Id="713351dd-d4f2-404d-9ca0-8741bbed9e51" />
+      </nodes>
+    </useCaseAssociationConnector>
+  </nestedChildShapes>
+</useCaseDiagram>
