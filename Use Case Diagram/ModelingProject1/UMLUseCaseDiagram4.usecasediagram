@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="b90c0bc1-e59d-4de8-b063-42c2dc9ad813" name="UMLUseCaseDiagram4" linkedPackageId="2fc20381-76de-410d-9d26-94320f27845f" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="202175b1-b702-4c6e-a956-ef9532b60547" name="Manager" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a01626bd-c2cf-44aa-abea-403073f47512" />
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="de574c59-ae97-4677-9f72-f76892644a04" name="Daily Summary" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5fa2aebb-9bb2-4445-b174-3ab637c28201" />
+        <targetEnds>
+          <association Id="ad73b1dd-deb0-4b09-8e7b-aaa834b04f09" isDerived="false" sourceEndRoleName="UseCase2" targetEndRoleName="Manager" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="202175b1-b702-4c6e-a956-ef9532b60547" LastKnownName="Manager" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7677c6aa-c552-4de6-897d-d0090c9f630d" name="UseCase2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c18314ca-f112-4bf7-94b3-523c9c859b41" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cea09835-3d6c-4d7e-aaf6-9191b5e2f1e4" name="Manager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a4722c9f-5436-4170-a394-4323ef2b19d9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="740a13d2-f3c0-4b43-8751-eec369c2ed7d" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="6571726b-9678-4ef1-a173-24ebdf86dc72" name="Summary of top three items ordered" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d6cfea6b-b263-4f9f-9e54-3b382d124f78" />
+        <targetEnds>
+          <association Id="5a08a1c6-a074-4644-bb4b-b5d4658aedfc" isDerived="false" sourceEndRoleName="Summary of top three items ordered" targetEndRoleName="Daily Summary1" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="de574c59-ae97-4677-9f72-f76892644a04" LastKnownName="Daily Summary" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="85f942cd-db7b-4286-8dc3-2832d35ceac4" name="Summary of top three items ordered" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a6dfe499-e9d8-4bed-94c2-1f995d59b79a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2caaf0ac-6269-4a2a-b356-bd1e5d496da5" name="Daily Summary1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9c237165-32b7-4274-9e91-57ec7932bd8e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b7b9fca1-8118-408a-8f78-4634fb6e93c0" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="2fc20381-76de-410d-9d26-94320f27845f" name="ModelingProject1">
+    <elementDefinition Id="667356d6-545a-40ac-a016-f99cf586fc99" />
+    <profileInstances>
+      <packageHasProfileInstances Id="6fb1e4fa-7436-44bd-9715-6e1509ccb2d5">
+        <profileInstance Id="3518735d-4ee1-4888-ab0e-6c635514c12f" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="e76fbe85-77d7-4571-a34c-51869774b68c">
+        <profileInstance Id="6e086a92-d3ef-48cd-9811-3b91cc57a8a7" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>
