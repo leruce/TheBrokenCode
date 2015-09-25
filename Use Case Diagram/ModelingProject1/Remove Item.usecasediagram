@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="70d375ce-c742-4772-bdb5-0a6404de47e3" name="Remove Item" linkedPackageId="2c7b2fb4-7b20-4280-8cbe-28fcfde37410" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="a792aabf-dbff-4522-b990-b64750f8c8e3">
+      <profileInstance Id="b2f30a5e-337f-4e11-ba19-7bcbbd05b27e" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="8fae772b-5290-489f-b026-37ddd31816c5">
+      <profileInstance Id="a3563c85-2e28-4fbb-8afc-e774e7995580" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="61353f28-b653-49a9-ae25-aa0b7f2d5412" name="Manager" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f6253c20-92cb-44a2-bf37-8ea5d29d078b" />
+        <targetEnds>
+          <association Id="c2f8bfb5-821a-409d-b090-bb95ecdb8661" isDerived="false" sourceEndRoleName="Manager" targetEndRoleName="Remove Item" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4e6f97ac-82e9-4272-8d91-1b347906a109" LastKnownName="Remove Item" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="eeefb684-ef23-447f-8a71-ffb2d1848518" name="Manager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1df120d2-e804-4956-9105-47824f20021c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4a0b1c28-16fc-452c-85df-f74858fa6700" name="Remove Item" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="715c4206-ff5b-417b-8de8-a19d4804fc50" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="24181f4e-8e6e-4e91-993f-6f8d2501388d" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4e6f97ac-82e9-4272-8d91-1b347906a109" name="Remove Item" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f8f68e4b-b25a-4615-bf58-c2e7f20b2c91" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="b4061817-3ca7-479a-ad5e-e1e40199b5ec" name="Kitchen Staff" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4db493d8-f169-47ce-92ca-6209add80c35" />
+        <targetEnds>
+          <association Id="2510e441-36fb-402c-8009-6bb4a09bfa9f" isDerived="false" sourceEndRoleName="Kitchen Staff" targetEndRoleName="Remove Item" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4e6f97ac-82e9-4272-8d91-1b347906a109" LastKnownName="Remove Item" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3595666a-5a4a-4573-8302-cba800172c0c" name="Kitchen Staff" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="cf65ff7f-4680-4b9b-9c5a-ebb620b15b38" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9b587969-6d3b-423d-bc61-09a35019592d" name="Remove Item" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6a89b75d-0249-4596-a407-e71b6395df3a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fac58a9b-ce23-4609-8580-9d4635b00e9b" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="2c7b2fb4-7b20-4280-8cbe-28fcfde37410" name="ModelingProject1">
+    <elementDefinition Id="667356d6-545a-40ac-a016-f99cf586fc99" />
+  </package>
+</useCaseModelRoot>

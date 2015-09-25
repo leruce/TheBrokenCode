@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="1588783e-1d9b-4f3e-bc16-205e9ac48c5f" name="Request Help" linkedPackageId="4e5ff4f6-8e47-4294-b569-04fb54783760" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="bb028241-6a5c-42ba-bf3a-8e924c98ccaf">
+      <profileInstance Id="a5db6b3e-e0f4-408f-8635-eb71e449b0a0" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="3ce88395-c9ac-4c28-8d9b-8bf28e31b553">
+      <profileInstance Id="aaa021fd-d5e7-4419-91a0-b8c8c40dacbb" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="6e72dda2-d2fa-4a98-bd47-f2ef70548612" name="Customer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8ddc089c-9414-48b7-9401-11f5436c039e" />
+        <targetEnds>
+          <association Id="4e6e7537-8653-4552-894d-a0260e3f5f4c" isDerived="false" sourceEndRoleName="Customer" targetEndRoleName="Request Help" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="529fceb8-1d7a-4c1b-bf7c-3efbc3d0c9ec" LastKnownName="Request Help" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9d8a7888-fa00-45c5-b701-0a9fefdd2a49" name="Customer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="cf7df46c-f99c-4cab-8260-e4aa22db48b0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="51e95bea-635e-4106-a7b0-f649a304e0a8" name="Request Help" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8176c476-2f51-4ff1-946b-f1dc14468784" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="179fee50-fa40-43cd-9628-2340324bca8a" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="b901d817-d1ed-4c7f-a35c-0c30b442d53f" name="Wait Staff" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e567cfc6-ae07-4963-8c4d-122897edee98" />
+        <targetEnds>
+          <association Id="bc071930-1b4c-48f6-926c-20dcae83ef31" isDerived="false" sourceEndRoleName="Wait Staff" targetEndRoleName="Request Help" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="529fceb8-1d7a-4c1b-bf7c-3efbc3d0c9ec" LastKnownName="Request Help" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ae912eb9-8a7f-489d-b22f-212ef07e696e" name="Wait Staff" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="938c813c-0ea7-4d16-82f8-0dc266b86e4f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4eea0402-3058-4a72-8a91-9bbeb7b44160" name="Request Help" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="64ac5099-a4ce-437d-80de-d148c864bd86" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f895af3f-1068-4263-a9f7-b5eab881cf2a" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="573f33be-1fe5-4f35-b8d2-6ba17280d586" name="Manager" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e11e427b-ff08-431b-8f41-1d1c64ad91f2" />
+        <targetEnds>
+          <association Id="98de0a71-3345-4ac0-817c-da0de405ecb8" isDerived="false" sourceEndRoleName="Manager" targetEndRoleName="Request Help" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="529fceb8-1d7a-4c1b-bf7c-3efbc3d0c9ec" LastKnownName="Request Help" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="175dcb26-20f3-4b71-8f6d-8b1039f6b39c" name="Manager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="73612d22-5845-44b8-939c-5fe1b5ba3e1e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6ff3921c-346a-4273-a40b-b149d65a5125" name="Request Help" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="25818d10-a612-4052-a319-add83105e8f6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bed60095-cece-4b9e-884d-ffe40324de7a" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="529fceb8-1d7a-4c1b-bf7c-3efbc3d0c9ec" name="Request Help" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a9ffe019-7f10-491b-b0b2-d8e5a9f63bc3" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="4e5ff4f6-8e47-4294-b569-04fb54783760" name="ModelingProject1">
+    <elementDefinition Id="667356d6-545a-40ac-a016-f99cf586fc99" />
+  </package>
+</useCaseModelRoot>

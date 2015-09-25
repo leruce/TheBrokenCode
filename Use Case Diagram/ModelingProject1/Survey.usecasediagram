@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="f3f3b4ab-f60f-4cb1-9e9a-e4ecf6a2a765" name="Survey" linkedPackageId="73c71282-4cd4-41a3-905e-91abd0dbb6b4" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="87c5302b-5ac5-4933-91c3-53e6aade5d6e">
+      <profileInstance Id="701e9375-35a9-431a-84eb-256db9258d8d" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="34a3aec8-625c-4cef-8b98-2dda6ccf0245">
+      <profileInstance Id="62237a4e-a70f-434c-8bd3-5fa269e530fd" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="92897480-b209-4b65-b66e-936895391570" name="Customer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="80a66bf7-64c3-495a-b97d-3ec238641dd6" />
+        <targetEnds>
+          <association Id="d1ec8626-cdfb-4b01-b5f6-db03af1633bc" isDerived="false" sourceEndRoleName="Customer" targetEndRoleName="Survey" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c0c25af3-5bae-48a5-bccc-12a83d15c763" LastKnownName="Survey" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="21266402-dc8a-4ca0-8fa1-9e9c55399f53" name="Customer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="bc59b7e0-4254-4078-83cf-53d855b57855" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="41deb3ba-382d-48c9-9abc-e9b0fa0576e1" name="Survey" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c6971fe7-06f8-4f60-904f-080ec3f4d79b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f9237f29-0d10-4aa3-8b4f-10d3bdde61ca" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c0c25af3-5bae-48a5-bccc-12a83d15c763" name="Survey" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ed1ab81b-ab4b-459b-9901-eb6adf91d24c" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="73c71282-4cd4-41a3-905e-91abd0dbb6b4" name="ModelingProject1">
+    <elementDefinition Id="667356d6-545a-40ac-a016-f99cf586fc99" />
+  </package>
+</useCaseModelRoot>

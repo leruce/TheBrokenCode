@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Refill Drink">
+  <useCaseModelRootMoniker Id="ddf55975-7542-4cbf-b561-4995c705fb1b" />
+  <nestedChildShapes>
+    <actorShape Id="a89123c0-7716-4cb4-ace9-3de34d283da2" absoluteBounds="2, 2.375, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="6fdd5a6d-0a38-4653-b2a8-5a9824596fc9" LastKnownName="Customer" />
+      <relativeChildShapes />
+    </actorShape>
+    <actorShape Id="59825c9a-cd53-4d12-99d8-2eec3f80881d" absoluteBounds="4.75, 2.375, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="3d8f24fe-f974-4fc2-af36-ca49f993bfd7" LastKnownName="Wait Staff" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="46e22960-3367-4d25-be4e-88f2f9d50fc1" absoluteBounds="3.125, 2.5, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="d08c3699-dac1-4a1f-ae8e-bb941ef8ac85" LastKnownName="Refill Drink" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(2.5 : 2.64772727272727); (3.13306504495005 : 2.70527864045)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="7008745b-3182-4501-8fd4-79abf339b672" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="a89123c0-7716-4cb4-ace9-3de34d283da2" />
+        <useCaseShapeMoniker Id="46e22960-3367-4d25-be4e-88f2f9d50fc1" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseAssociationConnector edgePoints="[(4.75 : 2.64772727272727); (4.11693495504995 : 2.70527864045)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="813a7a2f-2a86-4bd1-90d4-776d1fda3102" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="59825c9a-cd53-4d12-99d8-2eec3f80881d" />
+        <useCaseShapeMoniker Id="46e22960-3367-4d25-be4e-88f2f9d50fc1" />
+      </nodes>
+    </useCaseAssociationConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

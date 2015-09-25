@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="5a169aa0-2b0a-4f2a-86d4-0d439dbf89c2" name="UMLUseCaseDiagram2" linkedPackageId="5c832298-f6b4-4b74-a881-2d947548bc0c" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="63919eb8-b8ce-49c4-87a6-b7ce956dc327">
+      <profileInstance Id="f5e7dfa0-dc02-452d-8ea5-ff38f682caf7" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="96f43f0c-eba1-472a-9aa7-0736a6eae3f2">
+      <profileInstance Id="cc082afa-0d28-496b-b1bd-aa21ba441afc" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="c7c1cb12-6557-42d4-a227-322de9c24dda" name="Customer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4f1bf967-1392-41d9-bae9-7b82f0398094" />
+        <targetEnds>
+          <association Id="81342f3d-5177-4120-8c3d-5897544dfd15" isDerived="false" sourceEndRoleName="Customer" targetEndRoleName="Write a request/comment on an order&#xD;&#xA;Write a request/comment on an order&#xD;&#xA;" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="13129a4e-2700-45b9-98ac-e41926b8d111" LastKnownName="Write a request/comment on an order&#xD;&#xA;Write a request/comment on an order&#xD;&#xA;" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0501a5a9-f8b3-44fc-8055-f294f7a97d60" name="Customer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6658ea5e-f3b4-44c4-965d-91d7c0f9b896" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b082dbdd-d0f6-4f62-bb3b-d2980ab7adcd" name="Write a request/comment on an order&#xD;&#xA;Write a request/comment on an order&#xD;&#xA;" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b4afc03a-045d-4c28-80e0-45051b269d70" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="192087e6-4521-4bb1-a2df-ddeaad2d86ba" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="13129a4e-2700-45b9-98ac-e41926b8d111" name="Write a request/comment on an order&#xD;&#xA;Write a request/comment on an order&#xD;&#xA;" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="19efea26-bd6c-41f1-9586-2ec0e6809e20" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="5c832298-f6b4-4b74-a881-2d947548bc0c" name="ModelingProject1">
+    <elementDefinition Id="667356d6-545a-40ac-a016-f99cf586fc99" />
+  </package>
+</useCaseModelRoot>

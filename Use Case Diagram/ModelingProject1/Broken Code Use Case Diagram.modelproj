@@ -22,12 +22,47 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
-    <Content Include="2.usecasediagram">
+    <Content Include="Meal Status Update.usecasediagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="2.usecasediagram.layout">
+    <Content Include="Meal Status Update.usecasediagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>2.usecasediagram</DependentUpon>
+      <DependentUpon>Meal Status Update.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="Receipts.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Receipts.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Receipts.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="Refill Drink.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Refill Drink.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Refill Drink.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="Remove Item.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Remove Item.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Remove Item.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="Request Help.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Request Help.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Request Help.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="Survey.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Survey.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Survey.usecasediagram</DependentUpon>
     </Content>
     <Content Include="UMLUseCaseDiagram1.usecasediagram">
       <SubType>Content</SubType>
@@ -35,6 +70,20 @@
     <Content Include="UMLUseCaseDiagram1.usecasediagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>UMLUseCaseDiagram1.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="View Nutritional Information.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="View Nutritional Information.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>View Nutritional Information.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="Write a request.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Write a request.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Write a request.usecasediagram</DependentUpon>
     </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\ModelingProject1.uml">

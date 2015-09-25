@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="aa20b9b1-86df-43bf-8155-fe3723d69d56" name="Meal Status Update" linkedPackageId="637d4aff-fb2c-444b-b015-475eca0127f6" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="db7d2a05-ee2e-4e7a-9ced-5a9496036420">
+      <profileInstance Id="500956b7-b905-4b2e-a39e-042d39e4ed8e" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="05440d25-23d8-4b90-bd44-527ff9a6ba29">
+      <profileInstance Id="1dfc9325-d9f5-4656-b4e4-4d2e2de60d0e" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c6300f6e-cf20-4c8a-8e04-8f8a9ec2372a" name="Meal Status Update" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7d8f529c-c54a-4369-a82a-bc00ff5de33a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="702c5b68-ece7-4735-84cf-e1e00de1621a" name="Kitchen Staff" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8054ec32-f2b8-43aa-ba89-d549fd57481c" />
+        <targetEnds>
+          <association Id="7895d303-d2bf-448b-87b5-cfdd7b3519d7" isDerived="false" sourceEndRoleName="Kitchen Staff" targetEndRoleName="Meal Status Update" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c6300f6e-cf20-4c8a-8e04-8f8a9ec2372a" LastKnownName="Meal Status Update" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2ffeffbc-90eb-4ddf-ae9e-572a5a79b5c9" name="Kitchen Staff" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d459ab7f-05fb-4542-a0de-24fd7d33e62b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6f2f8819-af40-4638-976e-3a2377e099d3" name="Meal Status Update" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9728f1e3-7937-4e9e-8f3a-56cd34b01500" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9c6bea63-6c9a-40b9-bc46-7ef735694067" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="637d4aff-fb2c-444b-b015-475eca0127f6" name="ModelingProject1">
+    <elementDefinition Id="667356d6-545a-40ac-a016-f99cf586fc99" />
+  </package>
+</useCaseModelRoot>

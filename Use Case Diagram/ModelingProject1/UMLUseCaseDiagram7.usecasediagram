@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="47af78ce-730e-42e4-9fe9-872ebf8789f7" name="UMLUseCaseDiagram7" linkedPackageId="14b5cd10-dba8-462d-9e52-9c1c95e0c4a9" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="b71315db-9855-4881-b9e3-0ca69be97cf9">
+      <profileInstance Id="27212561-6bc0-4ce7-bd77-4f7eab84eb0f" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="05582d2a-d192-49d4-b07e-3552b8147486">
+      <profileInstance Id="90dc09af-f0b1-423f-b0a0-60afed488ddc" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="eada5569-501f-4240-9f8f-ee55bda2bfb1" name="Kitchen Staff" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="749671f7-fdf7-4520-944b-f365903362da" />
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="fb9f0206-5055-4c91-b972-9d0fc270eb4a" name="Waitstaff" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5325c95b-ecc8-406e-9220-5d8b601c209b" />
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="51a50577-342a-4437-b0bf-0763073750b7" name="Process Order" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="41e375f8-8c8c-46a3-97da-f81c51b7252b" />
+        <targetEnds>
+          <association Id="fc948caf-6cdc-4b48-874b-ebc903edced1" isDerived="false" sourceEndRoleName="Process Order" targetEndRoleName="Kitchen Staff" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="eada5569-501f-4240-9f8f-ee55bda2bfb1" LastKnownName="Kitchen Staff" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f36fbd5d-6689-4a74-9838-36c97b3955f0" name="Process Order" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="162e3b78-ca60-45d2-9c6a-6743ad28ce8b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="63adb8a0-5033-414f-b51a-231bc8afe4ac" name="Kitchen Staff" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="993c1355-212c-4baa-bb10-51b39190ff14" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="254d62f7-6852-428f-876d-4513e10a675f" />
+          </association>
+          <association Id="224fa45c-12fb-42c2-963c-7eb67f9c9f91" isDerived="false" sourceEndRoleName="Process Order" targetEndRoleName="Waitstaff" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="fb9f0206-5055-4c91-b972-9d0fc270eb4a" LastKnownName="Waitstaff" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2286857f-15ae-43c7-968a-98f45e73d80a" name="Process Order" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="bcc1fc41-555b-4f6e-9fda-e719561da801" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="92996737-d8cc-4f9f-9b6f-1b9bbfaa57db" name="Waitstaff" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e53fb61d-3859-4c86-8292-a1da0cb8c187" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="40e33a6e-0d65-451d-be42-9b9f5e4e9286" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="14b5cd10-dba8-462d-9e52-9c1c95e0c4a9" name="ModelingProject1">
+    <elementDefinition Id="667356d6-545a-40ac-a016-f99cf586fc99" />
+  </package>
+</useCaseModelRoot>
