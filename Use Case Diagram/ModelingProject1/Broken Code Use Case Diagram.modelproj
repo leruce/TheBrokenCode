@@ -36,6 +36,48 @@
       <SubType>Content</SubType>
       <DependentUpon>UMLUseCaseDiagram1.usecasediagram</DependentUpon>
     </Content>
+    <Content Include="UMLUseCaseDiagram2.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLUseCaseDiagram2.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLUseCaseDiagram2.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="UMLUseCaseDiagram3.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLUseCaseDiagram3.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLUseCaseDiagram3.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="UMLUseCaseDiagram4.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLUseCaseDiagram4.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLUseCaseDiagram4.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="UMLUseCaseDiagram5.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLUseCaseDiagram5.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLUseCaseDiagram5.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="UMLUseCaseDiagram6.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLUseCaseDiagram6.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLUseCaseDiagram6.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="UMLUseCaseDiagram7.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLUseCaseDiagram7.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLUseCaseDiagram7.usecasediagram</DependentUpon>
+    </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\ModelingProject1.uml">
       <SubType>Content</SubType>

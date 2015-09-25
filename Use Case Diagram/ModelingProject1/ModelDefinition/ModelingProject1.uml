@@ -28,16 +28,139 @@
     <packageHasNamedElement>
       <useCase
         Id="0d00bdcf-dab3-4df7-a9f1-c0a34e8e9b74"
-        name="UseCase1"
+        name="Place order if Customer doesn't want to"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="09297393-b36f-4817-a4aa-a28692cfa5e4"
+            isDerived="false"
+            sourceEndRoleName="Place order if Customer doesn't want to"
+            targetEndRoleName="Customer"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="8be77908-3476-439b-b033-69a2ea6f2df3"
+              LastKnownName="Customer"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1a75b34e-e55a-41c8-beee-c53f94acce1d"
+                  name="Place order if Customer doesn't want to"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d8a6fbfb-57af-4f5a-8299-22fe54da2168"
+                  name="Customer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="536191ef-ace9-46a3-accd-9d2ed619e12a"
+            isDerived="false"
+            sourceEndRoleName="Place order if Customer doesn't want to"
+            targetEndRoleName="Waitstaff"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="5325c95b-ecc8-406e-9220-5d8b601c209b"
+              LastKnownName="Waitstaff"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bb126a5d-8796-4ffa-85b0-ca7c834bd08d"
+                  name="Place order if Customer doesn't want to"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="85999baa-9d21-47f9-8b42-d2cd6352655f"
+                  name="Waitstaff"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="e99a172a-3673-476d-a3a9-186687cf1adf"
-        name="UseCase2"
+        name="Daily Summary"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="a379568d-c0a6-44da-a898-4248a26f229e"
+            isDerived="false"
+            sourceEndRoleName="UseCase2"
+            targetEndRoleName="Manager"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="c7fa2d2b-521a-4d18-8bef-e9bcc3a03793"
+              LastKnownName="Manager"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6de64fbf-bcc3-4e91-9d5c-5532c5275724"
+                  name="UseCase2"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="097f2400-753d-4fd7-a494-ea05a8b3a7b2"
+                  name="Manager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <actor
@@ -694,9 +817,51 @@
     <packageHasNamedElement>
       <useCase
         Id="d6cfea6b-b263-4f9f-9e54-3b382d124f78"
-        name="UseCase3"
+        name="Summary of top three items ordered"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="b7b9fca1-8118-408a-8f78-4634fb6e93c0"
+            isDerived="false"
+            sourceEndRoleName="Summary of top three items ordered"
+            targetEndRoleName="Daily Summary1"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="5fa2aebb-9bb2-4445-b174-3ab637c28201"
+              LastKnownName="Daily Summary"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a6dfe499-e9d8-4bed-94c2-1f995d59b79a"
+                  name="Summary of top three items ordered"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9c237165-32b7-4274-9e91-57ec7932bd8e"
+                  name="Daily Summary1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -708,16 +873,178 @@
     <packageHasNamedElement>
       <useCase
         Id="41e375f8-8c8c-46a3-97da-f81c51b7252b"
-        name="UseCase5"
+        name="Process Order"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="254d62f7-6852-428f-876d-4513e10a675f"
+            isDerived="false"
+            sourceEndRoleName="Process Order"
+            targetEndRoleName="Kitchen Staff"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="749671f7-fdf7-4520-944b-f365903362da"
+              LastKnownName="Kitchen Staff"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="162e3b78-ca60-45d2-9c6a-6743ad28ce8b"
+                  name="Process Order"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="993c1355-212c-4baa-bb10-51b39190ff14"
+                  name="Kitchen Staff"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="40e33a6e-0d65-451d-be42-9b9f5e4e9286"
+            isDerived="false"
+            sourceEndRoleName="Process Order"
+            targetEndRoleName="Waitstaff"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="5325c95b-ecc8-406e-9220-5d8b601c209b"
+              LastKnownName="Waitstaff"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bcc1fc41-555b-4f6e-9fda-e719561da801"
+                  name="Process Order"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e53fb61d-3859-4c86-8292-a1da0cb8c187"
+                  name="Waitstaff"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="7a0f998a-5353-4f64-8a9f-16354b3eae97"
-        name="UseCase6"
+        name="Place Order"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="ad6ba131-e38b-44f5-b03e-3bf4e556935d"
+            isDerived="false"
+            sourceEndRoleName="UseCase6"
+            targetEndRoleName="Customer"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="40bad090-7096-48a4-ab73-b41bc2434b2c"
+              LastKnownName="Customer"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="261904bb-dd43-4d60-a881-877c50d81c18"
+                  name="UseCase6"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6d45d085-8b01-4a8a-b7d0-ef6c21a4a1c5"
+                  name="Customer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="43229ad3-e981-400d-8146-b0b6dc34e236"
+            isDerived="false"
+            sourceEndRoleName="UseCase6"
+            targetEndRoleName="Kitchen Staff"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="749671f7-fdf7-4520-944b-f365903362da"
+              LastKnownName="Kitchen Staff"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7aeab8b3-9156-4a14-b7db-e1db4f751afc"
+                  name="UseCase6"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0a34f15d-e17c-4066-b7e8-52e4dd248b5b"
+                  name="Kitchen Staff"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -2296,34 +2623,55 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <actor
-        Id="c0834113-e5c7-4185-9dae-f390c4eeef9e"
-        name="Actor3"
+        Id="a01626bd-c2cf-44aa-abea-403073f47512"
+        name="Manager"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="5d25e1a0-bb9b-4933-aba9-e9638653258f"
+        name="Waitstaff"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="40bad090-7096-48a4-ab73-b41bc2434b2c"
+        name="Customer"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="749671f7-fdf7-4520-944b-f365903362da"
+        name="Kitchen Staff"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
-        Id="946964bf-0b69-426b-955f-118e8c107106"
-        name="UseCase8"
+        Id="5fa2aebb-9bb2-4445-b174-3ab637c28201"
+        name="Daily Summary"
         isAbstract="false"
         isLeaf="false">
         <targetEnds>
           <association
-            Id="26d093c5-05b0-47ff-bca0-ae8a7a31b00b"
+            Id="740a13d2-f3c0-4b43-8751-eec369c2ed7d"
             isDerived="false"
-            sourceEndRoleName="UseCase8"
-            targetEndRoleName="Actor3"
+            sourceEndRoleName="UseCase2"
+            targetEndRoleName="Manager"
             isLeaf="false"
             isAbstract="false">
             <actorMoniker
-              Id="c0834113-e5c7-4185-9dae-f390c4eeef9e"
-              LastKnownName="Actor3"
+              Id="a01626bd-c2cf-44aa-abea-403073f47512"
+              LastKnownName="Manager"
               LastKnownLocation="ModelingProject1.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="18674e0e-1edf-4f79-8ce3-d69c1ea6da0d"
-                  name="UseCase8"
+                  Id="c18314ca-f112-4bf7-94b3-523c9c859b41"
+                  name="UseCase2"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -2335,8 +2683,134 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="809cedae-a156-407f-b8e2-a040d7757834"
-                  name="Actor3"
+                  Id="a4722c9f-5436-4170-a394-4323ef2b19d9"
+                  name="Manager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="ce7a7fc1-347c-440e-afcf-717e44f887d2"
+        name="Manager"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="a0602b0c-51eb-4f5e-aafd-bcdd58f864f0"
+        name="Waitstaff"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="b805783f-2986-44cf-a59e-9b2fc65fd163"
+        name="Customer"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="524c0042-75ee-474e-bc0a-ab7ceebb3b20"
+        name="Kitchen Staff"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b632c8c5-e2f5-44ad-828f-b5ed2b69efa0"
+        name="Daily Summary"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="6ad44844-99ed-47ae-afa1-4a3e2526be8e"
+            isDerived="false"
+            sourceEndRoleName="UseCase2"
+            targetEndRoleName="Manager"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="ce7a7fc1-347c-440e-afcf-717e44f887d2"
+              LastKnownName="Manager"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="31be21cf-c45b-42d3-9266-5c3cd2b3c461"
+                  name="UseCase2"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ff1625e0-7864-4712-aeb7-104ff40fdd61"
+                  name="Manager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="17a4c3da-6e0f-409b-8a12-accfc2d11c41"
+        name="view status of assigned tables"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="14ebe8e8-8ada-4f9a-8c7a-1ebd3aca3328"
+            isDerived="false"
+            sourceEndRoleName="Summary of top three items ordered"
+            targetEndRoleName="Daily Summary1"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b632c8c5-e2f5-44ad-828f-b5ed2b69efa0"
+              LastKnownName="Daily Summary"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8aca17aa-6f58-4cac-be17-92c077c6af48"
+                  name="Summary of top three items ordered"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9de35710-7dc2-4f7e-863f-5cfe8e1b0cd4"
+                  name="Daily Summary1"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
