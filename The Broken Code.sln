@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The Broken Code", "The Brok
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The Broken Code.Tests", "The Broken Code.Tests\The Broken Code.Tests.csproj", "{E8694B34-2F69-4490-BBE5-9CC51C1AE214}"
 EndProject
-Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingProject1", "ModelingProject1\ModelingProject1.modelproj", "{6C99F242-D770-4BCE-8D52-E1E7D8FD74F3}"
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Class Diagram", "ModelingProject1\Class Diagram.modelproj", "{6C99F242-D770-4BCE-8D52-E1E7D8FD74F3}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Broken Code Use Case Diagram", "Use Case Diagram\ModelingProject1\Broken Code Use Case Diagram.modelproj", "{CA4D6AE2-230A-43E5-8BE6-30BB98F2454E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{6C99F242-D770-4BCE-8D52-E1E7D8FD74F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C99F242-D770-4BCE-8D52-E1E7D8FD74F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C99F242-D770-4BCE-8D52-E1E7D8FD74F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA4D6AE2-230A-43E5-8BE6-30BB98F2454E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA4D6AE2-230A-43E5-8BE6-30BB98F2454E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA4D6AE2-230A-43E5-8BE6-30BB98F2454E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA4D6AE2-230A-43E5-8BE6-30BB98F2454E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
