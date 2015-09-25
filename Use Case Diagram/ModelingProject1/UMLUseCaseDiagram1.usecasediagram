@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="708e50b6-e09c-4267-9fc2-b432492c2612" name="UMLUseCaseDiagram1" linkedPackageId="de76a69b-342a-46b8-856c-29f1efba7bcf" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="a85fa40e-b273-4162-a4c9-1ac48ae8d19e" name="Customer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8be77908-3476-439b-b033-69a2ea6f2df3" />
+        <targetEnds>
+          <association Id="a9eb6bf7-5bb2-4c9f-b56a-bfbf0a38079d" isDerived="false" sourceEndRoleName="Customer" targetEndRoleName="Menu Display" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0341fa3b-8ad2-4ad5-97dd-cd137b0c5fcb" LastKnownName="Menu Display" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="115f3078-0d3b-4246-8765-74091775584e" name="Customer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9a546254-41c0-4621-89af-228d2ac312e3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4b8152ee-41d3-40b7-bd12-e0025ea7d73b" name="Menu Display" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="107bf971-f8e5-4b03-bf52-57f91cfc7c88" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="af07ca2e-765d-4d82-a13e-3f4c3767e934" />
+          </association>
+          <association Id="d05bca26-f392-46e7-9fe1-cc59b9480574" isDerived="false" sourceEndRoleName="Customer" targetEndRoleName="Place Order" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a24b6f4d-db79-4435-8703-d3adec0b756a" LastKnownName="Place Order" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cdaae9ff-871b-4e41-81ec-f1e11d4ab6c2" name="Customer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="eca21d53-971a-4fed-bbe6-43e602e2e4a4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7e380cd2-0695-4a1c-ad7e-87446369142f" name="Place Order" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="848a1aca-ced9-43d8-b78f-ae4ea81bd665" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="517fad12-c3d7-46a3-82ab-00473a2419b1" />
+          </association>
+          <association Id="f7fd2444-fd24-4ff2-8d0b-6af8ec5fbda5" isDerived="false" sourceEndRoleName="Customer" targetEndRoleName="Pay Bill" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="da4a4e81-25ac-41bd-b2c5-5d6412b517fe" LastKnownName="Pay Bill" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="82a03afa-0111-4920-bd03-24b49f369368" name="Customer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="74af0773-e30a-4ef6-806e-03eb5ae35cd1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="94462c70-e4bd-404d-af11-00c13b9c9794" name="Pay Bill" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="87e55b6c-df49-42db-aa06-5c26f44c9ff4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7f291146-4b8b-48e8-9a67-d595b58504a5" />
+          </association>
+          <association Id="fd6ed55f-8f5a-452c-ad40-2e350a298486" isDerived="false" sourceEndRoleName="Customer" targetEndRoleName="Social Media" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="bb71608e-10d6-4e27-9594-30cf1a376a38" LastKnownName="Social Media" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6d20db83-10e6-41a3-8ef4-696280668d50" name="Customer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9ef8afd3-ad36-47d6-9d65-227e4777cefd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1a21a336-3b2a-45fa-8f86-bc358f7ed9f3" name="Social Media" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ff9eae9a-d7d3-4074-a7b4-56b15e0fc06b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0c87f3f0-a363-4a3b-9819-fa671129b7bb" />
+          </association>
+          <association Id="64be6b04-4f08-40f1-8254-c31c31e654a8" isDerived="false" sourceEndRoleName="Customer" targetEndRoleName="Games" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="76ff3461-21d1-4dbc-9a5d-c730345a61f1" LastKnownName="Games" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="927d599b-3b9c-4c89-8e0c-321bc24cb62c" name="Customer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="51277bc6-a68d-4e30-acbf-fac3f98738bf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8ec6b96d-4345-42a6-a996-43a24279e2ad" name="Games" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="550bdeaa-ec40-40bd-aeb8-b904aa0247e0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="02a4099f-66e7-4d56-a0d2-99c12c7839c5" />
+          </association>
+          <association Id="65685ea6-34a4-441f-9e9c-735c406b4a03" isDerived="false" sourceEndRoleName="Customer" targetEndRoleName="Survey" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="6d37a49b-42d8-4140-b182-90544902ef8e" LastKnownName="Survey" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2bd5563a-4d33-426f-9d02-39b0d4fbfe14" name="Customer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f83f9de5-5e82-4e38-bbda-9b403e86fe1a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8ed92af7-22a6-4aef-8aad-d40a92f2c90b" name="Survey" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0492f6a5-fc5b-437d-b606-c5ed628a5f3c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a29dc20d-a432-4c44-8b6a-ce2cf14cb371" />
+          </association>
+          <association Id="0c6a8a25-46db-4f2b-878c-f141e3fd6ada" isDerived="false" sourceEndRoleName="Customer" targetEndRoleName="Request Refill" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="53a5f014-52fc-436e-91e8-1c3f84ac47e1" LastKnownName="Request Refill" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="40f42228-29fa-4894-9afb-6dcc7de28af3" name="Customer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8649a4b7-6e96-454f-93e9-3e0fd1af576b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="039bfb50-86de-44e6-b453-4b835e9dada9" name="Request Refill" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a419b636-5b8f-4d0a-9e9a-b2067e0f2d95" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7ef6947a-edf2-4095-a6c3-20576c559a20" />
+          </association>
+          <association Id="1d15d8f5-60a4-4a39-ba4a-8e02e82ef636" isDerived="false" sourceEndRoleName="Customer" targetEndRoleName="Request Help" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b517523b-d5e6-48fd-a63a-5b9e77ed282f" LastKnownName="Request Help" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9a18dbf1-9848-41d8-b514-ef4cb67bdc8c" name="Customer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="46b22e3c-dc56-4143-b064-8a9195b112a3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6e64feaf-df90-4ff8-9ae1-ea1100a79404" name="Request Help" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="687d4821-af4b-4093-8ff2-221fe1639160" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="401ed20f-d3c2-4485-9382-0073757bd844" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="b6c7359f-400d-4b7a-9366-f1522345bebd" name="Kitchen Staff" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3b604211-1577-4a35-8164-70cae797f23d" />
+        <targetEnds>
+          <association Id="0458daf0-98a4-486d-8661-8854e9c9df28" isDerived="false" sourceEndRoleName="Kitchen Staff" targetEndRoleName="Process Order" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2f9d94d0-6866-4c19-b60b-b7da6d7ea709" LastKnownName="Process Order" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f7401aca-8e35-4ffd-b7fc-bdc300fae4c5" name="Kitchen Staff" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3e90020e-0ffe-44c3-bab0-957dfcdab6fb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="00575f65-61eb-419a-9066-481355bd74dc" name="Process Order" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="44f67cca-c342-42a3-92d1-2642f8ae8ab0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="600c93ff-55bf-4a3e-a2a7-281f0ac4d3a1" />
+          </association>
+          <association Id="977e26ed-d86b-499c-a75c-e359eb0e06c3" isDerived="false" sourceEndRoleName="Kitchen Staff" targetEndRoleName="Remove Item" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="59244d7e-3e37-4903-8228-0fd9beaaa277" LastKnownName="Remove Item" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="073ae8ce-93b2-4b6c-8ade-5255f7e5f358" name="Kitchen Staff" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e9e10bab-ee6b-4bd7-b6b6-1cfe49706605" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d5b97c74-6188-4ff6-9f7d-0b9d9f2eac11" name="Remove Item" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c976bccf-b30a-480d-87c9-52999f5fa267" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="08e6566a-850e-4501-80d3-b64f6bb0f4fe" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="6fdc7703-b99e-4cd6-b7a7-cc60f0399410" name="Manager" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c7fa2d2b-521a-4d18-8bef-e9bcc3a03793" />
+        <targetEnds>
+          <association Id="91bee176-9a87-4ae1-8995-88f89f8649dd" isDerived="false" sourceEndRoleName="Manager" targetEndRoleName="Daily Summary" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0c0f07d9-4933-4b34-bd72-e23b7fa388d1" LastKnownName="Daily Summary" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="08e843d9-f8ea-4f27-a0de-1dd2ea417f24" name="Manager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="97766437-53ab-40d6-8733-19eaadd735ca" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c0530721-0f7a-43c5-b5a8-171d99332faa" name="Daily Summary" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="96c2c099-98be-4a1a-a3dd-535f3949661d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f920fad3-585d-4c45-b64b-a7975eca4755" />
+          </association>
+          <association Id="0dbd133d-8f23-41b1-98ac-7c0e24292e21" isDerived="false" sourceEndRoleName="Manager" targetEndRoleName="Remove Item" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="59244d7e-3e37-4903-8228-0fd9beaaa277" LastKnownName="Remove Item" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d145f484-ff3a-44ff-9309-e5dc42d83c0d" name="Manager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="61e96adf-87fc-488b-a5ab-58ee1f4e2b52" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="91153bc5-4a84-43db-8dfd-25c87d92b21f" name="Remove Item" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d8f446ef-ae93-4897-9d92-609025182068" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c021ad86-30a7-450b-9ce6-e9f839968985" />
+          </association>
+          <association Id="f133f464-5109-4ae7-b3a4-460bbbfc9aef" isDerived="false" sourceEndRoleName="Manager" targetEndRoleName="Pay Bill" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="da4a4e81-25ac-41bd-b2c5-5d6412b517fe" LastKnownName="Pay Bill" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7d588985-34df-4c11-b302-37c27320ce2c" name="Manager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="48e60de9-b1b7-4bea-bfc9-85b570cdccbb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="aa9920b0-2f4c-4792-bae0-a008b1435ac6" name="Pay Bill" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="acf86c41-212f-4aef-8f7d-16933edc94a0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="810ff70d-9525-4866-9af7-40600082a67d" />
+          </association>
+          <association Id="78787f9b-ca31-42c9-a2f9-f08af9447cd5" isDerived="false" sourceEndRoleName="Manager" targetEndRoleName="Comp Item" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b9bac64e-25d8-40cf-8c5c-b710721597b8" LastKnownName="Comp Item" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="74cd3196-6598-4d70-9b2a-5cecf542a6cd" name="Manager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ad5ac13c-e96f-41b8-94a7-0558ec31f7a6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="eabbc09b-0578-46f6-ba7a-a865fc7306af" name="Comp Item" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4c602fd2-28b7-4200-b75f-697cf43aff96" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1eefe2a7-6f64-48d3-8325-251eff4617f5" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="1d0f3d67-872b-4444-b318-6636914821a8" name="Waitstaff" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5325c95b-ecc8-406e-9220-5d8b601c209b" />
+        <targetEnds>
+          <association Id="80846440-128f-4c20-be4f-02416195d509" isDerived="false" sourceEndRoleName="Waitstaff" targetEndRoleName="Place Order" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a24b6f4d-db79-4435-8703-d3adec0b756a" LastKnownName="Place Order" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="184fafd5-1670-4b7e-968b-9ef5e51f209e" name="Waitstaff" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="00f09032-f897-45dd-ab72-65972b69c9df" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="88880e61-2423-46ad-8db1-2fc3ff3c5831" name="Place Order" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="cc7ac5c3-a0e1-4da0-843b-a345002f4d42" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="91e76cbe-8526-4189-b42e-1c4841192385" />
+          </association>
+          <association Id="585711fc-5761-4b28-8d5c-a6901241e69b" isDerived="false" sourceEndRoleName="Waitstaff" targetEndRoleName="Comp Item" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b9bac64e-25d8-40cf-8c5c-b710721597b8" LastKnownName="Comp Item" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="22efb7d9-1100-4fc9-a5ea-5f701fc72da8" name="Waitstaff" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c3fef0dc-6deb-42cd-9f05-82136515c4c2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5d1e9f84-ec8a-40d1-abea-db58f69dc00c" name="Comp Item" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="88222ea3-6598-4f63-9b7b-aef8aa117bd1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c0b23c52-37c3-4321-a433-06c1e474e702" />
+          </association>
+          <association Id="d9fef93f-c473-4e84-bfd9-acf2fcebd361" isDerived="false" sourceEndRoleName="Waitstaff" targetEndRoleName="Pay Bill" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="da4a4e81-25ac-41bd-b2c5-5d6412b517fe" LastKnownName="Pay Bill" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dd4c6f38-5220-4928-85c4-798bd7858cfd" name="Waitstaff" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="bf7acc4c-8a95-440c-9d8b-ae6acadedb15" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="12e80ad5-acc5-4b84-9d00-b51d1d2d4716" name="Pay Bill" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="07446c21-6246-4db6-beb8-6293ba6d39b0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7c59b6a3-4c88-47b6-9c12-fba69a34bff7" />
+          </association>
+          <association Id="83b778db-695a-402f-83eb-1f9c35768a98" isDerived="false" sourceEndRoleName="Waitstaff" targetEndRoleName="Request Refill" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="53a5f014-52fc-436e-91e8-1c3f84ac47e1" LastKnownName="Request Refill" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bc95ac1a-5b34-41b9-91c8-b72d2473bc47" name="Waitstaff" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="020103a6-d0c0-414f-b14e-18448e7f6095" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d344148b-8b13-40aa-abca-f33dbc5542b0" name="Request Refill" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1154e03b-af81-463a-8a5f-916181034d36" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9bcfb8a5-295e-4077-8736-c60dfd9c2a53" />
+          </association>
+          <association Id="88ed7b89-c345-458a-8979-76ae71615073" isDerived="false" sourceEndRoleName="Waitstaff" targetEndRoleName="Request Help" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b517523b-d5e6-48fd-a63a-5b9e77ed282f" LastKnownName="Request Help" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="28336377-398d-45a3-a39b-f578779fd23a" name="Waitstaff" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e2d2465e-29cd-4929-9505-8e8b538ad41e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5e869804-589d-438f-b6b8-4885ec1cd881" name="Request Help" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c6f0a397-7211-4aa5-9988-373c5928b9a1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f75e4c98-7a1d-45bc-90d6-35d61e7edd89" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0341fa3b-8ad2-4ad5-97dd-cd137b0c5fcb" name="Menu Display" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="53a30660-b5c1-425d-a3a1-b2257b5fa2ae" />
+        <targetEnds>
+          <association Id="d5c01ec2-f31a-4168-9b07-6f9ea51c10e7" isDerived="false" sourceEndRoleName="Menu Display" targetEndRoleName="Place Order" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a24b6f4d-db79-4435-8703-d3adec0b756a" LastKnownName="Place Order" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fa940ab4-54b8-4fa2-803f-f5c743d788f3" name="Menu Display" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="aa3431a2-3e67-4047-ab56-5bc32c3db1c3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e01db0ff-731c-4bf4-87f4-f48bf049f84c" name="Place Order" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9c9cf468-a14b-4f79-8b2a-4b56924fb7c2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8173fd9f-689c-4fbb-96f8-bf510cbdedc0" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a24b6f4d-db79-4435-8703-d3adec0b756a" name="Place Order" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8809ec3c-bfa1-4c4d-a4e7-30c87e51f0d0" />
+        <targetEnds>
+          <association Id="89b9d70d-9869-4ebe-8263-3a8ebae48429" isDerived="false" sourceEndRoleName="Place Order" targetEndRoleName="Process Order" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2f9d94d0-6866-4c19-b60b-b7da6d7ea709" LastKnownName="Process Order" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4ac9d204-6335-47f8-b8ae-42b0fc0fe8f8" name="Place Order" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9d1260be-e871-4932-bf27-dc93075829f7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7ab981f0-eac2-41f7-b7ad-da13c7df8865" name="Process Order" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="03942b2b-6bbc-4156-9553-987cbdb34650" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f1b7ae33-262a-4627-8daf-b6deba533fab" />
+          </association>
+          <association Id="b2552bef-861b-4564-af4a-28832ba79efc" isDerived="false" sourceEndRoleName="Place Order" targetEndRoleName="Daily Summary" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0c0f07d9-4933-4b34-bd72-e23b7fa388d1" LastKnownName="Daily Summary" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8129b3b0-bf1e-4ebc-86c7-154660dee291" name="Place Order" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3fe1f06d-cdf6-4279-b03d-feed7735377d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7a0dc1c2-2867-4876-b5fd-d42271689604" name="Daily Summary" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6fec7b33-e093-4304-b017-19eeddd4d2a1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="866a96d3-f74c-4cdb-a9ca-89a7bf844a6d" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2f9d94d0-6866-4c19-b60b-b7da6d7ea709" name="Process Order" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bf349bb4-28e4-4551-ad0b-8efae731c613" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="da4a4e81-25ac-41bd-b2c5-5d6412b517fe" name="Pay Bill" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="12444067-e44c-4bf7-ad4d-2e080a74d34b" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="6d37a49b-42d8-4140-b182-90544902ef8e" name="Survey" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3f407ca5-2a55-4cb3-ade6-a900ab37edc0" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="76ff3461-21d1-4dbc-9a5d-c730345a61f1" name="Games" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b83c0134-98fc-4bf6-ac28-b63ac0147b8d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="bb71608e-10d6-4e27-9594-30cf1a376a38" name="Social Media" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3a57ff38-f9ce-4477-865d-068828c222ac" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="53a5f014-52fc-436e-91e8-1c3f84ac47e1" name="Request Refill" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="73c2d6c9-ac4b-4802-81b1-65c440b0df58" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b517523b-d5e6-48fd-a63a-5b9e77ed282f" name="Request Help" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ef9dc778-0429-43ea-aa54-fc5e612c291e" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="59244d7e-3e37-4903-8228-0fd9beaaa277" name="Remove Item" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2242e852-4511-441a-8288-0ec01cca1e24" />
+        <targetEnds>
+          <association Id="f04afa37-700f-485b-a1fc-7ff4913101d7" isDerived="false" sourceEndRoleName="Remove Item" targetEndRoleName="Menu Display" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0341fa3b-8ad2-4ad5-97dd-cd137b0c5fcb" LastKnownName="Menu Display" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="816b9e02-3050-4f70-961f-0ed1ad4e5e75" name="Remove Item" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0ae879e1-5bc3-4ba7-8fe4-aebe97a83ed9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="29cb3080-3730-4664-9aa5-38d3e3ad4e25" name="Menu Display" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6244bf5a-a66c-4e9d-9984-afac26bd572d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fe1638af-d627-4519-b02e-39695c89d715" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b9bac64e-25d8-40cf-8c5c-b710721597b8" name="Comp Item" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e3e1913d-7915-4b67-a623-cce8aee0079c" />
+        <targetEnds>
+          <association Id="e4452f7a-465a-4cfb-b6ae-afb3a994448e" isDerived="false" sourceEndRoleName="Comp Item" targetEndRoleName="Pay Bill" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="da4a4e81-25ac-41bd-b2c5-5d6412b517fe" LastKnownName="Pay Bill" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1705ac5d-a8b5-452b-840d-3b6e801e2e68" name="Comp Item" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f3212386-5651-4ba2-9bbe-fd0dcdbff5a9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4043a263-da74-4bdb-9d42-27458fbe2624" name="Pay Bill" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="18e130e7-ec0a-4fe2-92ce-453867e6e9ef" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="cdd83fa5-ea27-4a7a-a820-365b01759299" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0c0f07d9-4933-4b34-bd72-e23b7fa388d1" name="Daily Summary" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="079828ad-aa6c-4aff-a0f0-12a60445c43d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="de76a69b-342a-46b8-856c-29f1efba7bcf" name="ModelingProject1">
+    <elementDefinition Id="667356d6-545a-40ac-a016-f99cf586fc99" />
+    <profileInstances>
+      <packageHasProfileInstances Id="ceeaf141-c0e1-433f-b844-1523db8c3f31">
+        <profileInstance Id="1d283330-0816-4f1a-a278-bb6e705f65ba" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="f37db8ab-a31b-4abf-b166-6629cbada2e1">
+        <profileInstance Id="6204871f-c0b0-4ab1-b141-8e5e9f5a57db" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>
