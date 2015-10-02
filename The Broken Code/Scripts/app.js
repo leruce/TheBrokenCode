@@ -2,17 +2,27 @@
 
 /* App Module */
 
-var restaurantApp = angular.module('restaurantApp', ['ngRoute']);
+var restaurantApp = angular.module('restaurantApp', ['ngRoute'])
 
-restaurantApp
     .config(function ($routeProvider, $locationProvider) {
         $routeProvider
-            .when('/home', {
-                templateUrl: 'View/Home.html',
+            .when('/', {
+                templateUrl: 'Views/Home.html',
                 controller: 'homeViewModel'
             });
 
         //Go to home if no route found
         $routeProvider.otherwise({ redirectTo: '/'});
-        $locationProvider.html5Mode(true);
+        $locationProvider.html5Mode({
+            enabled: true,
+            requireBase: true
+        });
+    });
+
+restaurantApp.controller('indexViewModel', function ($scope, $http, $location) {
+        $scope.headingCaption = 'Index';
+    });
+
+restaurantApp.controller('homeViewModel', function ($scope, $http, $location) {
+        $scope.headingCaption = 'Home';
     });
