@@ -25,120 +25,115 @@
     <![endif]-->
 </head>
 
-<body>
+<body ng-controller="MainController">
 
-    <div class="container-fluid">
+     <div class="container-fluid">
+          <!-- Header -->
+          <div class="row">
+               <div class="col-md-12">
+                    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                         <!-- Restaurant Logo-->
+                         <div class="navbar-header">
+                              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                   <span class="sr-only">Toggle navigation</span>
+                                   <span class="icon-bar"></span>
+                                   <span class="icon-bar"></span>
+                                   <span class="icon-bar"></span>
+                              </button> <a class="navbar-brand" href="/#/">Logo</a>
+                         </div>
 
-        <!-- Header -->
-        <div class="row">
-            <div class="col-md-16">
-                <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-                    <!-- Restaurant Logo-->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button> <a class="navbar-brand" href="#">Logo</a>
-                    </div>
+                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                              <!-- Elements on the left -->
+                              <ul class="nav navbar-nav navbar-left">
 
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <!-- Elements on the left -->
-                        <ul class="nav navbar-nav navbar-left">
+                                   <li>
+                                        <a href="/#/games" target="_self">Games</a>
+                                   </li>
 
-                            <li>
-                                <a href="/Games" target="_blank">Games</a>
-                            </li>
+                                   <li>
+                                        <a href="/#/menu" target="_self">Menu</a>
+                                   </li>
 
-                            <li>
-                                <a href="/Menu" target="_blank">Menu</a>
-                            </li>
+                              </ul>
 
-                        </ul>
+                              <!-- Elements on the right -->
+                              <!-- Links for Refill and Help-->
+                              <!-- TODO: Create Modals for them-->
+                              <ul class="nav navbar-nav navbar-right">
+                                   <li>
+                                        <a href="/Refill">Refill</a>
+                                   </li>
+                                   <li>
+                                        <a href="/Help">Help</a>
+                                   </li>
+                                   <li>
+                                        <a href="/Order">View Order</a>
+                                   </li>
+                                   <li>
+                                        <a href="/Pay">Pay</a>
+                                   </li>
 
-                        <!-- Elements on the right -->
-                        <!-- Links for Refill and Help-->
-                        <!-- TODO: Create Modals for them-->
-                        <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a href="/Refill">Refill</a>
-                            </li>
-                            <li>
-                                <a href="/Help">Help</a>
-                            </li>
-                            <li>
-                                <a href="/Order">View Order</a>
-                            </li>
-                            <li>
-                                <a href="/Pay">Pay</a>
-                            </li>
+                                   <!-- Drop down menu for sign in and other things-->
+                                   <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">View Account<strong class="caret"></strong></a>
+                                        <ul class="dropdown-menu">
+                                             <li>
+                                                  <a href="#">Action</a>
+                                             </li>
+                                             <li>
+                                                  <a href="#">Another action</a>
+                                             </li>
+                                             <li>
+                                                  <a href="#">Something else here</a>
+                                             </li>
+                                             <li class="divider">
+                                             </li>
+                                             <li>
+                                                  <a href="#">Separated link</a>
+                                             </li>
+                                             <li class="divider">
+                                             </li>
+                                             <li>
+                                                  <a href="#">One more separated link</a>
+                                             </li>
+                                        </ul>
+                                   </li>
 
-                            <!-- Drop down menu for sign in and other things-->
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">View Account<strong class="caret"></strong></a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="#">Action</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Another action</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Something else here</a>
-                                    </li>
-                                    <li class="divider">
-                                    </li>
-                                    <li>
-                                        <a href="#">Separated link</a>
-                                    </li>
-                                    <li class="divider">
-                                    </li>
-                                    <li>
-                                        <a href="#">One more separated link</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li><a></a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </div>
-
-
-        <div ng-view>
-
-        </div>
-
-
-        <!-- Footer -->
-         <div class="row">
-                <div class="col-md-12">
-                    <nav class="navbar navbar-default navbar-fixed-bottom">
-                        <p align="center">
-                            <!--<a class="btn" href="Views/customer/angularExample.html">Click to see an agular example »</a>-->
-                            <a class="btn" href=""> Links for social media</a>
-                        </p>
+                                   <li><a></a></li>
+                              </ul>
+                         </div>
                     </nav>
-                </div>
-            </div>
-        </div>
+               </div>
+          </div>
+          
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="Scripts/jquery-1.9.1.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
-    <!-- Angular Scripts -->
-    <script src="Scripts/angular.min.js"></script>
-    <script src="Scripts/angular-route.min.js"></script>
-    <script src="Scripts/angular-touch.min.js"></script>
-    <!-- Out Angular Scripts -->
-    <script src="Scripts/app.js"></script>
-    <script src="Scripts/controller.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="Scripts/ie10-viewport-bug-workaround.js"></script>
+          <!-- Changes what's in between the header/foot depending on the route-->
+          <div ng-view>
+               
+          </div>
+
+          <!-- Footer -->
+          <footer>
+               <p align="center">
+                    <a class="btn" href=""> Links for social media</a>
+               </p>
+          </footer>
+
+     </div>
+
+               <!-- Bootstrap core JavaScript
+               ================================================== -->
+               <!-- Placed at the end of the document so the pages load faster -->
+               <script src="Scripts/jquery-1.9.1.min.js"></script>
+               <script src="Scripts/bootstrap.min.js"></script>
+               <!-- Angular Scripts -->
+               <script src="Scripts/angular.min.js"></script>
+               <script src="Scripts/angular-route.min.js"></script>
+               <script src="Scripts/angular-touch.min.js"></script>
+               <!-- Out Angular Scripts -->
+               <script src="Scripts/app.js"></script>
+               <script src="Scripts/controller.js"></script>
+               <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+               <script src="Scripts/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
