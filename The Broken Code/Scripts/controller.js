@@ -2,12 +2,44 @@
 
 /* Controlers */
 
-var restaurantController = angular.module('restaurantController', []);
+restaurantApp.controller('MainController',
+     ['$scope', '$http', '$location', '$rootScope',
+     function ($scope, $http, $location, $rootScope, ParseService) {
 
-restaurantController.controller('MainController', function ($scope, $http, $location) {
-     $scope.headingCaption = 'Home';
-});
+          $scope.headingCaption = 'HOME';
 
-restaurantController.controller('MenuController', function ($scope, $http, $location) {
-     $scope.headingCaption = 'Menu';
-});
+          //Get the current user
+          $rootScope.currentUser = Parse.User.current();
+
+          /*
+          If there is there is not a user logged in
+          then the current user is NULL
+          */
+          $rootScope.loggedIn = function () {
+               if ($rootScope.currentUser === null) {
+                    return false;
+               } else {
+                    return true;
+               }
+          };
+
+          $scope.logout = function () {
+               $rootScope.currentUser = null;
+               Parse.User.logOut();
+          };
+
+}]);
+
+restaurantApp.controller('MenuController',
+     ['$rootscope', '$scope', '$http', '$location',
+     function ($rootscope, $scope, $http, $location) {
+
+          $scope.headingCaption = 'Menu';
+}]);
+
+/*
+
+     EOF
+
+
+*/

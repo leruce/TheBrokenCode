@@ -3,10 +3,7 @@
 /* App Module */
 
 var restaurantApp = angular.module('restaurantApp',
-     [
-          'ngRoute',
-          'restaurantController'
-     ])
+     ['ngRoute',])
 
      .config(function ($routeProvider) {
           $routeProvider
@@ -16,15 +13,31 @@ var restaurantApp = angular.module('restaurantApp',
                     controller: 'MainController'
                })
                //The menu page
+               .when('/login', {
+                    templateUrl: 'Views/account/login.html',
+                    controller: 'LoginController'
+               })
+
+               //The menu page
                .when('/menu', {
                     templateUrl: 'Views/Menu/menu.html',
                     controller: 'MenuController'
                })
-
                //Go to home if no route found
                .otherwise({ 
                     redirectTo: '/'
                });
          
-     }); //end .config
+     }) //end .config
 
+     .run(function ($rootScope, $location, ParseService) {
+          
+     })//end .run
+
+/*
+
+
+     EOF
+
+
+*/
