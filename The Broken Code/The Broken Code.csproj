@@ -68,7 +68,7 @@
   <ItemGroup>
     <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="packages.config" />
-    <Content Include="Scripts\account\loginController.js" />
+    <Content Include="Scripts\account\accountController.js" />
     <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
     <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
     <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
@@ -118,6 +118,7 @@
     <Content Include="Scripts\controller.js" />
     <Content Include="Scripts\ie10-viewport-bug-workaround.js" />
     <Content Include="Scripts\kitchen\kitchenController.js" />
+    <Content Include="Scripts\menu\menuController.js" />
     <Content Include="Scripts\parse\parseService.js" />
     <Content Include="Views\account\login.html" />
     <Content Include="Views\Home.html" />
@@ -135,7 +136,6 @@
   <ItemGroup>
     <Folder Include="Scripts\customer\" />
     <Folder Include="Scripts\manager\" />
-    <Folder Include="Scripts\menu\" />
     <Folder Include="Scripts\staff\" />
     <Folder Include="Views\customer\" />
     <Folder Include="Views\manager\" />

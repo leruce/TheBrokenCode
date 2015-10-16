@@ -1,19 +1,65 @@
-﻿<div >
-     <h1>
-     Login View
-     Did the scope work? {{test}}
-     </h1>
+﻿<div class="container">
+
+     <form class="form-signin" ng-submit="login()">
+          <h2 class="form-signin-heading">Please sign in</h2>
+          <!-- Ask for user to input their username -->
+          <label for="inputUsername" class="sr-only">Username</label>
+          <input type="text" id="inputUsername" class="form-control" 
+                 ng-model="login.username" placeholder="Username" autofocus>
+          <!-- Ask for user to input their password-->
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input type="password" id="inputPassword" class="form-control" 
+                 ng-model="login.password" placeholder="Password" >
+          <!-- Sign in button runs login function in the controller -->
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+          <!-- Register button opens up modal for registration -->
+          <button class="btn btn-lg btn-primary btn-block" type="button"
+                  data-toggle="modal" data-target="#registerModal">Register</button>
+     </form>
+
 </div>
 
-<form ng-submit="login()">
-     <fieldset>
-          <label>Username:</label>
-          <input type="text" class="span3" ng-model="login.username" required />
-          <label>Password:</label>
-          <input type="password" ng-model="login.password" required />
-          <input type="submit" value="Log in" class="btn btn-orange" />
-     </fieldset>
-</form>
+<!-- Register Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModal"  ng-submit="register">
+     <div class="modal-dialog" role="document">
+          <div class="modal-content">
+               <!-- Modal Header-->
+               <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Create an account</h4>
+               </div>
+               <!-- Modal Body -->
+               <div class="modal-body">
+                    <!-- Registration form -->
+                   <form class="form-signin">
+                        <!-- Ask for users real name -->
+                        <label for="inputName" class="sr-only">Name</label>
+                        <input type="text" id="inputUsername" class="form-control"
+                               ng-model="login.name" placeholder="Name" autofocus>
+                        <!-- Ask user in input their username -->
+                        <label for="inputUsername" class="sr-only">Username</label>
+                        <input type="text" id="inputUsername" class="form-control"
+                               ng-model="login.username" placeholder="Username">
+                        <!-- Ask user to input a password -->
+                        <label for="inputPassword" class="sr-only">Password</label>
+                        <input type="password" id="inputPassword" class="form-control"
+                               ng-model="login.password" placeholder="Password">
+                        <!-- Ask user to input their birthday -->
+                        <label for="inputBirthday" class="sr-only">Birthday</label>
+                        <input type="date" id="inputPassword" class="form-control"
+                               ng-model="login.birthday">
+                        <!-- Ask user to input their email-->
+                   </form>
+               </div>
+               <!-- Modal footer with Cancel and Register buttons -->
+               <div class="modal-footer" >
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary" >Register</button>
+               </div>
+          </div>
+     </div>
+</div>
+
 
 <!--
 
