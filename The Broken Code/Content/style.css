@@ -1,3 +1,19 @@
-body{
+/* Our Custom CSS styles*/
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+     /* Padding for fixed navbar header */
      padding-top: 60px;
+     /* Margin bottom by footer height */
+     margin-bottom: 60px;
+}
+/* Sticky footer styles */
+footer {
+     /* Make sure it's always at the bottom*/
+     position: absolute;
+     bottom: 0;
+     /* Set the fixed height of the footer here */
+     height: 60px;
 }
