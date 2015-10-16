@@ -76,6 +76,9 @@
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <None Include=".bin\bower.cmd" />
+    <None Include=".bin\git.cmd" />
+    <None Include=".bin\node.cmd" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -114,9 +117,11 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\controller.js" />
     <Content Include="Scripts\ie10-viewport-bug-workaround.js" />
+    <Content Include="Scripts\kitchen\kitchenController.js" />
     <Content Include="Scripts\parse\parseService.js" />
     <Content Include="Views\account\login.html" />
     <Content Include="Views\Home.html" />
+    <Content Include="Views\kitchen\kitchen.html" />
     <Content Include="Views\menu\entrees.html" />
     <Content Include="Views\menu\appetizers.html" />
     <Content Include="Views\menu\drinks.html" />
@@ -129,12 +134,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Scripts\customer\" />
-    <Folder Include="Scripts\kitchen\" />
     <Folder Include="Scripts\manager\" />
     <Folder Include="Scripts\menu\" />
     <Folder Include="Scripts\staff\" />
     <Folder Include="Views\customer\" />
-    <Folder Include="Views\kitchen\" />
     <Folder Include="Views\manager\" />
   </ItemGroup>
   <PropertyGroup>

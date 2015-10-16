@@ -20,7 +20,7 @@ restaurantApp.controller('LoginController',
          }
 
          function loginUnsuccessful(user, error) {
-              alert("Error: " + error.message + " (" + error.code + ")");
+              Console.Log("Error: " + error.message + " (" + error.code + ")");
          }
 
          $scope.login = function () {

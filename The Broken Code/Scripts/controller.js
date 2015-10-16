@@ -31,8 +31,8 @@ restaurantApp.controller('MainController',
 }]);
 
 restaurantApp.controller('MenuController',
-     ['$rootscope', '$scope', '$http', '$location',
-     function ($rootscope, $scope, $http, $location) {
+     ['$rootScope', '$scope', '$http', '$location',
+     function ($rootScope, $scope, $http, $location) {
 
           $scope.headingCaption = 'Menu';
 }]);
