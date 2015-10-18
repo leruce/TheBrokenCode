@@ -18,8 +18,16 @@ restaurantApp.controller('AccountController',
           };
 
           $scope.register = function () {
-               console.log("fuck yeah");
-          }
+              console.log("hit_register");
+              var user = new Parse.User();
+              console.log("hit_register");
+              user.set("name", $scope.newuser.name);
+              user.set("username", $scope.newuser.username);
+              user.set("password", $scope.nerwuser.password);
+              user.set("email", $scope.newuser.email);
+              user.set("date", $scope.newuser.birthday);
+              console.log("fuck yeah");
+          };
 
           if ($rootScope.loggedIn) {
                     console.log("true");
