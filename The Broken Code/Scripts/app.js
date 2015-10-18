@@ -12,6 +12,12 @@ var restaurantApp = angular.module('restaurantApp',
                     templateUrl: 'Views/Home.html',
                     controller: 'MainController'
                })
+
+              //The tables page
+              .when('/tables', {
+                  templateUrl: 'Views/staff/tables.html',
+                  controller: 'MainController'
+              })
                //The menu page
                .when('/login', {
                     templateUrl: 'Views/account/login.html',

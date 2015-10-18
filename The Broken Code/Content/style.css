@@ -17,3 +17,12 @@ footer {
      /* Set the fixed height of the footer here */
      height: 60px;
 }
+
+.full-circle {
+ background-color: #f00;
+ border: 3px solid #333;
+ height: 150px;
+ width: 150px;
+ -moz-border-radius:75px;
+ -webkit-border-radius: 75px;
+}
