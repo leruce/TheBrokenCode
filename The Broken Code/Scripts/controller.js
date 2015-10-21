@@ -19,8 +19,10 @@ restaurantApp.controller('MainController',
           $rootScope.loggedIn = function () {
                console.log("hit logged in");
                if ($rootScope.currentUser === null) {
-                    return false;
+                    console.log("null");
+                    return false;    
                } else {
+                    console.log("user is " + $rootScope.currentUser);
                     return true;
                }
           };
