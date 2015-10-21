@@ -1,0 +1,16 @@
+{
+  "name": "The Broken Code",
+  "version": "0.0.0",
+  "main": "index.html",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "parse-angular-patch": "https://github.com/brandid/parse-angular-patch.git#~0.1.2"
+  }
+}

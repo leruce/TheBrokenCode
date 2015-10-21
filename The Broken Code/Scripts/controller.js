@@ -6,16 +6,18 @@ restaurantApp.controller('MainController',
      ['$scope', '$http', '$location', '$rootScope',
      function ($scope, $http, $location, $rootScope, ParseService) {
 
-          $scope.headingCaption = 'HOME';
-
           //Get the current user
-          $rootScope.currentUser = Parse.User.current();
-
+          $rootScope.currentUser = Parse.User.current({
+               //success:alert("Fuck yeah!"),
+               //error: alert("Error")
+          });
+          
           /*
           If there is there is not a user logged in
           then the current user is NULL
           */
           $rootScope.loggedIn = function () {
+               console.log("hit logged in");
                if ($rootScope.currentUser === null) {
                     return false;
                } else {
@@ -23,7 +25,8 @@ restaurantApp.controller('MainController',
                }
           };
 
-          $scope.logout = function () {
+          $rootScope.logout = function () {
+               console.log("hit logout");
                $rootScope.currentUser = null;
                Parse.User.logOut();
           };
@@ -31,8 +34,8 @@ restaurantApp.controller('MainController',
 }]);
 
 restaurantApp.controller('MenuController',
-     ['$rootscope', '$scope', '$http', '$location',
-     function ($rootscope, $scope, $http, $location) {
+     ['$rootScope', '$scope', '$http', '$location',
+     function ($rootScope, $scope, $http, $location) {
 
           $scope.headingCaption = 'Menu';
 }]);

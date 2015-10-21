@@ -13,15 +13,25 @@ var restaurantApp = angular.module('restaurantApp',
                     controller: 'MainController'
                })
 
+
               //The tables page
               .when('/tables', {
                   templateUrl: 'Views/staff/tables.html',
                   controller: 'MainController'
               })
                //The menu page
+
+               //The login page
+
                .when('/login', {
                     templateUrl: 'Views/account/login.html',
-                    controller: 'LoginController'
+                    controller: 'AccountController'
+               })
+
+               //The register page
+               .when('/register', {
+                    templateUrl: 'Views/account/register.html',
+                    controller: 'AccountController'
                })
 
                //The menu page
@@ -29,6 +39,11 @@ var restaurantApp = angular.module('restaurantApp',
                     templateUrl: 'Views/Menu/menu.html',
                     controller: 'MenuController'
                })
+              //The kitchen page
+               .when('/kitchen', {
+                  templateUrl: 'Views/kitchen/kitchen.html',
+                  controller: 'KitchenController'
+              })
                //Go to home if no route found
                .otherwise({ 
                     redirectTo: '/'
