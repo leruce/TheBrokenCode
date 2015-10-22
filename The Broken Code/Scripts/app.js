@@ -33,7 +33,19 @@ var restaurantApp = angular.module('restaurantApp',
                .when('/kitchen', {
                   templateUrl: 'Views/kitchen/kitchen.html',
                   controller: 'KitchenController'
-              })
+               })
+               .when('/drinks', {
+                   templateUrl: 'Views/menu/drinks.html',
+                   controller: 'DrinkMenuController'
+               })
+               .when('/entrees', {
+                   templateUrl: 'Views/menu/entrees.html',
+                   controller: 'EntreeMenuController'
+               })
+               .when('/appetizers', {
+                   templateUrl: 'Views/menu/appetizers.html',
+                   controller: 'AppetizerMenuController'
+               })
                //Go to home if no route found
                .otherwise({ 
                     redirectTo: '/'
