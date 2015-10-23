@@ -1,171 +1,38 @@
-﻿<!DOCTYPE HTML>
+﻿<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3" ng-repeat="table in Table">
+            <p>
+                {{table.ID}}
+            </p>
 
+            <div class="container">
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">Table {{table.ID}}{</button>
 
-<div class="row" align="center">
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
 
-    <div class="col-md-3" align="center">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Table {{table.ID}}</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>Status: {{table.Status}}</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
 
-        <p class="full-circle" ng-click="">       
-         </p>
+                    </div>
+                </div>
 
-        <p>
-            <button type="button" class="btn btn-lg btn-link" align="center">
-                View Table 1
-            </button>
-        </p>
-        
+            </div>
+
+        </div>
     </div>
-
-    <div class="col-md-3" align="center">
-
-        <p class="full-circle">
-        </p>
-
-        <p>
-            <button type="button" class="btn btn-lg btn-link" align="center">
-                View Table 2
-            </button>
-        </p>
-
-    </div>
-
-    <div class="col-md-3" align="center">
-
-        <p class="full-circle">
-        </p>
-
-        <p>
-            <button type="button" class="btn btn-lg btn-link" align="center">
-                View Table 3
-            </button>
-        </p>
-
-    </div>
-
-    <div class="col-md-3" align="center">
-
-        <p class="full-circle">
-        </p>
-
-        <p>
-            <button type="button" class="btn btn-lg btn-link" align="center">
-                View Table 4
-            </button>
-        </p>
-
-    </div>
-
 </div>
 
-<div class="row" align="center">
-
-    <div class="col-md-3" align="center">
-
-        <p class="full-circle">
-        </p>
-
-        <p>
-            <button type="button" class="btn btn-lg btn-link" align="center">
-                View Table 5
-            </button>
-        </p>
-
-    </div>
-
-    <div class="col-md-3" align="center">
-
-        <p class="full-circle">
-        </p>
-
-        <p>
-            <button type="button" class="btn btn-lg btn-link" align="center">
-                View Table 6
-            </button>
-        </p>
-
-    </div>
-
-    <div class="col-md-3" align="center">
-
-        <p class="full-circle">
-        </p>
-
-        <p>
-            <button type="button" class="btn btn-lg btn-link" align="center">
-                View Table 7
-            </button>
-        </p>
-    7
-    </div>
-
-    <div class="col-md-3" align="center">
-
-        <p class="full-circle">
-        </p>
-
-        <p>
-            <button type="button" class="btn btn-lg btn-link" align="center">
-                View Table 8
-            </button>
-        </p>
-
-    </div>
-
-</div>
-
-<div class="row" align="center">
-
-    <div class="col-md-3" align="center">
-
-        <p class="full-circle">
-        </p>
-
-        <p>
-            <button type="button" class="btn btn-lg btn-link" align="center">
-                View Table 9
-            </button>
-        </p>
-
-    </div>
-
-    <div class="col-md-3" align="center">
-
-        <p class="full-circle">
-        </p>
-
-        <p>
-            <button type="button" class="btn btn-lg btn-link" align="center">
-                View Table 10
-            </button>
-        </p>
-
-    </div>
-
-    <div class="col-md-3" align="center">
-
-        <p class="full-circle">
-        </p>
-
-        <p>
-            <button type="button" class="btn btn-lg btn-link" align="center">
-                View Table 11
-            </button>
-        </p>
-
-    </div>
-
-    <div class="col-md-3" align="center">
-
-        <p class="full-circle">
-        </p>
-
-        <p>
-            <button type="button" class="btn btn-lg btn-link" align="center">
-                View Table 12
-            </button>
-        </p>
-
-    </div>
-
-</div>
-  

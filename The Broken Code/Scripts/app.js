@@ -17,7 +17,7 @@ var restaurantApp = angular.module('restaurantApp',
               //The tables page
               .when('/tables', {
                   templateUrl: 'Views/staff/tables.html',
-                  controller: 'MainController'
+                  controller: 'TableController'
               })
                //The menu page
 

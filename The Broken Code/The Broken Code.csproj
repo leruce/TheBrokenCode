@@ -154,6 +154,7 @@
     <Content Include="Scripts\menu\menuController.js" />
     <Content Include="Scripts\menu\MenuService.js" />
     <Content Include="Scripts\parse\parseService.js" />
+    <Content Include="Scripts\staff\TableControler.js" />
     <Content Include="Views\account\login.html" />
     <Content Include="Views\Home.html" />
     <Content Include="Views\kitchen\kitchen.html" />
@@ -170,7 +171,6 @@
   <ItemGroup>
     <Folder Include="Scripts\customer\" />
     <Folder Include="Scripts\manager\" />
-    <Folder Include="Scripts\staff\" />
     <Folder Include="Views\customer\" />
     <Folder Include="Views\manager\" />
   </ItemGroup>
