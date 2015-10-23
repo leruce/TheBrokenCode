@@ -148,7 +148,11 @@
     <Content Include="Scripts\jquery-ui-1.11.4.js" />
     <Content Include="Scripts\jquery-ui-1.11.4.min.js" />
     <Content Include="Scripts\kitchen\kitchenController.js" />
+    <Content Include="Scripts\menu\AppetizersController.js" />
+    <Content Include="Scripts\menu\DrinksController.js" />
+    <Content Include="Scripts\menu\EntreesController.js" />
     <Content Include="Scripts\menu\menuController.js" />
+    <Content Include="Scripts\menu\MenuService.js" />
     <Content Include="Scripts\parse\parseService.js" />
     <Content Include="Views\account\login.html" />
     <Content Include="Views\Home.html" />
