@@ -1,13 +1,14 @@
 ﻿<div class="container-fluid">
     <div class="row">
         <div class="col-md-3" ng-repeat="table in Table">
-            <p>
-                {{table.ID}}
-            </p>
+            <p>&nbsp;</p>
+            <p class="full-circle"></p>
+           
+            <p>&nbsp;</p>
 
             <div class="container">
                 <!-- Trigger the modal with a button -->
-                <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">Table {{table.ID}}{</button>
+                <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">Table {{table.ID}}</button>
 
                 <!-- Modal -->
                 <div class="modal fade" id="myModal" role="dialog">
