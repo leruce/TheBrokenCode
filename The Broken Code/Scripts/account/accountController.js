@@ -26,7 +26,7 @@ restaurantApp.controller('AccountController',
                user.set("password", $scope.newuser.password);
                user.set("email", $scope.newuser.email);
 
-               //user.set("date", $scope.newuser.birthday);
+               //user.set("Birthday", $scope.newuser.birthday);
                console.log("fuck yeah");
 
                user.signUp(null, {

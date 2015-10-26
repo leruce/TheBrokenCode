@@ -158,6 +158,7 @@
     <Content Include="Views\account\login.html" />
     <Content Include="Views\Home.html" />
     <Content Include="Views\kitchen\kitchen.html" />
+    <Content Include="Views\menu\desserts.html" />
     <Content Include="Views\menu\entrees.html" />
     <Content Include="Views\menu\appetizers.html" />
     <Content Include="Views\menu\drinks.html" />
