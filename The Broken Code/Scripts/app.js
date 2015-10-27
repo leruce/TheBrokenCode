@@ -56,6 +56,12 @@ var restaurantApp = angular.module('restaurantApp',
                    templateUrl: 'Views/menu/appetizers.html',
                    controller: 'AppetizerMenuController'
                })
+              .when('/tictactoe', {
+                  templateUrl: 'Views/game/TicTacToe/TicTacToe.html'
+              })
+              .when('/connectfour', {
+                  templateUrl: 'Views/game/ConnectFour/ConnectFour.html'
+              })
                //Go to home if no route found
                .otherwise({ 
                     redirectTo: '/'
