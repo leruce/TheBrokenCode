@@ -173,6 +173,7 @@
     <Content Include="Views\menu\appetizers.html" />
     <Content Include="Views\menu\drinks.html" />
     <Content Include="Views\menu\menu.html" />
+    <Content Include="Views\payment\survey.html" />
     <Content Include="Views\staff\helppage.html" />
     <Content Include="Views\staff\PageR.html" />
     <Content Include="Views\staff\tables.html" />
