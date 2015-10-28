@@ -1,0 +1,35 @@
+﻿<div class="col-md-8" align="center">
+     <html ng-app="myNoteApp">
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+     <body>
+
+          <div ng-controller="myNoteCtrl">
+
+               <h2>Submit your help request here</h2>
+
+               <p><textarea ng-model="message" cols=30" rows="30"></textarea></p>
+
+               <p>
+                    <button ng-click="save()">Save</button>
+                    <button ng-click="clear()">Clear</button>
+               </p>
+
+               <p>Number of characters left: <span ng-bind="left()"></span></p>
+
+          </div>
+
+          <script src="helppage.js"></script>
+          <script src="helppage.js"></script>
+
+     </body>
+</html>
+     
+     
+      
+</div>
+
+
+
+
+
+

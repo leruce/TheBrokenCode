@@ -13,7 +13,17 @@ var restaurantApp = angular.module('restaurantApp',
                     controller: 'MainController'
                })
 
+               //The refill page
+              .when('/PageR', {
+                   templateUrl: 'Views/staff/PageR.html',
+                   controller: 'TableController'
+              })
 
+              //The help page
+              .when('/helppage', {
+                   templateUrl: 'Views/staff/helppage.html',
+                   controller: 'TableController'
+              })
               //The tables page
               .when('/tables', {
                   templateUrl: 'Views/staff/tables.html',

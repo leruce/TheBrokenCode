@@ -43,6 +43,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -154,6 +162,8 @@
     <Content Include="Scripts\menu\menuController.js" />
     <Content Include="Scripts\menu\MenuService.js" />
     <Content Include="Scripts\parse\parseService.js" />
+    <Content Include="Scripts\staff\helppage.js" />
+    <Content Include="Scripts\staff\PageRController.js" />
     <Content Include="Scripts\staff\TableControler.js" />
     <Content Include="Views\account\login.html" />
     <Content Include="Views\Home.html" />
@@ -163,6 +173,8 @@
     <Content Include="Views\menu\appetizers.html" />
     <Content Include="Views\menu\drinks.html" />
     <Content Include="Views\menu\menu.html" />
+    <Content Include="Views\staff\helppage.html" />
+    <Content Include="Views\staff\PageR.html" />
     <Content Include="Views\staff\tables.html" />
     <Content Include="Web.config" />
   </ItemGroup>
