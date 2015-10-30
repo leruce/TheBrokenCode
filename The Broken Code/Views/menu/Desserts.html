@@ -1,1 +1,52 @@
+﻿﻿<div class="container-fluid">
+     <div class="row">
+          <div class="col-md-4 top-buffer" ng-repeat="menuDesserts in MenuDesserts">
+               <h3>
+                    {{menuDesserts.FoodName}}
+               </h3>
+               <!--Need to Show the Food Pic. We need to pull from Parse. -->
+               <img class="img-thumbnail image-format" alt="Item Image" src="{{menuDesserts.FoodImg}}" />
+               <p class="description">
+                    {{menuDesserts.Description}}
+               </p>
+               <!-- Add Item to Order -->
+               <!-- TODO: Implement this -->
+               <button type="button" class="btn btn-default btn-sm"> Order </button>
+               <!-- Trigger the modal with a button -->
+               <button type="button" class="btn btn-default btn-sm"
+                       data-toggle="modal" data-target="#myModal">
+                    Nutrition Info
+               </button>
+          </div>
+     </div>
+</div>
+
+
+<!-- Entrees Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+     <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+               <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Nutrition Info</h4>
+               </div>
+               <div class="modal-body">
+                    <p>Calories: {{Calories}}</p>
+               </div>
+               <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               </div>
+          </div>
+
+     </div>
+</div>
+
+
+<!--
+
+     EOF
+
+-->
 ﻿

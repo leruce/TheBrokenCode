@@ -157,8 +157,10 @@
     <Content Include="Scripts\jquery-ui-1.11.4.min.js" />
     <Content Include="Scripts\kitchen\kitchenController.js" />
     <Content Include="Scripts\menu\AppetizersController.js" />
+    <Content Include="Scripts\menu\DessertsController.js" />
     <Content Include="Scripts\menu\DrinksController.js" />
     <Content Include="Scripts\menu\EntreesController.js" />
+    <Content Include="Scripts\menu\KidsController.js" />
     <Content Include="Scripts\menu\menuController.js" />
     <Content Include="Scripts\menu\MenuService.js" />
     <Content Include="Scripts\parse\parseService.js" />
@@ -172,6 +174,7 @@
     <Content Include="Views\menu\entrees.html" />
     <Content Include="Views\menu\appetizers.html" />
     <Content Include="Views\menu\drinks.html" />
+    <Content Include="Views\menu\kids.html" />
     <Content Include="Views\menu\menu.html" />
     <Content Include="Views\payment\survey.html" />
     <Content Include="Views\staff\helppage.html" />

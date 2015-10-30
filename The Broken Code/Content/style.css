@@ -19,10 +19,23 @@ footer {
 }
 
 .full-circle {
- background-color: #f00;
- border: 3px solid #333;
- height: 150px;
- width: 150px;
- -moz-border-radius:75px;
- -webkit-border-radius: 75px;
+      background-color: #f00;
+      border: 3px solid #333;
+      height: 150px;
+      width: 150px;
+      -moz-border-radius:75px;
+      -webkit-border-radius: 75px;
+}
+
+.description{
+     height:60px;
+}
+
+.top-buffer { 
+     margin-top:20px; 
+}
+
+.image-format{
+     height: 250px;
+     width: auto;
 }

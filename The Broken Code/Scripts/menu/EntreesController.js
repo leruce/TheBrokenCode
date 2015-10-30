@@ -1,4 +1,4 @@
-﻿
+﻿'use strict';
 
 restaurantApp.controller('EntreeMenuController',
      ['$rootScope', '$scope', '$http', 'ParseService', '$location', '$q',
@@ -21,9 +21,8 @@ restaurantApp.controller('EntreeMenuController',
                          NutritionInfo: result.get("NutritionInfo"),
                          Price: result.get("Price"),
                          FoodID: result.get("FoodID"),
-                         FoodImg: result.get("ItemPhoto")
+                         FoodImg: result.get("ItemPhoto").url(),
                      });
-                     //alert("Food: " + result.get("Name"));
                  });
              },
              error: function (error) {
