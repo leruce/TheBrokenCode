@@ -1,22 +1,20 @@
 ﻿﻿<div class="container-fluid">
     <div class="row">
-        <div class="col-md-4" ng-repeat="menuAppetizers in MenuAppetizers">
-          <p class="description">
+        <div class="col-md-4 top-buffer" ng-repeat="menuAppetizers in MenuAppetizers">
+          <h3>
                {{menuAppetizers.FoodName}}
+          </h3>
+          <!--Display Image from Database -->
+          <img class="img-thumbnail image-format" alt="Item Image" src="{{menuAppetizers.FoodImg}}" />
+          <p class="description">
+               {{menuAppetizers.Description}}
           </p>
-          <!--Need to Show the Food Pic. We need to pull from Parse. -->
-          <img class="img-thumbnail" alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/" />
-
-
-            <p>
-                {{menuAppetizers.Description}}
-            </p>
-
+          <!-- Add Item to Order -->
+          <!-- TODO: Implement this -->
           <button type="button" class="btn btn-default btn-sm">Order</button>
           <!-- Trigger the modal with a button -->
           <button type="button" class="btn btn-default btn-sm" 
-                  data-toggle="modal" data-target="#myModal">Nutrition Info</button>
-
+               data-toggle="modal" data-target="#myModal">Nutrition Info</button>
         </div>
     </div>
 </div>
@@ -24,7 +22,6 @@
 <!-- Nutrion Info Modal -->
 <div class="modal fade" id="myModal" role="dialog">
      <div class="modal-dialog">
-
           <!-- Modal content-->
           <div class="modal-content">
                <div class="modal-header">
@@ -38,7 +35,6 @@
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                </div>
           </div>
-
      </div>
 </div>
 

@@ -60,24 +60,38 @@ var restaurantApp = angular.module('restaurantApp',
                   templateUrl: 'Views/kitchen/kitchen.html',
                   controller: 'KitchenController'
                })
+               //The drinks page
                .when('/drinks', {
                    templateUrl: 'Views/menu/drinks.html',
                    controller: 'DrinkMenuController'
                })
+               //The entress page
                .when('/entrees', {
                    templateUrl: 'Views/menu/entrees.html',
                    controller: 'EntreeMenuController'
                })
+               //The appetizers page
                .when('/appetizers', {
                    templateUrl: 'Views/menu/appetizers.html',
                    controller: 'AppetizerMenuController'
                })
+
               .when('/tictactoe', {
                   templateUrl: 'Views/game/TicTacToe/TicTacToe.html'
               })
               .when('/connectfour', {
                   templateUrl: 'Views/game/ConnectFour/ConnectFour.html'
               })
+               //The desserts page
+               .when('/desserts', {
+                    templateUrl: 'Views/menu/desserts.html',
+                    controller: 'DessertMenuController'
+               })
+               //The appetizers page
+               .when('/kids', {
+                    templateUrl: 'Views/menu/kids.html',
+                    controller: 'KidsMenuController'
+               })
                //Go to home if no route found
                .otherwise({ 
                     redirectTo: '/'

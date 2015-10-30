@@ -21,12 +21,12 @@
 //1 = Player 1
 //2 = Player 2
 
-var C4Grid = [[0, 0, 0, 0, 0, 0, 0],
+var C4Grid = [[0, 1, 0, 0, 0, 0, 0],
+            [0, 0, 1, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0]];
+            [0, 0, 1, 2, 0, 0, 0]];
 
 var C4GlobalCanvas;
 var C4GlobalDrawBoard;
@@ -52,23 +52,11 @@ function C4createBoard(canvas) {
 
     //Draw the 2 lines/ hashtag
     for (var r = 0; r < C4BoardWidth; r += C4SqWidth) {
-        if (r == 0) {
-            continue;
-        }
-        if (r == 700) {
-            continue;
-        }
         C4GlobalBoardConext.moveTo(.5 + r, 0);
         C4GlobalBoardConext.lineTo(.5 + r, C4BoardHeight);
     }
 
     for (var c = 0; c < C4BoardHeight; c += C4SqHeight) {
-        if (c == 0) {
-            continue;
-        }
-        if (c == 600) {
-            continue;
-        }
         C4GlobalBoardConext.moveTo(0, .5 + c);
         C4GlobalBoardConext.lineTo(C4BoardWidth, .5 + c);
     }
@@ -78,25 +66,40 @@ function C4createBoard(canvas) {
 
     //Need to fill in the board
     //use the  grid we have to draw it in
-    for (var r = 0; r < row; r++) {
-        for (var c = 0; c < col; c++) {
+    for (var r = 0; r < C4row; r++) {
+        for (var c = 0; c < C4col; c++) {
             //This  compare  coord
-            var C4Slot = Grid[r][c];
+            var C4Slot = C4Grid[r][c];
+
+            //console.log("Working" + C4Slot);
             if (C4Slot == 0) {
                 continue;
             }
             else if (C4Slot == 1) {
-                C4GlobalBoardConext.font = "Bold 50px sans-serif";
-                C4GlobalBoardConext.fillText("X", r * C4SqHeight, c * C4SqWidth);
+                console.log("Row Num: " + r + " Col Num: " + c + " C4Grid: " + C4Grid[r][c]);
+                C4GlobalBoardConext.font = "Bold 100px sans-serif";
+                C4GlobalBoardConext.fillText("O", r * C4SqHeight + 100, c * C4SqWidth);
+                console.log("Located Heights: " + r * C4SqHeight + "Located Width: " + c * C4SqWidth);
                 //Draw an X
             }
             else if (C4Slot == 2) {
                 //Draw an O
-                C4GlobalBoardConext.font = "Bold 50px sans-serif";
+                C4GlobalBoardConext.font = "Bold 100px sans-serif";
                 C4GlobalBoardConext.fillText("O", r * C4SqHeight, c * C4SqWidth);
             }
         }
     }
     //Now we know we can always keep drawing over the current stuff
     //Next coruse of action would be Figure out how to click the damn canvas
+}
+
+function C4GameStart(canvas) {
+    C4GlobalCanvas = canvas;
+    C4GlobalCanvas.width = C4BoardWidth;
+    C4GlobalCanvas.height = C4BoardHeight;
+    //C4GlobalCanvas.addEventListener("click", C4GameClick, false);
+    C4GlobalBoardConext = C4GlobalCanvas.getContext("2d")
+    C4GlobalPlayer = 0;
+    C4createBoard(C4GlobalCanvas);
+
 }
