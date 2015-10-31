@@ -75,12 +75,17 @@ var restaurantApp = angular.module('restaurantApp',
                    templateUrl: 'Views/menu/appetizers.html',
                    controller: 'AppetizerMenuController'
                })
-
+              .when('/game', {
+                  templateUrl: 'Views/game/GameList.html'
+              })
               .when('/tictactoe', {
                   templateUrl: 'Views/game/TicTacToe/TicTacToe.html'
               })
               .when('/connectfour', {
                   templateUrl: 'Views/game/ConnectFour/ConnectFour.html'
+              })
+              .when('/LotteryGame', {
+                  templateUrl: 'Views/game/Lottery.html'
               })
                //The desserts page
                .when('/desserts', {

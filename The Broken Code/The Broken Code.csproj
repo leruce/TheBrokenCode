@@ -124,6 +124,7 @@
     <Content Include="Scripts\angular-route.min.js.map" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\game\ConnectFour\ConnectFour.js" />
+    <Content Include="Scripts\game\Lottery.js" />
     <Content Include="Scripts\game\TicTacToe\TicTacToe.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
@@ -158,6 +159,7 @@
     <Content Include="Scripts\jquery-ui-1.11.4.js" />
     <Content Include="Scripts\jquery-ui-1.11.4.min.js" />
     <Content Include="Scripts\kitchen\kitchenController.js" />
+    <Content Include="Scripts\manager\ManagerController.js" />
     <Content Include="Scripts\menu\AppetizersController.js" />
     <Content Include="Scripts\menu\DessertsController.js" />
     <Content Include="Scripts\menu\DrinksController.js" />
@@ -171,6 +173,8 @@
     <Content Include="Scripts\staff\TableControler.js" />
     <Content Include="Views\account\login.html" />
     <Content Include="Views\game\ConnectFour\ConnectFour.html" />
+    <Content Include="Views\game\GameList.html" />
+    <Content Include="Views\game\Lottery.html" />
     <Content Include="Views\game\TicTacToe\TicTacToe.html" />
     <Content Include="Views\Home.html" />
     <Content Include="Views\kitchen\kitchen.html" />
@@ -182,6 +186,7 @@
     <Content Include="Views\menu\menu.html" />
     <Content Include="Views\payment\survey.html" />
     <Content Include="Views\staff\helppage.html" />
+    <Content Include="Views\manager\manager.html" />
     <Content Include="Views\staff\PageR.html" />
     <Content Include="Views\staff\tables.html" />
     <Content Include="Web.config" />
@@ -191,9 +196,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Scripts\customer\" />
-    <Folder Include="Scripts\manager\" />
     <Folder Include="Views\customer\" />
-    <Folder Include="Views\manager\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
