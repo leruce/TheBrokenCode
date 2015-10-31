@@ -13,6 +13,7 @@ var restaurantApp = angular.module('restaurantApp',
                     controller: 'MainController'
                })
 
+
                //The refill page
               .when('/PageR', {
                    templateUrl: 'Views/staff/PageR.html',
@@ -27,8 +28,15 @@ var restaurantApp = angular.module('restaurantApp',
 
               //The help page
               .when('/helppage', {
-                   templateUrl: 'Views/staff/helppage.html',
-                   controller: 'TableController'
+                  templateUrl: 'Views/staff/helppage.html',
+                  controller: 'TableController'
+              })
+
+              //The manager page
+              .when('/manager', {
+                  templateUrl: 'Views/manager/manager.html',
+                  controller: 'ManagerController'
+
               })
               //The tables page
               .when('/tables', {
