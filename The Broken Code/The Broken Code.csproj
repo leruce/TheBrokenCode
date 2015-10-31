@@ -124,7 +124,7 @@
     <Content Include="Scripts\angular-route.min.js.map" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\game\ConnectFour\ConnectFour.js" />
-    <Content Include="Scripts\game\TicTacToe\TicTacToeCode.js" />
+    <Content Include="Scripts\game\TicTacToe\TicTacToe.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />

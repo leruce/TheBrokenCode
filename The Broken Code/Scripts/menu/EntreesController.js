@@ -21,7 +21,7 @@ restaurantApp.controller('EntreeMenuController',
                          NutritionInfo: result.get("NutritionInfo"),
                          Price: result.get("Price"),
                          FoodID: result.get("FoodID"),
-                         FoodImg: result.get("ItemPhoto").url(),
+                         FoodImg: result.get("ItemPhoto").url()
                      });
                  });
              },
