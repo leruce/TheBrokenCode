@@ -1,13 +1,13 @@
-﻿window.name = 0;
+window.name = 0;
 //Cheap and lazy method for lottery
 function LotteryPlay() {
     var x = 3;
     var currentDate = new Date();
     currentDate.setMonth(currentDate.getMonth() + x);
     console.log(currentDate);
-    if (window.name >= 2) {
+    if (window.name >= 2) 
+    {
         alert("You have already played 2 games!");
-        
     }
     else {
         var randomNum = Math.floor(Math.random() * 5) + 1; //This pick between 1 to 5, we will just statically set 3 as the number we want_
