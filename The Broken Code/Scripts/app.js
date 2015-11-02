@@ -3,7 +3,7 @@
 /* App Module */
 
 var restaurantApp = angular.module('restaurantApp',
-     ['ngRoute',])
+     ['ngRoute', "ui.bootstrap"])
 
      .config(function ($routeProvider) {
           $routeProvider

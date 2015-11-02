@@ -1,8 +1,14 @@
 ﻿'use strict';
 
+restaurantApp.controller('ModalInstanceCtrl', ['$scope', function ($scope, menuAppetizers) {
+    $scope.menuAppetizers = menuAppetizers;
+}]);
+
+
+
 restaurantApp.controller('AppetizerMenuController',
-     ['$rootScope', '$scope', '$http', 'ParseService', '$location', '$q',
-     function ($rootScope, $scope, $http, $location, ParseService, $q) {
+     ['$rootScope', '$scope', '$http', 'ParseService', '$location', '$q', '$uibModal',
+     function ($rootScope, $scope, $http, ParseService, $location, $q, $uibModal) {
          var menuItem = [];
          var MenuDfd = $q.defer();
          var Menu = Parse.Object.extend("Menu");
@@ -46,6 +52,19 @@ restaurantApp.controller('AppetizerMenuController',
              //Balh
          });
          $scope.headingCaption = 'Menu';
+         $scope.open = function (_menuAppetizer) {
+             //console.log("We get into the modal open");
+             var modalInstance = $uibModal.open({
+                 templateUrl: "Views/menu/myModal.html",
+                 controller: 'ModalInstanceCtrl',
+                 resolve: {
+                     MenuAppetizers: function () {
+                         console.log("We managed to get into the open" + " " + _menuAppetizer.FoodName);
+                         return _menuAppetizer;
+                     }
+                     }
+             });
+         }
      }]);
 
 /*
