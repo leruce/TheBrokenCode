@@ -13,18 +13,17 @@ var restaurantApp = angular.module('restaurantApp',
                     controller: 'MainController'
                })
                //The refill page
-              .when('/PageR', {
+              .when('/refill', {
                    templateUrl: 'Views/staff/PageR.html',
                    controller: 'TableController'
-              })
-              
+              })             
               //The payment page
               .when('/payment', {
                   templateUrl: 'Views/payment/survey.html',
                   controller: 'TableController'
               })
               //The help page
-              .when('/helppage', {
+              .when('/help', {
                    templateUrl: 'Views/staff/helppage.html',
                    controller: 'TableController'
               })
@@ -33,16 +32,6 @@ var restaurantApp = angular.module('restaurantApp',
                   templateUrl: 'Views/staff/tables.html',
                   controller: 'TableController'
               })
-               //The login page
-               .when('/login', {
-                    templateUrl: 'Views/account/login.html',
-                    controller: 'AccountController'
-               })
-               //The register page
-               .when('/register', {
-                    templateUrl: 'Views/account/register.html',
-                    controller: 'AccountController'
-               })
                //The menu page
                .when('/menu', {
                     templateUrl: 'Views/Menu/menu.html',

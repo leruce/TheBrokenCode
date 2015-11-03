@@ -44,6 +44,11 @@ restaurantApp.controller('MainController',
                })
           };
 
+          //Called when user wants to continue as guest
+          $scope.guestLogin = function () {
+
+          }
+
           //Welcome user and redirect them to the main page
           function loginSuccessful(user) {
                $rootScope.$apply(function () {
