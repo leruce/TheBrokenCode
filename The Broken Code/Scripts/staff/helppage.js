@@ -11,8 +11,8 @@ function HelpF()
                     alert("Thank you! Your request has been sent!");
                 },
                 error: function (help, error) {
-                    //alert("Failed to create!");
+                  //  alert("Failed to create!");
                 }
             });
-        }
+}
   
