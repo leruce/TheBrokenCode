@@ -1,5 +1,5 @@
 <!-- Showcased Menu Item -->
-<div class="row">
+<div class="row" ng-show="currentUser">
     <div class="col-md-12">
         
 			<div class="carousel slide" id="carousel-209621">
@@ -39,8 +39,8 @@
     </div>
 </div>
 
-<!-- Items Pictures with "order now" link-->
-<div class="row">
+<!-- Menu Items with links to show them-->
+<div class="row" ng-show="currentUser">
 
     <div class="col-md-4" align="center">
         <h2 align="center">
@@ -72,19 +72,104 @@
                <a href="#/desserts" class="btn btn-info" role="button" align= "center"> View Desserts</a>
           </p>
     </div>
+
 </div>
-    <div class="row" align="center">
-        <div class="col-md-12" align="center">
-            <h2 align="center">
-                Drinks
-            </h2>
-             <img class="img-thumbnail image-format" src="https://41.media.tumblr.com/21600c59c28104dc8b32a90a3da30cb8/tumblr_nrj06b588y1sx5lcto1_500.jpg">
-            <p>
-               <a href="#/drinks" class="btn btn-info" role="button" align= "center"> View Drinks</a>
+
+<div class="row" align="center" ng-show="currentUser">
+     <div class="col-md-12" align="center">
+          <h2 align="center">
+               Drinks
+          </h2>
+          <img class="img-thumbnail image-format" src="https://41.media.tumblr.com/21600c59c28104dc8b32a90a3da30cb8/tumblr_nrj06b588y1sx5lcto1_500.jpg">
+          <p>
+          <a href="#/drinks" class="btn btn-info" role="button" align= "center"> View Drinks</a>
           </p>
-        </div>
+     </div>  
+</div>
+
+
+<!--
     
-    </div>
+     Everything above shows up when there is a user logged in
+
+     Everything below shows up when there is NOT a user logged in
+     This is done through the ng-show and ng-hide tags
+
+-->
+
+<!-- Login Form -->
+<div class="container" ng-hide="currentUser">
+
+     <form class="form-signin" ng-submit="login()">
+          <h2 class="form-signin-heading">Please sign in</h2>
+          <!-- Ask for user to input their username -->
+          <label for="inputUsername" class="sr-only">Username</label>
+          <input type="text" id="inputUsername" class="form-control"
+                 ng-model="login.username" placeholder="Username" autofocus>
+          <!-- Ask for user to input their password-->
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input type="password" id="inputPassword" class="form-control"
+                 ng-model="login.password" placeholder="Password">
+          <!-- Sign in button runs login function in the controller -->
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+          <!-- Register button opens up modal for registration -->
+          <button class="btn btn-lg btn-primary btn-block" type="button"
+                  data-toggle="modal" data-target="#registerModal">
+               Register
+          </button>
+     </form>
+
+</div>
+
+<!-- Register Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" 
+     role="dialog" aria-labelledby="registerModal" ng-hide="currentUser">
+    
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+               <!-- Modal Header-->
+               <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Create an account</h4>
+               </div>
+               <!-- Modal Body -->
+               <div class="modal-body">
+                    <!-- Registration form -->
+                    <form class="form-signin">
+                         <!-- Ask for users real name -->
+                         <label for="inputName" class="sr-only">Name</label>
+                         <input type="text" id="inputName" class="form-control"
+                                ng-model="newuser.name" placeholder="Name" autofocus>
+                         <!-- Ask user in input their username -->
+                         <label for="inputUsername" class="sr-only">Username</label>
+                         <input type="text" id="inputUsername" class="form-control"
+                                ng-model="newuser.username" placeholder="Username">
+                         <!-- Ask user to input a password -->
+                         <label for="inputPassword" class="sr-only">Password</label>
+                         <input type="password" id="inputPassword" class="form-control"
+                                ng-model="newuser.password" placeholder="Password">
+                         <!-- Ask user to input their birthday -->
+
+                         <!-- Ask user to input their email-->
+                         <label for="inputEmail" class="sr-only">Email Address</label>
+                         <input type="email" id="inputEmail" class="form-control"
+                                ng-model="newuser.email" placeholder="User@email.com">
+               </form>
+          </div>
+          <!-- Modal footer with Cancel and Register buttons -->
+          <div class="modal-footer">
+               <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+               <button type="button" class="btn btn-primary" ng-click="register()">Register</button>
+          </div>
+     </div>
+</div>
+</div>
+
+
+<div class="container" ng-hide="currentUser">
+
+</div>
+
 
 <!--
 

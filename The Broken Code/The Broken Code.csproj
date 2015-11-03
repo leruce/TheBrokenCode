@@ -109,6 +109,8 @@
     <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="packages.config" />
+    <Content Include="Resources\Binary.png" />
+    <Content Include="Resources\Logo.ico" />
     <Content Include="Scripts\account\accountController.js" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
@@ -170,13 +172,13 @@
     <Content Include="Scripts\menu\DrinksController.js" />
     <Content Include="Scripts\menu\EntreesController.js" />
     <Content Include="Scripts\menu\KidsController.js" />
-    <Content Include="Scripts\menu\menuController.js" />
+    <Content Include="Scripts\menu\MenuController.js" />
     <Content Include="Scripts\menu\MenuService.js" />
-    <Content Include="Scripts\menu\TestMenuController.js" />
     <Content Include="Scripts\parse\parseService.js" />
     <Content Include="Scripts\staff\helppage.js" />
     <Content Include="Scripts\staff\PageRController.js" />
     <Content Include="Scripts\staff\TableControler.js" />
+    <Content Include="Scripts\summary\SummaryController.js" />
     <Content Include="Scripts\ui-bootstrap-tpls-0.14.3.min.js" />
     <Content Include="Views\account\login.html" />
     <Content Include="Views\game\ConnectFour\ConnectFour.html" />
@@ -191,8 +193,6 @@
     <Content Include="Views\menu\drinks.html" />
     <Content Include="Views\menu\kids.html" />
     <Content Include="Views\menu\menu.html" />
-    <Content Include="Views\menu\myModal.html" />
-    <Content Include="Views\menu\TestMenu.html" />
     <Content Include="Views\payment\survey.html" />
     <Content Include="Views\staff\helppage.html" />
     <Content Include="Views\manager\manager.html" />

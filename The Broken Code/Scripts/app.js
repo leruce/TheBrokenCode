@@ -12,7 +12,6 @@ var restaurantApp = angular.module('restaurantApp',
                     templateUrl: 'Views/Home.html',
                     controller: 'MainController'
                })
-
                //The refill page
               .when('/PageR', {
                    templateUrl: 'Views/staff/PageR.html',
@@ -24,7 +23,6 @@ var restaurantApp = angular.module('restaurantApp',
                   templateUrl: 'Views/payment/survey.html',
                   controller: 'TableController'
               })
-
               //The help page
               .when('/helppage', {
                    templateUrl: 'Views/staff/helppage.html',
@@ -35,21 +33,16 @@ var restaurantApp = angular.module('restaurantApp',
                   templateUrl: 'Views/staff/tables.html',
                   controller: 'TableController'
               })
-               //The menu page
-
                //The login page
-
                .when('/login', {
                     templateUrl: 'Views/account/login.html',
                     controller: 'AccountController'
                })
-
                //The register page
                .when('/register', {
                     templateUrl: 'Views/account/register.html',
                     controller: 'AccountController'
                })
-
                //The menu page
                .when('/menu', {
                     templateUrl: 'Views/Menu/menu.html',
@@ -75,28 +68,29 @@ var restaurantApp = angular.module('restaurantApp',
                    templateUrl: 'Views/menu/appetizers.html',
                    controller: 'AppetizerMenuController'
                })
-              .when('/game', {
-                  templateUrl: 'Views/game/GameList.html'
-              })
-              .when('/tictactoe', {
-                  templateUrl: 'Views/game/TicTacToe/TicTacToe.html'
-              })
-              .when('/connectfour', {
-                  templateUrl: 'Views/game/ConnectFour/ConnectFour.html'
-              })
-              .when('/LotteryGame', {
-                  templateUrl: 'Views/game/Lottery.html'
-              })
                //The desserts page
                .when('/desserts', {
                     templateUrl: 'Views/menu/desserts.html',
                     controller: 'DessertMenuController'
                })
-               //The appetizers page
+               //The kids menu page
                .when('/kids', {
                     templateUrl: 'Views/menu/kids.html',
                     controller: 'KidsMenuController'
                })
+               //Games Routing
+               .when('/game', {
+                    templateUrl: 'Views/game/GameList.html'
+               })
+               .when('/tictactoe', {
+                    templateUrl: 'Views/game/TicTacToe/TicTacToe.html'
+               })
+               .when('/connectfour', {
+                    templateUrl: 'Views/game/ConnectFour/ConnectFour.html'
+               })
+               .when('/LotteryGame', {
+                    templateUrl: 'Views/game/Lottery.html'
+               })              
                //Go to home if no route found
                .otherwise({ 
                     redirectTo: '/'
@@ -105,7 +99,7 @@ var restaurantApp = angular.module('restaurantApp',
      }) //end .config
 
      .run(function ($rootScope, $location, ParseService) {
-          
+          $rootScope.sessionUser = Parse.User.current();
      })//end .run
 
 /*

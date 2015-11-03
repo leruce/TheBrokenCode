@@ -1,0 +1,9 @@
+diff a/The Broken Code/The Broken Code.csproj b/The Broken Code/The Broken Code.csproj	(rejected hunks)
+@@ -179,6 +179,7 @@
+      <Content Include="Scripts\staff\helppage.js" />
+      <Content Include="Scripts\staff\PageRController.js" />
+      <Content Include="Scripts\staff\TableControler.js" />
+++<<<<<<< Updated upstream
+ +=======
+      <Content Include="Scripts\summary\SummaryController.js" />
+ +>>>>>>> Stashed changes

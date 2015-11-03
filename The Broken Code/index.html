@@ -7,9 +7,9 @@
      <meta name="viewport" content="width=device-width, initial-scale=1">
 
      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-     <meta name="description" content="Source code generated using layoutit.com">
-     <meta name="Group 7" content="">
-     <link rel="icon" href="">
+     <meta name="description" content="The Broken Code Cafe">
+     <meta name="Group 7" content="UNT - CSCE4444">
+     <link rel="icon" href="/#/">
 
      <title>The Broken Code</title>
 
@@ -33,23 +33,18 @@
 
      <div class="container-fluid">
           <!-- Header -->
-          <div class="row">
+          <div class="row" >
                <div class="col-md-12">
                     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                          <!-- Restaurant Logo-->
                          <div class="navbar-header">
-                              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                                   <span class="sr-only">Toggle navigation</span>
-                                   <span class="icon-bar"></span>
-                                   <span class="icon-bar"></span>
-                                   <span class="icon-bar"></span>
-                    <!--           <span class="icon-bar"></span> -->
-                              </button> <a class="navbar-brand" href="/#/">Logo</a>
+                              <a class="navbar-brand" href="/#/">
+                                   The Broken Code
+                              </a>
                          </div>
-
-                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                         <div class="collapse navbar-collapse" ng-show="currentUser">
                               <!-- Elements on the left -->
-                              <ul class="nav navbar-nav navbar-left">
+                              <ul class="nav navbar-nav navbar-left" ng-show="currentUser">
 
                                    <li>
                                         <a href="/#/game" target="_self">Games</a>
@@ -80,7 +75,7 @@
                               <!-- Elements on the right -->
                               <!-- Links for Refill and Help-->
                               <!-- TODO: Create Modals for them-->
-                              <ul class="nav navbar-nav navbar-right">
+                              <ul class="nav navbar-nav navbar-right" ng-show="currentUser">
                                    <li>
                                         <a href="/#/PageR">Refill</a>
                                    </li>
@@ -96,35 +91,25 @@
 
                                    <!-- Drop down menu for sign in and other things-->
                                    <li class="dropdown">
-                                        <a class="dropdown-toggle" data-toggle="dropdown">View Account<strong class="caret"></strong></a>
+                                        <a class="dropdown-toggle" data-toggle="dropdown">My Profile<strong class="caret"></strong></a>
                                         <ul class="dropdown-menu">
-                                             <!-- Send user to login screen -->
-                                             <li> <!-- TODO Add ng-if to make this dissapear once user is logged in-->
-                                                  <a href="/#/login">Login</a>
-                                             </li>
                                              <!-- Sends user to rewards view -->
                                              <li> <!-- TODO: Make this send user to login screen if not logged in -->
                                                   <a href="/#/rewards">View Rewards</a>
                                              </li>
-                                             <li>
-                                                  <a href="/#/rewards">Something else?...</a>
-                                             </li>
-
                                              <!-- Logs user out -->
                                              <li class="divider"> </li>
                                              <li> <!-- TODO Add ng-if to make this appear ONLY if user is logged in-->
-                                                  <a href="/#/">Log Out</a>
+                                                  <a ng-click="logOut()">Log Out</a>
                                              </li>
                                         </ul>
                                    </li>
-
                                    <li><a></a></li>
                               </ul>
                          </div>
                     </nav>
                </div>
-          </div>
-          
+          </div>        
 
           <!-- Changes what's in between the header/foot depending on the route-->
           <div ng-view>
@@ -140,7 +125,6 @@
                  </span>
              </div>
          </footer>
-
      </div>
 
      <!-- Bootstrap core & JavaScript -->
@@ -151,13 +135,14 @@
      <script src="Scripts/angular.min.js"></script>
      <script src="Scripts/angular-route.min.js"></script>
      <script src="Scripts/angular-touch.min.js"></script>
-    <script src="Scripts/ui-bootstrap-tpls-0.14.3.min.js"></script>
+     <script src="Scripts/ui-bootstrap-tpls-0.14.3.min.js"></script>
      <!-- Our Angular Scripts -->
      <script src="Scripts/app.js"></script>
      <script src="Scripts/controller.js"></script>
      <script src="Scripts/parse/parseService.js"></script>
      <script src="Scripts/kitchen/kitchenController.js"></script>
      <script src="Scripts/account/accountController.js"></script>
+     <script src="Scripts/menu/MenuController.js"></script>
      <script src="Scripts/menu/AppetizersController.js"></script>
      <script src="Scripts/menu/DrinksController.js"></script>
      <script src="Scripts/menu/EntreesController.js"></script>
