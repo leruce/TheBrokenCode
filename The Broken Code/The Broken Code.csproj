@@ -109,7 +109,6 @@
     <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="packages.config" />
-    <Content Include="Resources\Binary.png" />
     <Content Include="Resources\Logo.ico" />
     <Content Include="Scripts\account\accountController.js" />
     <Content Include="Scripts\angular-mocks.js" />
