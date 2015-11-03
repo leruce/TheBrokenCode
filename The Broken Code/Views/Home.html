@@ -117,6 +117,10 @@
                   data-toggle="modal" data-target="#registerModal">
                Register
           </button>
+          <!-- Guest Button for users who do not wish to log in or create an account -->
+          <button class="btn btn-lg btn-primary btn-block" ng-click="guestLogin()" type="button" >
+               Continue as Guest
+          </button>
      </form>
 
 </div>
@@ -166,11 +170,7 @@
 </div>
 
 
-<div class="container" ng-hide="currentUser" ng-submit="guestLogin()">
-     <button class="btn btn-lg btn-primary btn-block" type="submit">
-          Continue as Guest
-     </button>
-</div>
+
 
 
 <!--
