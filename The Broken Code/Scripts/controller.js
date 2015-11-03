@@ -82,6 +82,7 @@ restaurantApp.controller('MainController',
 
           //Function to get the user a table
           function getTable(user) {
+               $rootScope.table;
                var Table = Parse.Object.extend("Table");
                var tableQuery = new Parse.Query(Table);
                tableQuery.equalTo("Available", true);
@@ -91,12 +92,14 @@ restaurantApp.controller('MainController',
                          $rootScope.table = data;
                          $rootScope.table.set("Available", false);
                          $rootScope.table.save();
-                         return $rootScope.table;
-                    },
+                                             },
                     error: function (error) {
                          alert("Error: " + error.code + " " + error.message);
                     }
-               });// End tableQuery.first              
+               }).then(function (data) {
+                   console.log("This is the end");
+                   return $rootScope.table;
+               });// End tableQuery.first;// End tableQuery.first              
           }
 
 }]);

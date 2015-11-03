@@ -42,6 +42,11 @@ var restaurantApp = angular.module('restaurantApp',
                   templateUrl: 'Views/kitchen/kitchen.html',
                   controller: 'KitchenController'
                })
+               //The view order page
+               .when('/vieworder', {
+                   templateUrl: 'Views/vieworder/vieworder.html',
+                   controller: 'ViewOrderController'
+               })
                //The drinks page
                .when('/drinks', {
                    templateUrl: 'Views/menu/drinks.html',
