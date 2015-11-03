@@ -177,9 +177,7 @@
     <Content Include="Scripts\staff\helppage.js" />
     <Content Include="Scripts\staff\PageRController.js" />
     <Content Include="Scripts\staff\TableControler.js" />
-    <Content Include="Scripts\summary\SummaryController.js" />
     <Content Include="Scripts\ui-bootstrap-tpls-0.14.3.min.js" />
-    <Content Include="Views\account\login.html" />
     <Content Include="Views\game\ConnectFour\ConnectFour.html" />
     <Content Include="Views\game\GameList.html" />
     <Content Include="Views\game\Lottery.html" />
@@ -204,6 +202,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Scripts\customer\" />
+    <Folder Include="Scripts\summary\" />
+    <Folder Include="Views\account\" />
     <Folder Include="Views\customer\" />
   </ItemGroup>
   <PropertyGroup>

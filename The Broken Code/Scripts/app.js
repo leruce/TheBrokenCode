@@ -68,7 +68,7 @@ var restaurantApp = angular.module('restaurantApp',
                     controller: 'KidsMenuController'
                })
                //Games Routing
-               .when('/game', {
+               .when('/games', {
                     templateUrl: 'Views/game/GameList.html'
                })
                .when('/tictactoe', {
