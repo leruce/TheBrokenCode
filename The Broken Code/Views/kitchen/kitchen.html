@@ -1,11 +1,39 @@
-﻿<div class="row" align="center">
+﻿
+{{works}}
+<br/>
+<div ng-repeat="order in orders">
+    <div class="row">
+        <div class="col-md-1">
+            {{order.waitTime | date:'mm:ss'}}
+        </div>
+        <div class="col-md-10" style="background-color: aliceblue; border: dotted">
+            <!--{{ now | date:'HH:mm:ss'}} -->
+            <h3>
+                Table #{{order.table}} has been waiting {{order.waitTime | date:'mm:ss'}}
+            </h3>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>
+                            Item
+                        </th>
+                        <th>
+                            Comments
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in order.items">
+                        <td>{{getItemNames(item)}} </td>
+                        <td> Comment </td>
+                    </tr>
+                </tbody>
+            </table>
 
-    <div class="col-md-12" align="center">
-        <p>
-            {{headingCaption}}
-            <button type="button" class="btn-default" align="center" ng-click="addOrder()">
-                {{works}}
-            </button>
-        </p>
+        </div> 
+        <div class="col-md-1">
+            <button type="button" class="btn" ng-click="removeOrder($index)">Complete</button>
+        </div>
     </div>
+    <br/>
 </div>
