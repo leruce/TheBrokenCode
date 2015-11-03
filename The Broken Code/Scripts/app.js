@@ -18,11 +18,7 @@ var restaurantApp = angular.module('restaurantApp',
                    templateUrl: 'Views/staff/PageR.html',
                    controller: 'TableController'
               })
-              //The summary page
-              .when('/summary', {
-                   templateUrl: 'Views/summary/summary.html',
-                   controller: 'TableController'
-              })
+              
               //The payment page
               .when('/payment', {
                   templateUrl: 'Views/payment/survey.html',

@@ -7,7 +7,7 @@ function LotteryPlay() {
     console.log(currentDate);
     if (window.name >= 2) 
     {
-        alert("You have already played 2 games!");
+        alert("You have already played 2 games! I'm sorry, you are not a winner.");
     }
     else {
         var randomNum = Math.floor(Math.random() * 5) + 1; //This pick between 1 to 5, we will just statically set 3 as the number we want_
@@ -20,7 +20,7 @@ function LotteryPlay() {
             coupon.set("ExpiryDate", currentDate);
             coupon.save(null, {
                 success: function (coupon) {
-                    alert("You won a Coupon of 10 dollar off next time you come! Coupon code is: " + coupon.id);
+                    alert("You WON A FREE $10 Dollar COUPON! Use this coupon next time you come! Coupon code is: " + coupon.id);
                 },
                 error: function (coupon, error) {
                     //alert("Failed to create!");
