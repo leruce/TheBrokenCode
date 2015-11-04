@@ -47,6 +47,7 @@ restaurantApp.controller('MainController',
           //Called when user wants to continue as guest
           $scope.guestLogin = function () {
 
+
           }
 
           //Welcome user and redirect them to the main page
@@ -91,6 +92,7 @@ restaurantApp.controller('MainController',
                     success: function (data) {
                          $rootScope.table = data;
                          $rootScope.table.set("Available", false);
+                         $rootScope.table.set("Customer", user);
                          $rootScope.table.save();
                                              },
                     error: function (error) {
