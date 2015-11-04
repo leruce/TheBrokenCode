@@ -96,6 +96,7 @@ var restaurantApp = angular.module('restaurantApp',
           $rootScope.sessionUser = Parse.User.current();
      })//end .run
 
+
 /*
 
 

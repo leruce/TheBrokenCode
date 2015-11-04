@@ -32,7 +32,7 @@ restaurantApp.controller('MainController',
                     success: function (user) {                        
                          // Welcome the user and close the modal window
                          $rootScope.currentUser = Parse.User.current();
-                         alert("Login Successful! Welcome " + user.getUsername() + "!");
+                         alert("Welcome " + user.getUsername() + "!");
                          $('#registerModal').modal('hide');
                          $window.location.reload()
                          getTable(user);
@@ -110,7 +110,7 @@ restaurantApp.controller('MainController',
                var Table = Parse.Object.extend("Table");
                var tableQuery = new Parse.Query(Table);
                tableQuery.equalTo("Available", true);
-               //Gets the first free table
+               //Looks for and assigns the first free table to the user
                tableQuery.first({
                     success: function (data) {
                          $rootScope.table = data;

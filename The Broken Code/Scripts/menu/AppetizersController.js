@@ -51,7 +51,8 @@ restaurantApp.controller('AppetizerMenuController',
          .catch(function (error) {
              //Balh
          });
-         $scope.headingCaption = 'Menu';
+
+         //Add item to order
          $scope.addToOrder = function (_foodID) {
              //Goal is to do the following things
              //Check the Customer via currentUser
@@ -78,6 +79,7 @@ restaurantApp.controller('AppetizerMenuController',
              //Note, IT DOES NOT RETURN ERROR IF WE HAVE 0, SO WE NEED TO MAKE A CASE FOR THE 0 ITEMS
 
          }
+
          $scope.open = function (_menuAppetizer) {
              //console.log("We get into the modal open");
              var modalInstance = $uibModal.open({
