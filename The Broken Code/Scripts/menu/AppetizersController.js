@@ -54,7 +54,7 @@ restaurantApp.controller('AppetizerMenuController',
          $scope.headingCaption = 'Menu';
          $scope.addToOrder = function (_foodID) {
              //Goal is to do the following things
-             //Check the Customer via session id
+             //Check the Customer via currentUser
              //We check the order class if we have the following details
              //If the customer have an order created
                 //If so, we check if Ordered is true or False
@@ -62,6 +62,20 @@ restaurantApp.controller('AppetizerMenuController',
                 //If not, we create a new order object
              //If not, we then create a new order Object.
              //That should resolve this problem and add orders into the system easily
+             console.log($rootScope.currentUser);
+             var Order = Parse.Object.extend("Order");
+             var checkOrderQuery = new Parse.Query(Order);
+             checkOrderQuery.equalTo("Customer", $rootScope.currentUser);
+             checkOrderQuery.equalTo("Ordered", false);
+             checkOrderQuery.first({
+                 success: function (orders) {
+                     console.log("we get into the query first order " + orders);
+                 }
+             })
+             //If either one of those are false, we just create a new object.
+             //Being said, we need to create a new order if we have no customer. We need to create a new order if there no open OrderList
+             //Now we get the first one, since we will ONLY have 1 of them open at the time we just append
+             //Note, IT DOES NOT RETURN ERROR IF WE HAVE 0, SO WE NEED TO MAKE A CASE FOR THE 0 ITEMS
 
          }
          $scope.open = function (_menuAppetizer) {
