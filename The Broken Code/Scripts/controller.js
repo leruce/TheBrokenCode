@@ -60,9 +60,12 @@ restaurantApp.controller('MainController',
                   success: function (guest) {
                       //This is first open guest we have
                       console.log(guest);
-                      $rootScope.currentUser = guest;
-                      $location.path("/");
-                      getTable(guest);
+                      var username = guest.get('username');
+                      var password = guest.get('username');
+                      Parse.User.logIn(username, password, {
+                          success: loginSuccessful,
+                          error: loginUnsuccessful
+                      });
                   }
               })
 
