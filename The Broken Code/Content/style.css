@@ -19,12 +19,14 @@ footer {
 }
 
 .full-circle {
-  background-color: mediumpurple;
-border: 3px solid #333;
- height: 150px;
- width: 150px;
- -moz-border-radius:75px;
- -webkit-border-radius: 75px;
+width:150px;
+height:150px;
+border-radius:50%;
+font-size:30px;
+color:#fff;
+line-height:150px;
+text-align:center;
+background:#094400
 }
 
 .description{

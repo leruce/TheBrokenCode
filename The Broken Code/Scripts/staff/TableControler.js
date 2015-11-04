@@ -10,7 +10,7 @@
                  angular.forEach(data, function (result) {
                      TableName.push({
                          ID: result.get("TableID"),
-                         Status: result.get("tableStatus"),
+                         Status: result.get("Status"),
                      });
                      
                  });
