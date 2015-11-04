@@ -52,6 +52,18 @@ restaurantApp.controller('AppetizerMenuController',
              //Balh
          });
          $scope.headingCaption = 'Menu';
+         $scope.addToOrder = function (_foodID) {
+             //Goal is to do the following things
+             //Check the Customer via session id
+             //We check the order class if we have the following details
+             //If the customer have an order created
+                //If so, we check if Ordered is true or False
+                //If it false then we append the _foodID to the ItemsOrdered
+                //If not, we create a new order object
+             //If not, we then create a new order Object.
+             //That should resolve this problem and add orders into the system easily
+
+         }
          $scope.open = function (_menuAppetizer) {
              //console.log("We get into the modal open");
              var modalInstance = $uibModal.open({
