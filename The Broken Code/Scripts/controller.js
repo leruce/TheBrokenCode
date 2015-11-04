@@ -46,9 +46,29 @@ restaurantApp.controller('MainController',
 
           //Called when user wants to continue as guest
           $scope.guestLogin = function () {
+ 
+              //First thing to do is Check if guest is true
+              //Next it to check if they login or not
+              //If guest true and login is false we get a list of object
+              //in this case it a list of table
+              var user = new Parse.User();
+              var query = new Parse.Query(Parse.User);
+              query.equalTo("isGuest", true);
+              query.equalTo("GuestLogin", false);
+              console.log(query);
+              query.first({
+                  success: function (guest) {
+                      //This is first open guest we have
+                      console.log(guest);
+                      $rootScope.currentUser = guest;
+                      $location.path("/");
+                      getTable(guest);
+                  }
+              })
 
 
-          }
+
+          };
 
           //Welcome user and redirect them to the main page
           function loginSuccessful(user) {

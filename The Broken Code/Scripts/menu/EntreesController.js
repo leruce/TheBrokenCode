@@ -2,7 +2,7 @@
 
 restaurantApp.controller('EntreeMenuController',
      ['$rootScope', '$scope', '$http', 'ParseService', '$location', '$q',
-     function ($rootScope, $scope, $http, $location, ParseService, $q) {
+     function ($rootScope, $scope, $http, ParseService, $location, $q) {
          var menuItem = [];
          var MenuDfd = $q.defer();
          var Menu = Parse.Object.extend("Menu");
