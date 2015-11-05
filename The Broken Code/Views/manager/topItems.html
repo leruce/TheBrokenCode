@@ -1,11 +1,12 @@
 ﻿<!--Displays top three items in each category-->
 
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-3">
             <div class="row">
                 <div class="col-md-12">
-                    <table class="table">
+                    <table class="table table-condensed table-hover">
                         <thead>
                             <tr>
                                 <th>
@@ -14,7 +15,7 @@
                             </tr>
                         </thead>
                         <tbody ng-repeat="menuAppetizers in MenuAppetizers | orderBy:'-Amount'  | limitTo:3 ">
-                            <tr class="alert-success">
+                            <tr class="success">
                                 <td>
                                     {{menuAppetizers.FoodName}}
                                 </td>
@@ -28,7 +29,7 @@
         <div class="col-md-3">
             <div class="row">
                 <div class="col-md-12">
-                    <table class="table">
+                    <table class="table table-condensed table-hover">
                         <thead>
                             <tr>
                                 <th>
@@ -38,7 +39,7 @@
                             </tr>
                         </thead>
                         <tbody ng-repeat="menuEntree in MenuEntree | orderBy:'-Amount'  | limitTo:3 ">
-                            <tr class="alert-success">
+                            <tr class="success">
                                 <td>
                                     {{menuEntree.FoodName}}
                                 </td>
@@ -52,7 +53,7 @@
         <div class="col-md-3">
             <div class="row">
                 <div class="col-md-12">
-                    <table class="table">
+                    <table class="table table-condensed table-hover">
                         <thead>
                             <tr>
                                 <th>
@@ -62,7 +63,7 @@
                             </tr>
                         </thead>
                         <tbody ng-repeat="menuDesert in MenuDesert | orderBy:'-Amount' | limitTo:3 ">
-                            <tr class="alert-success">
+                            <tr class="success">
                                 <td>
                                     {{menuDesert.FoodName}}
                                 </td>
@@ -76,7 +77,7 @@
         <div class="col-md-3">
             <div class="row">
                 <div class="col-md-12">
-                    <table class="table">
+                    <table class="table table-condensed table-hover">
                         <thead>
                             <tr>
                                 <th>
@@ -85,7 +86,7 @@
                             </tr>
                         </thead>
                         <tbody ng-repeat="menuDrinks in MenuDrinks | orderBy:'-Amount' | limitTo:3 ">
-                            <tr class="alert-success">
+                            <tr class="success">
                                 <td>
                                     {{menuDrinks.FoodName}}
                                 </td>

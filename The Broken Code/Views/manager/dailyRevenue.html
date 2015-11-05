@@ -3,7 +3,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-6">
-            <table class="table">
+            <table class="table table-condensed table-hover">
                 <thead>
                     <tr>
                         <th>
@@ -18,7 +18,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="alert-success">
+                    <tr class="success">
                         <td>
                             $900000000000.00
                         </td>
@@ -34,7 +34,7 @@
             </table>
         </div>
         <div class="col-md-6">
-            <table class="table">
+            <table class="table table-condensed table-hover">
                 <thead>
                     <tr>
                         <th>
@@ -46,7 +46,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="alert-success" ng-repeat="menuAll in MenuAll | orderBy: '-Amount'">
+                    <tr class="success" ng-repeat="menuAll in MenuAll | orderBy: '-Amount'">
                         <td>
                             {{menuAll.FoodName}}
                         </td>
