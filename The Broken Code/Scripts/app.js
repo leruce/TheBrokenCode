@@ -32,15 +32,12 @@ var restaurantApp = angular.module('restaurantApp',
                     templateUrl: 'Views/staff/staffOrder.html',
                     controller: 'TableController'
               })
-              .when('/remove', {
-                  templateUrl: 'Views/kitchen/remove.html',
-                  controller: 'removeController'
-              })
               //The main manager page
               .when('/manager', {
                   templateUrl: 'Views/manager/manager.html',
                   controller: 'ManagerController'
               })
+
                //The refill page
               .when('/refill', {
                    templateUrl: 'Views/staff/PageR.html',
@@ -56,12 +53,7 @@ var restaurantApp = angular.module('restaurantApp',
                    templateUrl: 'Views/staff/helppage.html',
                    controller: 'TableController'
               })
-              //The tables page
-              .when('/tables', {
-                  templateUrl: 'Views/staff/tables.html',
-                  controller: 'TableController'
-              })
-               //The menu page
+              //The menu page
                .when('/menu', {
                     templateUrl: 'Views/Menu/menu.html',
                     controller: 'MenuController'
@@ -113,7 +105,73 @@ var restaurantApp = angular.module('restaurantApp',
                })
                .when('/LotteryGame', {
                     templateUrl: 'Views/game/Lottery.html'
-               })              
+               })
+
+               //The tables page
+              .when('/tables', {
+                  templateUrl: 'Views/staff/tables.html',
+                  controller: 'TableController'
+              })
+               //The table1 page
+              .when('/tables/1', {
+                  templateUrl: 'Views/Tables/Table1.html',
+                  controller: 'TableController'
+              })
+                //The table2 page
+              .when('/tables/2', {
+                  templateUrl: 'Views/tables/Table2.html',
+                  controller: 'TableController'
+              })
+                //The table3 page
+              .when('/tables/3', {
+                  templateUrl: 'Views/Tables/Table3.html',
+                  controller: 'TableController'
+              })
+                //The table4 page
+              .when('/tables/4', {
+                  templateUrl: 'Views/Tables/Table4.html',
+                  controller: 'TableController'
+              })
+                //The table1 page
+              .when('/tables/5', {
+                  templateUrl: 'Views/Tables/Table5.html',
+                  controller: 'TableController'
+              })
+                //The table1 page
+              .when('/tables/6', {
+                  templateUrl: 'Views/Tables/Table6.html',
+                  controller: 'TableController'
+              })
+                //The table1 page
+              .when('/tables/7', {
+                  templateUrl: 'Views/Tables/Table7.html',
+                  controller: 'TableController'
+              })
+                //The table1 page
+              .when('/tables/8', {
+                  templateUrl: 'Views/Tables/Table8.html',
+                  controller: 'TableController'
+              })
+                //The table1 page
+              .when('/tables/9', {
+                  templateUrl: 'Views/Tables/Table9.html',
+                  controller: 'TableController'
+              })
+                //The table1 page
+              .when('/tables/10', {
+                  templateUrl: 'Views/Tables/Table10.html',
+                  controller: 'TableController'
+              })
+                //The table1 page
+              .when('/tables/11', {
+                  templateUrl: 'Views/Tables/Table11.html',
+                  controller: 'TableController'
+              })
+                //The table1 page
+              .when('/tables/12', {
+                  templateUrl: 'Views/Tables/Table12.html',
+                  controller: 'TableController'
+              })
                //Go to home if no route found
                .otherwise({ 
                     redirectTo: '/'
