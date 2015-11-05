@@ -8,6 +8,7 @@ body {
      padding-top: 60px;
      /* Margin bottom by footer height */
      margin-bottom: 60px;
+     background-color: #507e49;
 }
 /* Sticky footer styles */
 footer {
