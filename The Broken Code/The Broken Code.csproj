@@ -166,6 +166,7 @@
     <Content Include="Scripts\jquery-ui-1.11.4.js" />
     <Content Include="Scripts\jquery-ui-1.11.4.min.js" />
     <Content Include="Scripts\kitchen\kitchenController.js" />
+    <Content Include="Scripts\kitchen\removeController.js" />
     <Content Include="Scripts\manager\ManagerController.js" />
     <Content Include="Scripts\menu\AppetizersController.js" />
     <Content Include="Scripts\menu\DessertsController.js" />
@@ -187,6 +188,7 @@
     <Content Include="Views\game\TicTacToe\TicTacToe.html" />
     <Content Include="Views\Home.html" />
     <Content Include="Views\kitchen\kitchen.html" />
+    <Content Include="Views\kitchen\remove.html" />
     <Content Include="Views\menu\desserts.html" />
     <Content Include="Views\menu\entrees.html" />
     <Content Include="Views\menu\appetizers.html" />

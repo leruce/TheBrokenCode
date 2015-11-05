@@ -1,0 +1,11 @@
+﻿<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 top-buffer" ng-repeat="items in Ingredient">
+            <h3>
+                {{items.IngredientName}}
+            </h3>
+            <!-- Add Item to Order -->
+            <button type="button" class="btn btn-default btn-sm" ng-click="removeFromMenu(items)">Remove</button>
+        </div>
+    </div>
+</div>
