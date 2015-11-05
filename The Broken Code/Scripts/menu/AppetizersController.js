@@ -53,7 +53,7 @@ restaurantApp.controller('AppetizerMenuController',
          });
 
          //Add item to order
-         $scope.addToOrder = function (_foodID) {
+         $scope.addToOrder = function (foodObject) {
              //Goal is to do the following things
              //Check the Customer via currentUser
              //We check the order class if we have the following details
@@ -70,7 +70,15 @@ restaurantApp.controller('AppetizerMenuController',
              checkOrderQuery.equalTo("Ordered", false);
              checkOrderQuery.first({
                  success: function (orders) {
-                     console.log("we get into the query first order " + orders);
+                     if (orders == null) {
+                         console.log("We got no orders for this person sucka");
+                         createOrder(foodObject);
+                     }
+                     else {
+                         console.log("we get into the query first order " + orders.id);
+                         //We need to check if order exist or not. since it can return a 0.
+                         addItem(orders, foodObject);
+                     }
                  }
              })
              //If either one of those are false, we just create a new object.
@@ -79,7 +87,51 @@ restaurantApp.controller('AppetizerMenuController',
              //Note, IT DOES NOT RETURN ERROR IF WE HAVE 0, SO WE NEED TO MAKE A CASE FOR THE 0 ITEMS
 
          }
-
+         function createOrder(_foodObject) {
+             //What we do is create a object and save it here
+             //We want to set customer, FoodID, Price, The Booleans
+             var Order = Parse.Object.extend("Order");
+             var order = new Order();
+             //console.log("food Name " + _foodObject.FoodName);
+             //order.set("ItemsOrdered", [__foodID]);
+             order.set("Customer", $rootScope.currentUser);
+             order.set("ItemsOrdered", [_foodObject.FoodID]);
+             order.set("Cost", _foodObject.Price);
+             order.set("Ordered", false);
+             order.set("Completed", false);
+             order.set("InProgress", false);
+             order.set("Paid", false);
+             //order.set("TableID", findTable($rootScope.currentUser))
+             //We need to create a function for this later Right now we get this shit to work
+             order.save(null, {
+                 success: function (order) {
+                     console.log("SAVED");
+                 },
+                 error: function (order, error) {
+                     console.log("Failed " +  error.code + error.message);
+                 }
+             });
+             
+         }
+         function addItem(orderObject, _foodObject) {
+             //We need to add price value
+             //Append the  itemsOrdered
+             var cost = orderObject.get("Cost") + _foodObject.Price;
+             var ItemsOrdered = orderObject.get("ItemsOrdered");
+             ItemsOrdered.push(_foodObject.FoodID);
+             console.log(cost);
+             console.log(ItemsOrdered);
+             orderObject.set("Cost", cost);
+             orderObject.set("ItemsOrdered", ItemsOrdered);
+             orderObject.save(null, {
+                 success: function (orderObject) {
+                     console.log("Saved");
+                 },
+                 error: function (orderObject, error) {
+                     console.log("FAILED");
+                 }
+             });
+         }
          $scope.open = function (_menuAppetizer) {
              //console.log("We get into the modal open");
              var modalInstance = $uibModal.open({

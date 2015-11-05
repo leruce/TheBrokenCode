@@ -10,9 +10,9 @@
                {{menuDrinks.Description}}
           </p>
           <p>
-               ${{menuAppetizers.Price}}
+               ${{menuDrinks.Price}}
                <!-- Add Item to Order -->
-               <button type="button" class="btn btn-default btn-sm"> Order </button>
+               <button type="button" class="btn btn-default btn-sm" ng-click="addToOrder(menuDrinks)"> Order </button>
                <!-- Trigger the modal with a button -->
                <button type="button" class="btn btn-default btn-sm"
                          data-toggle="modal" data-target="#myModal">
