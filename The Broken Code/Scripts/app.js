@@ -12,6 +12,11 @@ var restaurantApp = angular.module('restaurantApp',
                     templateUrl: 'Views/Home.html',
                     controller: 'MainController'
                })
+
+              .when('/stafforder', {
+                    templateUrl: 'Views/staff/staffOrder.html',
+                    controller: 'TableController'
+               })
                //The refill page
               .when('/refill', {
                    templateUrl: 'Views/staff/PageR.html',

@@ -178,7 +178,7 @@
     <Content Include="Scripts\payment\surveyController.js" />
     <Content Include="Scripts\staff\helppage.js" />
     <Content Include="Scripts\staff\PageRController.js" />
-    <Content Include="Scripts\staff\TableControler.js" />
+    <Content Include="Scripts\staff\TableController.js" />
     <Content Include="Scripts\ui-bootstrap-tpls-0.14.3.min.js" />
     <Content Include="Views\account\ViewOrders.html" />
     <Content Include="Views\game\ConnectFour\ConnectFour.html" />
@@ -197,6 +197,7 @@
     <Content Include="Views\staff\helppage.html" />
     <Content Include="Views\manager\manager.html" />
     <Content Include="Views\staff\PageR.html" />
+    <Content Include="Views\staff\staffOrder.html" />
     <Content Include="Views\staff\tables.html" />
     <Content Include="Web.config" />
   </ItemGroup>
