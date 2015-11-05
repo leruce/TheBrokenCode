@@ -1,6 +1,6 @@
 ﻿
 {{works}}
-<br/>
+<br />
 <div ng-repeat="order in orders">
     <div class="row">
         <div class="col-md-1">
@@ -30,12 +30,13 @@
                 </tbody>
             </table>
 
-    <div class="col-md-12" align="center">
-        <p>
-            {{headingCaption}}
-            <button type="button" class="btn-success" align="center" ng-click="addOrder()">
-                {{works}}
-            </button>
-        </p>
+
+        </div>
+        <div class="col-md-1">
+            <button type="button" class="btn" ng-click="removeOrder($index)">Complete</button>
+
+        </div>
     </div>
+    <br />
 </div>
+
