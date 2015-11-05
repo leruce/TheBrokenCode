@@ -1,0 +1,99 @@
+﻿<!--Displays top three items in each category-->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Appetizers
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody ng-repeat="menuAppetizers in MenuAppetizers | orderBy:'-Amount'  | limitTo:3 ">
+                            <tr class="alert-success">
+                                <td>
+                                    {{menuAppetizers.FoodName}}
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Entrees
+                                </th>
+
+                            </tr>
+                        </thead>
+                        <tbody ng-repeat="menuEntree in MenuEntree | orderBy:'-Amount'  | limitTo:3 ">
+                            <tr class="alert-success">
+                                <td>
+                                    {{menuEntree.FoodName}}
+                                </td>
+                           
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Deserts
+                                </th>
+
+                            </tr>
+                        </thead>
+                        <tbody ng-repeat="menuDesert in MenuDesert | orderBy:'-Amount' | limitTo:3 ">
+                            <tr class="alert-success">
+                                <td>
+                                    {{menuDesert.FoodName}}
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Drinks
+
+                            </tr>
+                        </thead>
+                        <tbody ng-repeat="menuDrinks in MenuDrinks | orderBy:'-Amount' | limitTo:3 ">
+                            <tr class="alert-success">
+                                <td>
+                                    {{menuDrinks.FoodName}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -12,11 +12,32 @@ var restaurantApp = angular.module('restaurantApp',
                     templateUrl: 'Views/Home.html',
                     controller: 'MainController'
                })
-
+              //The manager adjusment report
+               .when('/manager/report', {
+                   templateUrl: 'Views/manager/adjustments.html',
+                   controller: 'ManagerController'
+               })
+              //The manager revnue page
+              .when('/manager/revenue', {
+                  templateUrl: 'Views/manager/dailyRevenue.html',
+                  controller: 'TableController'
+              })
+              //The manager top items page
+               .when('/manager/tops', {
+                   templateUrl: 'Views/manager/topItems.html',
+                   controller: 'TableController'
+               })
+              //The staff ordering page
               .when('/stafforder', {
                     templateUrl: 'Views/staff/staffOrder.html',
                     controller: 'TableController'
-               })
+              })
+              //The main manager page
+              .when('/manager', {
+                  templateUrl: 'Views/manager/manager.html',
+                  controller: 'ManagerController'
+              })
+
                //The refill page
               .when('/refill', {
                    templateUrl: 'Views/staff/PageR.html',

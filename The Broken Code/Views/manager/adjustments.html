@@ -1,0 +1,39 @@
+﻿<!--Shows bill adjustment report-->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-condensed table-hover">
+                <thead>
+                    <tr>
+                        <th>
+                            Staff
+                        </th>
+                        <th>
+                            Amount Reduced
+                        </th>
+                        <th>
+                            Reason
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody ng-repeat="report in Report">
+                    <tr class="success">
+                        <td>
+                            {{report.ID}}
+                        </td>
+                        <td>
+                            ${{report.Reduced}}
+                        </td>
+                        <td>
+                            {{report.Reason}}
+                        </td>
+
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

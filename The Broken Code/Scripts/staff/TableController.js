@@ -57,7 +57,8 @@
                          NutritionInfo: result.get("NutritionInfo"),
                          Price: result.get("Price"),
                          FoodID: result.get("FoodID"),
-                         FoodImg: result.get("ItemPhoto").url()
+                         FoodImg: result.get("ItemPhoto").url(),
+                         Amount: result.get("AmountSold")
                      });
                  });
              },
@@ -67,7 +68,6 @@
          }).then(function (data) {
 
              MenuDfd.resolve(data);
-            // alert("Working got " + menuItem.length);
          },
          function (error) {
              MenuDfd.reject(data);
@@ -75,15 +75,15 @@
          });
          MenuDfd.promise
          .then(function (Appetizer) {
-            // alert("MenuValue:" + menuItem[0].FoodName);
+
              $scope.MenuAppetizers = menuItem;
          })
          .catch(function (error) {
-             //Balh
+
          });
 
 
-
+         //pull drinks
          var menuItem2 = [];
          var MenuDfd2 = $q.defer();
          var Menu2 = Parse.Object.extend("Menu");
@@ -102,9 +102,10 @@
                          NutritionInfo: result.get("NutritionInfo"),
                          Price: result.get("Price"),
                          FoodID: result.get("FoodID"),
-                         FoodImg: result.get("ItemPhoto").url()
+                         FoodImg: result.get("ItemPhoto").url(),
+                         Amount: result.get("AmountSold")
                      });
-                     //alert("Food: " + result.get("Name"));
+
                  });
              },
              error: function (error) {
@@ -113,7 +114,7 @@
          }).then(function (data) {
 
              MenuDfd2.resolve(data);
-             //alert("Working got " + menuItem.length);
+
          },
          function (error) {
              MenuDfd2.reject(data);
@@ -121,15 +122,15 @@
          });
          MenuDfd2.promise
          .then(function (Drink) {
-             //alert("MenuValue:" + menuItem[0].FoodName);
+
              $scope.MenuDrinks = menuItem2;
          })
          .catch(function (error) {
-             //Balh
+
          });
 
 
-
+         //pull entrees
          var menuItem3 = [];
          var MenuDfd3 = $q.defer();
          var Menu3 = Parse.Object.extend("Menu");
@@ -148,9 +149,10 @@
                          NutritionInfo: result.get("NutritionInfo"),
                          Price: result.get("Price"),
                          FoodID: result.get("FoodID"),
-                         FoodImg: result.get("ItemPhoto").url()
+                         FoodImg: result.get("ItemPhoto").url(),
+                         Amount: result.get("AmountSold")
                      });
-                     //alert("Food: " + result.get("Name"));
+
                  });
              },
              error: function (error) {
@@ -159,7 +161,7 @@
          }).then(function (data) {
 
              MenuDfd3.resolve(data);
-             //alert("Working got " + menuItem.length);
+
          },
          function (error) {
              MenuDfd3.reject(data);
@@ -167,14 +169,14 @@
          });
          MenuDfd3.promise
          .then(function (Entree) {
-             //alert("MenuValue:" + menuItem[0].FoodName);
+         
              $scope.MenuEntree = menuItem3;
          })
          .catch(function (error) {
-             //Balh
+
          });
 
-         
+         //pull deserts
          var menuItem4 = [];
          var MenuDfd4 = $q.defer();
          var Menu4 = Parse.Object.extend("Menu");
@@ -193,9 +195,10 @@
                          NutritionInfo: result.get("NutritionInfo"),
                          Price: result.get("Price"),
                          FoodID: result.get("FoodID"),
-                         FoodImg: result.get("ItemPhoto").url()
+                         FoodImg: result.get("ItemPhoto").url(),
+                         Amount: result.get("AmountSold")
                      });
-                     //alert("Food: " + result.get("Name"));
+                
                  });
              },
              error: function (error) {
@@ -204,7 +207,7 @@
          }).then(function (data) {
 
              MenuDfd4.resolve(data);
-             //alert("Working got " + menuItem.length);
+           
          },
          function (error) {
              MenuDfd4.reject(data);
@@ -212,13 +215,49 @@
          });
          MenuDfd4.promise
          .then(function (Desert) {
-             //alert("MenuValue:" + menuItem[0].FoodName);
+         
              $scope.MenuDesert = menuItem4;
          })
          .catch(function (error) {
-             //Balh
+          
          });
 
+
+         //pull whole menu
+         var menuItem5 = [];
+         var MenuDfd5 = $q.defer();
+         var MenuAll = Parse.Object.extend("MenuItem");
+         var queryAll = new Parse.Query(MenuAll);
+         queryAll.find({
+             success: function (data) {
+                 angular.forEach(data, function (result) {
+                     menuItem5.push({
+                         FoodName: result.get("Name"),
+                         Amount: result.get("AmountSold")
+                     });
+                     
+                 });
+             },
+             error: function (error) {
+                 alert("Error: " + error.code + " " + error.message);
+             }
+         }).then(function (data) {
+
+             MenuDfd5.resolve(data);
+           
+         },
+         function (error) {
+             MenuDfd5.reject(data);
+
+         });
+         MenuDfd5.promise
+         .then(function (All) {
+           
+             $scope.MenuAll = menuItem5;
+         })
+         .catch(function (error) {
+             
+         });
 
 
          //$scope.addToOrder = function (foodObject) {

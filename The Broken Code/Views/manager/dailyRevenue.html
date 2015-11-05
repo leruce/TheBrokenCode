@@ -1,0 +1,60 @@
+﻿<!--Shows revenue and amount of each item ordered-->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            Total Revenue
+                        </th>
+                        <th>
+                            Taxes
+                        </th>
+                        <th>
+                            Gratuity
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="alert-success">
+                        <td>
+                            $900000000000.00
+                        </td>
+                        <td>
+                            $1337.55
+                        </td>
+                        <td>
+                            $69.99
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            Item
+                        </th>
+                        <th>
+                            Amount Ordered
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="alert-success" ng-repeat="menuAll in MenuAll | orderBy: '-Amount'">
+                        <td>
+                            {{menuAll.FoodName}}
+                        </td>
+                        <td>
+                         {{menuAll.Amount}}
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
