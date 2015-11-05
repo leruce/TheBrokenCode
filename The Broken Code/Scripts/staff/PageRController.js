@@ -15,17 +15,8 @@ function PageRController()
             var Refill = Parse.Object.extend("Refill");
             var refill = new Refill();
             var refillList = [];
-<<<<<<< Updated upstream
+
             //var String = document.getElementById('refilltext').value;
-            var String;
-            for (var i = 0; i < 12; i++) {
-                String = document.getElementById('refilltext' + i).value;
-                refillList.push(String);
-                console.log(String);
-            }
-            console.log(refillList);
-            refill.save(null, {
-=======
             var String;
     
     for (var x = 0; x < 12; x++)
@@ -36,7 +27,6 @@ function PageRController()
     }
         refill.set("RefillID", refillList);
         refill.save(null, {
->>>>>>> Stashed changes
                 success: function (refill) {
                     alert("Thank you! Your request has been sent!");
 
