@@ -32,19 +32,15 @@ var restaurantApp = angular.module('restaurantApp',
                     templateUrl: 'Views/staff/staffOrder.html',
                     controller: 'TableController'
               })
-<<<<<<< HEAD
               .when('/remove', {
                   templateUrl: 'Views/kitchen/remove.html',
                   controller: 'removeController'
               })
-=======
               //The main manager page
               .when('/manager', {
                   templateUrl: 'Views/manager/manager.html',
                   controller: 'ManagerController'
               })
-
->>>>>>> bdb1150915da1307cdd9d096e828b794cefb2d51
                //The refill page
               .when('/refill', {
                    templateUrl: 'Views/staff/PageR.html',
