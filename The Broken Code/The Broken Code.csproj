@@ -200,13 +200,10 @@
     <Content Include="Views\game\TicTacToe\TicTacToe.html" />
     <Content Include="Views\Home.html" />
     <Content Include="Views\kitchen\kitchen.html" />
-<<<<<<< HEAD
     <Content Include="Views\kitchen\remove.html" />
-=======
     <Content Include="Views\manager\adjustments.html" />
     <Content Include="Views\manager\dailyRevenue.html" />
     <Content Include="Views\manager\topItems.html" />
->>>>>>> bdb1150915da1307cdd9d096e828b794cefb2d51
     <Content Include="Views\menu\desserts.html" />
     <Content Include="Views\menu\entrees.html" />
     <Content Include="Views\menu\appetizers.html" />
