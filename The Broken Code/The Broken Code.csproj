@@ -111,6 +111,7 @@
     <Content Include="packages.config" />
     <Content Include="Resources\Logo.ico" />
     <Content Include="Scripts\account\accountController.js" />
+    <Content Include="Scripts\account\ViewOrderController.js" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
@@ -179,6 +180,7 @@
     <Content Include="Scripts\staff\PageRController.js" />
     <Content Include="Scripts\staff\TableControler.js" />
     <Content Include="Scripts\ui-bootstrap-tpls-0.14.3.min.js" />
+    <Content Include="Views\account\ViewOrders.html" />
     <Content Include="Views\game\ConnectFour\ConnectFour.html" />
     <Content Include="Views\game\GameList.html" />
     <Content Include="Views\game\Lottery.html" />
@@ -204,7 +206,6 @@
   <ItemGroup>
     <Folder Include="Scripts\customer\" />
     <Folder Include="Scripts\summary\" />
-    <Folder Include="Views\account\" />
     <Folder Include="Views\customer\" />
   </ItemGroup>
   <PropertyGroup>
