@@ -114,20 +114,19 @@ var restaurantApp = angular.module('restaurantApp',
               })
                //The table1 page
               .when('/tables/1', {
-                  templateUrl: 'Views/Tables/Table1.html',
+                  templateUrl: 'Views/tables/Table1.html',
                   controller: 'TableController'
               })
-                //The table2 page
               .when('/tables/2', {
                   templateUrl: 'Views/tables/Table2.html',
                   controller: 'TableController'
               })
-                //The table3 page
+                //The table3 page                
               .when('/tables/3', {
                   templateUrl: 'Views/Tables/Table3.html',
                   controller: 'TableController'
               })
-                //The table4 page
+
               .when('/tables/4', {
                   templateUrl: 'Views/Tables/Table4.html',
                   controller: 'TableController'
