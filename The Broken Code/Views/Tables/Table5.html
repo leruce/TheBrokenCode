@@ -1,10 +1,86 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-	<meta charset="utf-8" />
-</head>
-<body>
+﻿<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="text-center">
+                <b>Table Name</b>
+            </h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <h3 class="text-center">
+                        <b>Customers</b>
+                    </h3>
+                    <table class="table table-condensed table-hover">
+                        <tbody>
+                            <tr class="success">
+                                <td>
+                                    Customer 1
+                                </td>
+                            </tr>
 
-</body>
-</html>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="text-center">
+                        <b>Status</b>
+                    </h3>
+                    <table class="table table-condensed table-hover">
+                        <tbody ng-repeat="table6 in Table6">
+                            <tr class="success">
+                                <td>
+                                    {{table6.Status}}
+                                </td>
+                                <td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="text-center">
+                        <b>Refills</b>
+                    </h3>
+                    <table class="table table-condensed table-hover">
+                        <tbody>
+                            <tr class="success">
+                                <td>
+                                    Sprite
+                                </td>
+                                <td>
+                                    x1
+                                </td>
+                            </tr>
+
+                            <tr class="success">
+                                <td>
+                                    Vodka Sour
+                                </td>
+                                <td>
+                                    x7
+                                </td>
+                            </tr>
+                            <tr class="success">
+                                <td>
+                                    Dr. Pepper
+                                </td>
+                                <td>
+                                    x2
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>
+                <b>Comments</b>
+            </h3>
+            <p ng-repeat="help in Help">
+                <strong>{{help.Request}}</strong>
+            </p>
+        </div>
+    </div>
+</div>

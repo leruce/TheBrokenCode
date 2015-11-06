@@ -260,6 +260,555 @@
          });
 
 
+
+         //pull help class
+         var helpList = [];
+         var HelpDfd = $q.defer();
+         var Help = Parse.Object.extend("Help");
+         var queryHelp = new Parse.Query(Help);
+         queryHelp.find({
+             success: function (data) {
+                 angular.forEach(data, function (result) {
+                     helpList.push({
+                         Request: result.get("HelpRequest"),
+                         Status: result.get("helpStatus")
+                     });
+
+                 });
+             },
+             error: function (error) {
+                 alert("Error: " + error.code + " " + error.message);
+             }
+         }).then(function (data) {
+
+             HelpDfd.resolve(data);
+
+         },
+         function (error) {
+             HelpDfd.reject(data);
+
+         });
+         HelpDfd.promise
+         .then(function (All) {
+
+             $scope.Help = helpList;
+         })
+         .catch(function (error) {
+
+         });
+
+
+         //table1
+      
+             var list = [];
+             var TableDfd2 = $q.defer();
+             var Table2 = Parse.Object.extend("Table");
+             var queryList = new Parse.Query(Table2);
+             
+             queryList.equalTo("TableID", 1);
+            
+             queryList.find({
+                 success: function (data) {
+                     angular.forEach(data, function (result) {
+                         list.push({
+                             ID: result.get("TableID"),
+                             Customer: result.get("Customer"),
+                             Status: result.get("Status")
+                         });
+
+
+
+                     });
+                 },
+
+
+                 error: function (error) {
+                     alert("Error: " + error.code + " " + error.message);
+                 }
+             }).then(function (data) {
+
+                 TableDfd2.resolve(data);
+                 //next query based on _User class
+                 //console.log(data.get("Customer"));
+             },
+             function (error) {
+                 TableDfd2.reject(data);
+
+             });
+             TableDfd2.promise
+             .then(function (List) {
+
+                 console.log(list[0].Customer.id);
+                 var cust = Parse.Object.extend("User");
+                 var queryCust = new Parse.Query(cust);
+                 queryCust.equalTo("objectID", "list[0].Customer.id");
+                 queryCust.find({
+                     success: function (data) {
+                         angular.forEach(data, function (result) {
+                             console.log(data);
+                             list.push({
+                    
+                                 Name: result.get("Name"),
+                             
+                             });
+
+
+
+                         });
+                     }
+
+                 
+                 })
+                 
+                 $scope.Table2 = list;
+               
+             })
+             .catch(function (error) {
+
+             });
+         
+         //table 2
+             var list2 = [];
+             var TableDfd3 = $q.defer();
+             var Table3 = Parse.Object.extend("Table");
+             var queryList2 = new Parse.Query(Table3);
+             queryList2.equalTo("TableID", 2);
+             queryList2.find({
+                 success: function (data) {
+                     angular.forEach(data, function (result) {
+                         list2.push({
+                             ID: result.get("TableID"),
+                             Customer: result.get("Customer"),
+                             Status: result.get("Status")
+                         });
+
+
+
+                     });
+                 },
+                 error: function (error) {
+                     alert("Error: " + error.code + " " + error.message);
+                 }
+             }).then(function (data) {
+
+                 TableDfd3.resolve(data);
+
+             },
+             function (error) {
+                 TableDfd3.reject(data);
+
+             });
+             TableDfd3.promise
+             .then(function (List) {
+
+                 $scope.Table3 = list2;
+             })
+             .catch(function (error) {
+
+             });
+
+
+         //table 3
+             var list3 = [];
+             var TableDfd4 = $q.defer();
+             var Table4 = Parse.Object.extend("Table");
+             var queryList3 = new Parse.Query(Table4);
+             queryList3.equalTo("TableID", 3);
+             queryList3.find({
+                 success: function (data) {
+                     angular.forEach(data, function (result) {
+                         list3.push({
+                             ID: result.get("TableID"),
+                             Customer: result.get("Customer"),
+                             Status: result.get("Status")
+                         });
+
+
+
+                     });
+                 },
+                 error: function (error) {
+                     alert("Error: " + error.code + " " + error.message);
+                 }
+             }).then(function (data) {
+
+                 TableDfd4.resolve(data);
+
+             },
+             function (error) {
+                 TableDfd4.reject(data);
+
+             });
+             TableDfd4.promise
+             .then(function (List) {
+
+                 $scope.Table4 = list3;
+             })
+             .catch(function (error) {
+
+             });
+
+        
+         //table 4
+             var list4 = [];
+             var TableDfd5 = $q.defer();
+             var Table5 = Parse.Object.extend("Table");
+             var queryList4 = new Parse.Query(Table5);
+             queryList4.equalTo("TableID", 4);
+             queryList4.find({
+                 success: function (data) {
+                     angular.forEach(data, function (result) {
+                         list4.push({
+                             ID: result.get("TableID"),
+                             Customer: result.get("Customer"),
+                             Status: result.get("Status")
+                         });
+
+
+
+                     });
+                 },
+                 error: function (error) {
+                     alert("Error: " + error.code + " " + error.message);
+                 }
+             }).then(function (data) {
+
+                 TableDfd5.resolve(data);
+
+             },
+             function (error) {
+                 TableDfd5.reject(data);
+
+             });
+             TableDfd5.promise
+             .then(function (List) {
+
+                 $scope.Table5 = list4;
+             })
+             .catch(function (error) {
+
+             });
+
+         //table 5
+             var list5 = [];
+             var TableDfd6 = $q.defer();
+             var Table6 = Parse.Object.extend("Table");
+             var queryList5 = new Parse.Query(Table6);
+             queryList5.equalTo("TableID", 5);
+             queryList5.find({
+                 success: function (data) {
+                     angular.forEach(data, function (result) {
+                         list5.push({
+                             ID: result.get("TableID"),
+                             Customer: result.get("Customer"),
+                             Status: result.get("Status")
+                         });
+
+
+
+                     });
+                 },
+                 error: function (error) {
+                     alert("Error: " + error.code + " " + error.message);
+                 }
+             }).then(function (data) {
+
+                 TableDfd6.resolve(data);
+
+             },
+             function (error) {
+                 TableDfd6.reject(data);
+
+             });
+             TableDfd6.promise
+             .then(function (List) {
+
+                 $scope.Table6 = list5;
+             })
+             .catch(function (error) {
+
+             });
+
+
+         //table 6
+             var list6 = [];
+             var TableDfd7 = $q.defer();
+             var Table7 = Parse.Object.extend("Table");
+             var queryList6 = new Parse.Query(Table7);
+             queryList6.equalTo("TableID", 6);
+             queryList6.find({
+                 success: function (data) {
+                     angular.forEach(data, function (result) {
+                         list6.push({
+                             ID: result.get("TableID"),
+                             Customer: result.get("Customer"),
+                             Status: result.get("Status")
+                         });
+
+
+
+                     });
+                 },
+                 error: function (error) {
+                     alert("Error: " + error.code + " " + error.message);
+                 }
+             }).then(function (data) {
+
+                 TableDfd7.resolve(data);
+
+             },
+             function (error) {
+                 TableDfd7.reject(data);
+
+             });
+             TableDfd7.promise
+             .then(function (List) {
+
+                 $scope.Table7 = list6;
+             })
+             .catch(function (error) {
+
+             });
+
+         //table 7
+             var list7 = [];
+             var TableDfd8 = $q.defer();
+             var Table8 = Parse.Object.extend("Table");
+             var queryList7 = new Parse.Query(Table8);
+             queryList7.equalTo("TableID", 7);
+             queryList7.find({
+                 success: function (data) {
+                     angular.forEach(data, function (result) {
+                         list7.push({
+                             ID: result.get("TableID"),
+                             Customer: result.get("Customer"),
+                             Status: result.get("Status")
+                         });
+
+
+
+                     });
+                 },
+                 error: function (error) {
+                     alert("Error: " + error.code + " " + error.message);
+                 }
+             }).then(function (data) {
+
+                 TableDfd8.resolve(data);
+
+             },
+             function (error) {
+                 TableDfd8.reject(data);
+
+             });
+             TableDfd8.promise
+             .then(function (List) {
+
+                 $scope.Table8 = list7;
+             })
+             .catch(function (error) {
+
+             });
+
+         //table 8
+             var list8 = [];
+             var TableDfd9 = $q.defer();
+             var Table9 = Parse.Object.extend("Table");
+             var queryList8 = new Parse.Query(Table9);
+             queryList8.equalTo("TableID", 8);
+             queryList8.find({
+                 success: function (data) {
+                     angular.forEach(data, function (result) {
+                         list8.push({
+                             ID: result.get("TableID"),
+                             Customer: result.get("Customer"),
+                             Status: result.get("Status")
+                         });
+
+
+
+                     });
+                 },
+                 error: function (error) {
+                     alert("Error: " + error.code + " " + error.message);
+                 }
+             }).then(function (data) {
+
+                 TableDfd9.resolve(data);
+
+             },
+             function (error) {
+                 TableDfd9.reject(data);
+
+             });
+             TableDfd9.promise
+             .then(function (List) {
+
+                 $scope.Table9 = list8;
+             })
+             .catch(function (error) {
+
+             });
+
+         //table 9
+             var list9 = [];
+             var TableDfd10 = $q.defer();
+             var Table10 = Parse.Object.extend("Table");
+             var queryList9 = new Parse.Query(Table10);
+             queryList9.equalTo("TableID", 9);
+             queryList9.find({
+                 success: function (data) {
+                     angular.forEach(data, function (result) {
+                         list9.push({
+                             ID: result.get("TableID"),
+                             Customer: result.get("Customer"),
+                             Status: result.get("Status")
+                         });
+
+
+
+                     });
+                 },
+                 error: function (error) {
+                     alert("Error: " + error.code + " " + error.message);
+                 }
+             }).then(function (data) {
+
+                 TableDfd10.resolve(data);
+
+             },
+             function (error) {
+                 TableDfd10.reject(data);
+
+             });
+             TableDfd10.promise
+             .then(function (List) {
+
+                 $scope.Table10 = list9;
+             })
+             .catch(function (error) {
+
+             });
+
+         //table 10
+             var list10 = [];
+             var TableDfd11 = $q.defer();
+             var Table11 = Parse.Object.extend("Table");
+             var queryList10 = new Parse.Query(Table11);
+             queryList10.equalTo("TableID", 10);
+             queryList10.find({
+                 success: function (data) {
+                     angular.forEach(data, function (result) {
+                         list10.push({
+                             ID: result.get("TableID"),
+                             Customer: result.get("Customer"),
+                             Status: result.get("Status")
+                         });
+
+
+
+                     });
+                 },
+                 error: function (error) {
+                     alert("Error: " + error.code + " " + error.message);
+                 }
+             }).then(function (data) {
+
+                 TableDfd11.resolve(data);
+
+             },
+             function (error) {
+                 TableDfd11.reject(data);
+
+             });
+             TableDfd11.promise
+             .then(function (List) {
+
+                 $scope.Table11 = list10;
+             })
+             .catch(function (error) {
+
+             });
+
+         //table 11
+             var list11 = [];
+             var TableDfd12 = $q.defer();
+             var Table12 = Parse.Object.extend("Table");
+             var queryList11 = new Parse.Query(Table12);
+             queryList11.equalTo("TableID", 11);
+             queryList11.find({
+                 success: function (data) {
+                     angular.forEach(data, function (result) {
+                         list11.push({
+                             ID: result.get("TableID"),
+                             Customer: result.get("Customer"),
+                             Status: result.get("Status")
+                         });
+
+
+
+                     });
+                 },
+                 error: function (error) {
+                     alert("Error: " + error.code + " " + error.message);
+                 }
+             }).then(function (data) {
+
+                 TableDfd12.resolve(data);
+
+             },
+             function (error) {
+                 TableDfd12.reject(data);
+
+             });
+             TableDfd12.promise
+             .then(function (List) {
+
+                 $scope.Table12 = list11;
+             })
+             .catch(function (error) {
+
+             });
+
+         //table 12
+             var list12 = [];
+             var TableDfd13 = $q.defer();
+             var Table13 = Parse.Object.extend("Table");
+             var queryList12 = new Parse.Query(Table13);
+             queryList12.equalTo("TableID", 12);
+             queryList12.find({
+                 success: function (data) {
+                     angular.forEach(data, function (result) {
+                         list12.push({
+                             ID: result.get("TableID"),
+                             Customer: result.get("Customer"),
+                             Status: result.get("Status")
+                         });
+
+
+
+                     });
+                 },
+                 error: function (error) {
+                     alert("Error: " + error.code + " " + error.message);
+                 }
+             }).then(function (data) {
+
+                 TableDfd13.resolve(data);
+
+             },
+             function (error) {
+                 TableDfd13.reject(data);
+
+             });
+             TableDfd13.promise
+             .then(function (List) {
+
+                 $scope.Table13 = list12;
+             })
+             .catch(function (error) {
+
+             });
          //$scope.addToOrder = function (foodObject) {
          //    //Goal is to do the following things
          //    //Check the Customer via currentUser
