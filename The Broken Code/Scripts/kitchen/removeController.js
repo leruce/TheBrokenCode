@@ -57,14 +57,14 @@ restaurantApp.controller('removeController',
                  Item.Active = "Activate";
                  Item.IngredientActive = false;
                  getMenu(Item);
-                 console.log(Item.IngredientActive);
+                 //console.log(Item.IngredientActive);
              }
              else if (Item.Active == "Activate")
              {
                  Item.Active = "Remove";
                  Item.IngredientActive = true;
                  getMenu(Item);
-                 console.log(Item.IngredientActive);
+                 //console.log(Item.IngredientActive);
              }
 
              //If either one of those are false, we just create a new object.
@@ -79,6 +79,7 @@ restaurantApp.controller('removeController',
              var menuList = [];
              var MenuDfd = $q.defer();
              var Menu = Parse.Object.extend("MenuItem");
+             var menu = new Menu();
              var queryIngredient = new Parse.Query(Menu);
              queryIngredient.find({
                  success: function (data) {
@@ -87,7 +88,33 @@ restaurantApp.controller('removeController',
                          menuList.push({
                              menuIngredients: result.get("IngredientList"),
                              menuActive: result.get("Active"),
+                             menuID: result.get("ObjectId"),
                          });
+                     });
+                     
+                     for (var x = 0; x < menuList.length; x++)
+                     {
+                         if (menuList[x].menuIngredients != null)
+                         {
+                             for (var y = 0; y < menuList[x].menuIngredients.length; y++)
+                             {
+                                 
+                                 if (menuList[x].menuIngredients[y] == Item.IngredientID)
+                                 {
+                                     console.log(Item.IngredientActive + "==" + menuList[x].menuActive);
+                                     menu.id = menuList[x].menuID;
+                                     menu.set("Active", Item.IngredientActive);
+                                 }
+                             }
+                         }
+                     }
+                     menu.save(null, {
+                         success: function (menu) {
+                             //alert("Thank you! Your request has been sent!");
+                         },
+                         error: function (menu, error) {
+                             //  alert("Failed to create!");
+                         }
                      });
                  },
                  error: function (error) {
@@ -97,7 +124,6 @@ restaurantApp.controller('removeController',
                  //console.log("menu list it " + menuList);
                  //console.log("data is " + data);
                  MenuDfd.resolve(data);
-                 console.log("console.log " + data.length);
                  //alert("Working got " + menuItem.length);
              },
          function (error) {
@@ -108,16 +134,6 @@ restaurantApp.controller('removeController',
              .then(function (data) {
                  //alert("MenuValue:" + menuItem[0].FoodName);
                  $scope.menuList = data;
-                 console.log("console.log 2nd Promose " +menuList);
-                 console.log($scope.menuList);
-                 /*console.log($scope.menuList.MenuIngredients);
-                 (for (var x = 0; x < $scope.menuList.length; x++) {
-                     for (var y = 0; y < $scope.menuList[x].menuIngredients.length; y++) {
-                         if (Item.IngredientID == $scope.menuList.menuIngredients[y]) {
-                             $scope.menuList.Active = Item.Active;
-                         }
-                     }
-                 }*/
              })
              .catch(function (error) {
                  //Balh
