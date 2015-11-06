@@ -26,9 +26,9 @@
 </h3>
                     <table class="table table-condensed table-hover">
                         <tbody>
-                            <tr class="success">
+                            <tr class="success" ng-include="getTable(wXtdGwjvuP)" ng-repeat="table2 in Table2">
                                 <td>
-                                    Eating
+                                   {{table2.Status}}
                                 </td>
                                 <td>
                             </tr>
@@ -78,8 +78,8 @@
             <h3>
                 <b>Comments</b>
 </h3>
-            <p>
-                <strong>Bring some table dancers.</strong>
+            <p  ng-repeat="help in Help">
+                <strong>{{help.Request}}</strong>
             </p>
         </div>
     </div>
