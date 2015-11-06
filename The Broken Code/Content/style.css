@@ -64,3 +64,11 @@ background:#094400
   text-decoration: none;
   color: #000000;
 }
+h1 {
+	font-family: Papyrus, fantasy;
+	font-size: 40px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+    line-height: 18px;
+}
