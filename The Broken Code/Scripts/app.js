@@ -27,7 +27,6 @@ var restaurantApp = angular.module('restaurantApp',
                    templateUrl: 'Views/manager/topItems.html',
                    controller: 'TableController'
                })
-<<<<<<< Updated upstream
               //The staff ordering page
               .when('/stafforder', {
                     templateUrl: 'Views/staff/staffOrder.html',
@@ -38,8 +37,7 @@ var restaurantApp = angular.module('restaurantApp',
                   templateUrl: 'Views/kitchen/remove.html',
                   controller: 'removeController'
               })
-=======
->>>>>>> Stashed changes
+
               //The main manager page
               .when('/manager', {
                   templateUrl: 'Views/manager/manager.html',
