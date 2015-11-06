@@ -209,9 +209,7 @@
     <Content Include="Views\menu\kids.html" />
     <Content Include="Views\menu\menu.html" />
     <Content Include="Views\payment\survey.html" />
-    <Content Include="Views\staff\helppage.html" />
     <Content Include="Views\manager\manager.html" />
-    <Content Include="Views\staff\PageR.html" />
     <Content Include="Views\staff\staffOrder.html" />
     <Content Include="Views\staff\tables.html" />
     <Content Include="Web.config" />
