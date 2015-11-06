@@ -44,9 +44,8 @@ background:#094400
 }
 
 .btn {
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 28px;
+ 
+  border-radius: 15px; /*Increase to make more "round/pill shaped"*/
   -webkit-box-shadow: 0px 1px 3px #666666;
   -moz-box-shadow: 0px 1px 3px #666666;
   box-shadow: 0px 1px 3px #666666;
@@ -56,6 +55,7 @@ background:#094400
   background: #0c4500;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
+  border: solid #ffffff 2px;
 }
 
 
