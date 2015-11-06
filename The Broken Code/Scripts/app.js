@@ -32,6 +32,11 @@ var restaurantApp = angular.module('restaurantApp',
                     templateUrl: 'Views/staff/staffOrder.html',
                     controller: 'TableController'
               })
+              //The remove page
+              .when('/remove', {
+                  templateUrl: 'Views/kitchen/remove.html',
+                  controller: 'removeController'
+              })
               //The main manager page
               .when('/manager', {
                   templateUrl: 'Views/manager/manager.html',
