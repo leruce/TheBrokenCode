@@ -25,8 +25,8 @@
                         <b>Status</b>
 </h3>
                     <table class="table table-condensed table-hover">
-                        <tbody>
-                            <tr class="success" ng-include="getTable(wXtdGwjvuP)" ng-repeat="table2 in Table2">
+                        <tbody ng-repeat="table2 in Table2">
+                            <tr class="success">
                                 <td>
                                    {{table2.Status}}
                                 </td>
