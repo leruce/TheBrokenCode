@@ -54,6 +54,7 @@ restaurantApp.controller('ViewOrderController',
                 }
             }).then(function (orders) {
                 Defered.resolve(orders);
+                console.log("First Resolve give us this: "+orders.get("ItemsOrdered"));
             },
             function (error) {
                 Defered.reject(orders);
@@ -61,10 +62,9 @@ restaurantApp.controller('ViewOrderController',
             Defered.promise
             .then(function (orders) {
                 $scope.Items = FoodItem;
-                console.log(orders.get("ItemsOrdered"));
-                $scope.CrudeOrder = orders;
+                console.log("Which then be promised to hold value :" + orders.get("ItemsOrdered"));
+                //$scope.CrudeOrder = orders;
                 CheckOrder(orders);
-                console.log($rootScope.OrderThings);
                 //Here where i will  call my function
             })
             .catch(function (error) {
@@ -72,6 +72,7 @@ restaurantApp.controller('ViewOrderController',
                 console.log("We get an ERROR here");
             });
             function CheckOrder(Ordered) {
+                console.log("We get into the CheckOrdered");
                 var SecondDeffered = $q.defer();
                 var OrderExpanded = [];
                 var menuItem = Parse.Object.extend("MenuItem");
@@ -99,7 +100,7 @@ restaurantApp.controller('ViewOrderController',
 
                 }).then(function (OrderExpand) {
                     SecondDeffered.resolve(OrderExpand);
-                    
+                    console.log("We resvolved the 2nd promise we have " + OrderExpand);
                 },
                 function (error) {
                     SecondDeffered.reject(OrderExpand);
