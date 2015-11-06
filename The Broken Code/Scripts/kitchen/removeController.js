@@ -56,14 +56,14 @@ restaurantApp.controller('removeController',
              {
                  Item.Active = "Activate";
                  Item.IngredientActive = false;
-                 getMenu();
+                 getMenu(Item);
                  console.log(Item.IngredientActive);
              }
              else if (Item.Active == "Activate")
              {
                  Item.Active = "Remove";
                  Item.IngredientActive = true;
-                 getMenu();
+                 getMenu(Item);
                  console.log(Item.IngredientActive);
              }
 
@@ -75,7 +75,7 @@ restaurantApp.controller('removeController',
              
          }
          
-         function getMenu() {
+         function getMenu(Item) {
              var menuList = [];
              var MenuDfd = $q.defer();
              var Menu = Parse.Object.extend("MenuItem");
@@ -107,13 +107,20 @@ restaurantApp.controller('removeController',
              .then(function (data) {
                  //alert("MenuValue:" + menuItem[0].FoodName);
                  $scope.menuList = data;
+                 console.log($scope.menuList);
+                 /*console.log($scope.menuList.MenuIngredients);
+                 (for (var x = 0; x < $scope.menuList.length; x++) {
+                     for (var y = 0; y < $scope.menuList[x].menuIngredients.length; y++) {
+                         if (Item.IngredientID == $scope.menuList.menuIngredients[y]) {
+                             $scope.menuList.Active = Item.Active;
+                         }
+                     }
+                 }*/
              })
              .catch(function (error) {
                  //Balh
              });
-
-             console.log($scope.menuList);
-
+             
          }
      }]);
 
