@@ -100,6 +100,7 @@ restaurantApp.controller('DessertMenuController',
               order.save(null, {
                   success: function (order) {
                       console.log("SAVED");
+                      alert("You added " + _foodObject.FoodName);
                   },
                   error: function (order, error) {
                       console.log("Failed " + error.code + error.message);
@@ -120,6 +121,7 @@ restaurantApp.controller('DessertMenuController',
               orderObject.save(null, {
                   success: function (orderObject) {
                       console.log("Saved");
+                      alert("You added " + _foodObject.FoodName);
                   },
                   error: function (orderObject, error) {
                       console.log("FAILED");

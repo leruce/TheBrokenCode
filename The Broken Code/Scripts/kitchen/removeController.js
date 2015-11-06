@@ -10,7 +10,6 @@ restaurantApp.controller('removeController',
          queryIngredient.find({
              success: function (data) {
                  angular.forEach(data, function (result) {
-                     
                      var active;
                      if (result.get("Active") == true)
                      {
@@ -45,6 +44,7 @@ restaurantApp.controller('removeController',
          .then(function (Entree) {
              //alert("MenuValue:" + menuItem[0].FoodName);
              $scope.Ingredient = Item;
+             //console.log(Item.IngredientID)
          })
          .catch(function (error) {
              //Balh
@@ -97,6 +97,7 @@ restaurantApp.controller('removeController',
                  //console.log("menu list it " + menuList);
                  //console.log("data is " + data);
                  MenuDfd.resolve(data);
+                 console.log("console.log " + data.length);
                  //alert("Working got " + menuItem.length);
              },
          function (error) {
@@ -107,6 +108,7 @@ restaurantApp.controller('removeController',
              .then(function (data) {
                  //alert("MenuValue:" + menuItem[0].FoodName);
                  $scope.menuList = data;
+                 console.log("console.log 2nd Promose " +menuList);
                  console.log($scope.menuList);
                  /*console.log($scope.menuList.MenuIngredients);
                  (for (var x = 0; x < $scope.menuList.length; x++) {
