@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-condensed table-hover">
+                <thead>
+                    <tr>
+                        <th>
+                            Customer's Refill Request
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody >
+                    <tr class="success" ng-repeat="refills in Refills">
+                        <td>
+                            {{refills.Request}}
+
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

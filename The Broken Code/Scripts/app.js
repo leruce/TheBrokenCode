@@ -27,6 +27,7 @@ var restaurantApp = angular.module('restaurantApp',
                    templateUrl: 'Views/manager/topItems.html',
                    controller: 'TableController'
                })
+<<<<<<< Updated upstream
               //The staff ordering page
               .when('/stafforder', {
                     templateUrl: 'Views/staff/staffOrder.html',
@@ -37,27 +38,50 @@ var restaurantApp = angular.module('restaurantApp',
                   templateUrl: 'Views/kitchen/remove.html',
                   controller: 'removeController'
               })
+=======
+>>>>>>> Stashed changes
               //The main manager page
               .when('/manager', {
                   templateUrl: 'Views/manager/manager.html',
                   controller: 'ManagerController'
               })
-
-               //The refill page
+               //The main staff page 
+              .when('/waitstaff', {
+                  templateUrl: 'Views/staff/waitstaff.html',
+                  controller: 'TableController'
+              })
+              //The staff ordering page
+              .when('/waitstaff/order', {
+                    templateUrl: 'Views/staff/staffOrder.html',
+                    controller: 'TableController'
+              })
+             //The waitstaff refill page
+              .when('/waitstaff/refill', {
+                   templateUrl: 'Views/staff/staffrefill.html',
+                   controller: 'RefillSController'
+              })  
+              //The waitstaff help page
+              .when('/waitstaff/help', {
+                   templateUrl: 'Views/staff/staffhelp.html',
+                   controller: 'HelpSController'
+              })
+               //The customer refill page
+              .when('/help', {
+                   templateUrl: 'Views/customer/helppage.html',
+                   controller: 'refillController'
+              })   
+                //The customer help page
               .when('/refill', {
-                   templateUrl: 'Views/staff/PageR.html',
-                   controller: 'TableController'
-              })             
+                   templateUrl: 'Views/customer/refillpage.html',
+                   controller: 'helpController'
+              })
+        
               //The payment page
               .when('/payment', {
                   templateUrl: 'Views/payment/survey.html',
                   controller: 'TableController'
               })
-              //The help page
-              .when('/help', {
-                   templateUrl: 'Views/staff/helppage.html',
-                   controller: 'TableController'
-              })
+             
               //The menu page
                .when('/menu', {
                     templateUrl: 'Views/Menu/menu.html',
