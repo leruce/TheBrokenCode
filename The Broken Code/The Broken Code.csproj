@@ -177,7 +177,6 @@
     <Content Include="Scripts\menu\MenuService.js" />
     <Content Include="Scripts\parse\parseService.js" />
     <Content Include="Scripts\payment\surveyController.js" />
-    <Content Include="Scripts\staff\helppage.js" />
     <Content Include="Scripts\staff\PageRController.js" />
     <Content Include="Scripts\staff\TableController.js" />
     <Content Include="Views\tables\Table11.html" />
