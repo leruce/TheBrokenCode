@@ -23,7 +23,7 @@ restaurantApp.controller('removeController',
                          IngredientName: result.get("Name"),
                          IngredientID: result.get("IngredientID"),
                          IngredientActive: result.get("Active"),
-                         Active: active,
+                         Active: active
                      });
                  });
                  console.log(data.length);
@@ -56,6 +56,16 @@ restaurantApp.controller('removeController',
              {
                  Item.Active = "Activate";
                  Item.IngredientActive = false;
+                 var ingredient;
+                 var queryID = new Parse.Query(MenuIngredient);
+                 queryID.equalTo("IngredientID", Item.IngredientID);
+                 queryID.find({
+                     success: function (data) {
+                         ingredient = data[0];
+                         ingredient.set("Active", Item.IngredientActive);
+                         ingredient.save();
+                     }
+                 });
                  getMenu(Item);
                  //console.log(Item.IngredientActive);
              }
@@ -63,6 +73,16 @@ restaurantApp.controller('removeController',
              {
                  Item.Active = "Remove";
                  Item.IngredientActive = true;
+                 var ingredient;
+                 var queryID = new Parse.Query(MenuIngredient);
+                 queryID.equalTo("IngredientID", Item.IngredientID);
+                 queryID.find({
+                     success: function (data) {
+                         ingredient = data[0];
+                         ingredient.set("Active", Item.IngredientActive);
+                         ingredient.save();
+                     }
+                         });
                  getMenu(Item);
                  //console.log(Item.IngredientActive);
              }
@@ -79,7 +99,6 @@ restaurantApp.controller('removeController',
              var menuList = [];
              var MenuDfd = $q.defer();
              var Menu = Parse.Object.extend("MenuItem");
-             var menu = new Menu();
              var queryIngredient = new Parse.Query(Menu);
              queryIngredient.find({
                  success: function (data) {
@@ -88,7 +107,7 @@ restaurantApp.controller('removeController',
                          menuList.push({
                              menuIngredients: result.get("IngredientList"),
                              menuActive: result.get("Active"),
-                             menuID: result.get("ObjectId"),
+                             foodID: result.get("FoodID")
                          });
                      });
                      
@@ -101,21 +120,22 @@ restaurantApp.controller('removeController',
                                  
                                  if (menuList[x].menuIngredients[y] == Item.IngredientID)
                                  {
-                                     console.log(Item.IngredientActive + "==" + menuList[x].menuActive);
-                                     menu.id = menuList[x].menuID;
-                                     menu.set("Active", Item.IngredientActive);
+                                     var item;
+                                     var queryID = new Parse.Query(Menu);
+                                     queryID.equalTo("FoodID", menuList[x].foodID);
+                                     console.log("Item is: " + menuList[x].foodID);
+                                     queryID.find({
+                                         success: function (data) {
+                                             console.log(data[0]);
+                                             item = data[0];
+                                             item.set("Active", Item.IngredientActive);
+                                             item.save();
+                                         }
+                                     });
                                  }
                              }
                          }
                      }
-                     menu.save(null, {
-                         success: function (menu) {
-                             //alert("Thank you! Your request has been sent!");
-                         },
-                         error: function (menu, error) {
-                             //  alert("Failed to create!");
-                         }
-                     });
                  },
                  error: function (error) {
                      alert("Error: " + error.code + " " + error.message);
