@@ -225,6 +225,7 @@
 
          //pull whole menu
          var menuItem5 = [];
+         var revenueList = [];
          var MenuDfd5 = $q.defer();
          var MenuAll = Parse.Object.extend("MenuItem");
          var queryAll = new Parse.Query(MenuAll);
@@ -233,7 +234,8 @@
                  angular.forEach(data, function (result) {
                      menuItem5.push({
                          FoodName: result.get("Name"),
-                         Amount: result.get("AmountSold")
+                         Amount: result.get("AmountSold"),
+                         Price: result.get("Price"),
                      });
                      
                  });
@@ -241,7 +243,31 @@
              error: function (error) {
                  alert("Error: " + error.code + " " + error.message);
              }
-         }).then(function (data) {
+         })
+
+         var gratList = []; //get Tip amount from Order class
+         var Gratuity = Parse.Object.extend("Order");
+         var GratuityAll = new Parse.Query(Gratuity);
+         GratuityAll.find({
+             success: function (data) {
+                 angular.forEach(data, function (result) {
+                     gratList.push({
+                         Gratuity: result.get("Tip"),
+                     });
+
+                 });
+             },
+
+             error: function (error) {
+                 alert("Error: " + error.code + " " + error.message);
+             }
+         })
+
+
+
+
+
+             .then(function (data) {
 
              MenuDfd5.resolve(data);
            
@@ -254,6 +280,34 @@
          .then(function (All) {
            
              $scope.MenuAll = menuItem5;
+             $scope.Revenue = revenueList; //revenue list that contains revenue, taxes and gratuity
+             var revenue = 0;
+             var taxes = 0;
+
+             //Loop through all the items and multiply their price by amount sold
+             for (i = 0; i < 37; i++) {
+                 
+                 revenue +=menuItem5[i].Price * menuItem5[i].Amount;
+             }
+
+             var result = Math.round(revenue * 100) / 100;  //Get rid of everything past second decimal
+             
+             taxes = Math.round(result * (0.0825) * 100) / 100; //Get taxes and round to two decimal places
+
+             
+             var gratuity = 0;
+
+             for (i = 0; i < gratList.length; i++) {
+
+                 gratuity += gratList[i].Gratuity;
+             }
+
+             revenueList.push({  //push revenue and taxes to list
+                 Revenue: result,
+                 Tax: taxes,
+                 Tip: gratuity
+             });
+                         
          })
          .catch(function (error) {
              

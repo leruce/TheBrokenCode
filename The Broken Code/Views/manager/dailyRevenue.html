@@ -18,15 +18,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="success">
+                    <tr class="success" ng-repeat="revenue in Revenue">
                         <td>
-                            $900000000000.00
+                            
+                            ${{revenue.Revenue}} 
                         </td>
                         <td>
-                            $1337.55
+                            ${{revenue.Tax}}
                         </td>
                         <td>
-                            $69.99
+                            ${{revenue.Tip}}
                         </td>
                     </tr>
 
