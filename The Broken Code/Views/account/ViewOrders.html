@@ -1,40 +1,38 @@
 ﻿<div class="container-fluid">
-     <div class="row">
-          <h1 class="text-left">
-               View Order
-          </h1>
-     </div>
-     <div class="row">
-          <div class="col-md-6">
-
-               <div class="row top-buffer" ng-repeat="OrderStuff in OrderThings">
-                    <div class="col-md-6">
-                         <h3>
-                              {{OrderStuff.FoodName}}
-                         </h3>
-                         <p>
-                              Price ${{OrderStuff.Price}}
-                         </p>
-                         <button type="button" class="btn" ng-click="DeleteItem(OrderStuff)">
-                              Delete Item
-                         </button>
-                    </div>
-                    <div class="col-md-6">
-                         <textarea class="form-control noresize" cols="30" rows="4" id="{{foodItem.id}}"> </textarea>
-                         <button type="button" class="btn" ng-click="SendOrderOut(OrderStuff)">
-                              Save Comment
-                         </button>
-                    </div>
-               </div>
-          </div>
-
-          </div>
-     <div class="row">
-          <div class="col-md-6">
-               <h3>Cost: $<span ng-bind="Cost"></span> </h3>
-               <button type="button" class="btn btn-default" ng-click="Submit(OrderStuff)">
-                    Submit Order
-               </button>
-          </div>
-     </div>
+    <div class="row">
+        <h1 class="text-left">
+            View Order
+        </h1>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row top-buffer" ng-repeat="OrderStuff in OrderThings">
+                <div class="col-md-6">
+                    <h3>
+                        {{OrderStuff.FoodName}}
+                    </h3>
+                    <p>
+                        Price ${{OrderStuff.Price}}
+                    </p>
+                    <button type="button" class="btn" ng-click="DeleteItem(OrderStuff)">
+                        Delete Item
+                    </button>
+                </div>
+                <div class="col-md-6">
+                    <textarea class="form-control noresize" cols="30" rows="4" id="{{OrderStuff.id}}"> </textarea>
+                    <button type="button" class="btn" ng-click="SendOrderOut(OrderStuff)">
+                        Save Comment
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Cost: $<span ng-bind="Cost"></span> </h3>
+            <button type="button" class="btn btn-default" ng-click="Submit(OrderStuff)">
+                Submit Order
+            </button>
+        </div>
+    </div>
 </div>
