@@ -3,13 +3,19 @@ html {
   position: relative;
   min-height: 100%;
 }
+
 body {
      /* Padding for fixed navbar header */
-     padding-top: 60px;
+     padding-top: 100px;
      /* Margin bottom by footer height */
      margin-bottom: 60px;
      background-color: #507e49;
 }
+
+.navbar-fixed-top {
+    min-height: 80px;
+}
+
 /* Sticky footer styles */
 footer {
      /* Make sure it's always at the bottom*/
@@ -30,6 +36,7 @@ text-align:center;
 background:#094400
 }
 
+/* Menu item descriptions*/
 .description{
      height:60px;
 }
@@ -38,13 +45,13 @@ background:#094400
      margin-top:20px; 
 }
 
+/* Menu item image format*/
 .image-format {
     height: 250px;
     width: auto;
 }
 
 .btn {
- 
   border-radius: 15px; /*Increase to make more "round/pill shaped"*/
   -webkit-box-shadow: 0px 1px 3px #666666;
   -moz-box-shadow: 0px 1px 3px #666666;
@@ -56,14 +63,15 @@ background:#094400
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   border: solid #ffffff 2px;
+  width: 150px;
 }
-
 
 .btn:hover {
   background: #e8e5e8;
   text-decoration: none;
   color: #000000;
 }
+
 h1 {
 	font-family: Papyrus, fantasy;
 	font-size: 40px;
@@ -71,4 +79,9 @@ h1 {
 	font-variant: normal;
 	font-weight: bold;
     line-height: 18px;
+}
+
+/* Disable resizable text boxes */
+textarea {
+    resize: none;
 }

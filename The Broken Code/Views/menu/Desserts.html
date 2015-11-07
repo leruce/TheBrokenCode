@@ -3,14 +3,13 @@
           <div class="col-md-4 top-buffer" ng-repeat="menuDesserts in MenuDesserts">
                <h3>
                     <b>{{menuDesserts.FoodName}}</b>
-</h3>
+               </h3>
                <!--Need to Show the Food Pic. We need to pull from Parse. -->
                <img class="img-thumbnail image-format" alt="Item Image" src="{{menuDesserts.FoodImg}}" />
                <p class="description">
-                   <strong>{{menuDesserts.Description}}</strong>
-</p>
+                   <strong>{{menuDesserts.Description}} - ${{menuDesserts.Price}}</strong>
+               </p>
                <p>
-                   <strong>${{menuDesserts.Price}}</strong>
                     <!-- Add Item to Order -->
                     <button type="button" class="btn btn-sm"ng-click="addToOrder(menuDesserts)"> Order </button>
                     <!-- Trigger the modal with a button -->
