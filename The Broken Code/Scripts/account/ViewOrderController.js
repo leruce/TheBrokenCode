@@ -25,7 +25,7 @@
 restaurantApp.controller('ViewOrderController',
     ['$rootScope', '$scope', '$http', '$location', '$window', '$q', 'ParseService',
         function ($rootScope, $scope, $http, $location, $window, $q, ParseService) {
-            console.log("We have enter the controller");
+            //console.log("We have enter the controller");
             var Defered = $q.defer();
             var Order = Parse.Object.extend("Order");
             var viewOrderQuery = new Parse.Query(Order);
@@ -35,10 +35,10 @@ restaurantApp.controller('ViewOrderController',
             viewOrderQuery.first({
                 success: function (orders) {
                     if (orders == null) {
-                        console.log("We get into no orders in view");
+                        //console.log("We get into no orders in view");
                     }
                     else {
-                        console.log("We got an order to list");
+                        //console.log("We got an order to list");
                         angular.forEach(orders, function (result) {
                             FoodItem.push({
                                 OrderComment: orders.get("OrderComment"),
@@ -54,16 +54,19 @@ restaurantApp.controller('ViewOrderController',
                 }
             }).then(function (orders) {
                 Defered.resolve(orders);
-                console.log("First Resolve give us this: "+orders.get("ItemsOrdered"));
+                ///$scope.CrudeOrder = FoodItem;
+                //console.log($scope.orderStuff);
+                //console.log("First Resolve give us this: "+orders.get("ItemsOrdered"));
             },
             function (error) {
                 Defered.reject(orders);
             });
             Defered.promise
             .then(function (orders) {
-                $scope.Items = FoodItem;
                 console.log("Which then be promised to hold value :" + orders.get("ItemsOrdered"));
-                //$scope.CrudeOrder = orders;
+                $scope.CrudeOrder = FoodItem;
+                $scope.Cost = FoodItem[0].Cost;
+                //console.log(FoodItem.legnth);
                 CheckOrder(orders);
                 //Here where i will  call my function
             })
@@ -72,7 +75,7 @@ restaurantApp.controller('ViewOrderController',
                 console.log("We get an ERROR here");
             });
             function CheckOrder(Ordered) {
-                console.log("We get into the CheckOrdered");
+                //console.log("We get into the CheckOrdered");
                 var SecondDeffered = $q.defer();
                 var OrderExpanded = [];
                 var menuItem = Parse.Object.extend("MenuItem");
@@ -84,7 +87,7 @@ restaurantApp.controller('ViewOrderController',
                         angular.forEach(OrderExpand, function (result) {
                             for (var x = 0; x < FoodIDArray.length; x++) {
                                 if (FoodIDArray[x] == result.get("FoodID")) {
-                                    console.log("We got into the Check order Success!");
+                                    //console.log("We got into the Check order Success!");
                                     OrderExpanded.push({
                                         FoodName: result.get("Name"),
                                         Price: result.get("Price"),
@@ -100,7 +103,7 @@ restaurantApp.controller('ViewOrderController',
 
                 }).then(function (OrderExpand) {
                     SecondDeffered.resolve(OrderExpand);
-                    console.log("We resvolved the 2nd promise we have " + OrderExpand);
+                    //console.log("We resvolved the 2nd promise we have " + OrderExpand);
                 },
                 function (error) {
                     SecondDeffered.reject(OrderExpand);
@@ -108,7 +111,7 @@ restaurantApp.controller('ViewOrderController',
                 SecondDeffered.promise
                 .then(function (OrderStuff) {
                         $rootScope.OrderThings = OrderExpanded;
-                        console.log("In the 2nd Promise! " + $rootScope.OrderThings);
+                        //console.log("In the 2nd Promise! " + $rootScope.OrderThings);
                     //return OrderExpanded;
                 })
                 .catch(function (error) {
