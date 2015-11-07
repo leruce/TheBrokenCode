@@ -17,7 +17,7 @@ var restaurantApp = angular.module('restaurantApp',
                    templateUrl: 'Views/manager/adjustments.html',
                    controller: 'ManagerController'
                })
-              //The manager revnue page
+              //The manager revenue page
               .when('/manager/revenue', {
                   templateUrl: 'Views/manager/dailyRevenue.html',
                   controller: 'TableController'
@@ -142,61 +142,61 @@ var restaurantApp = angular.module('restaurantApp',
                //The table1 page
               .when('/tables/1', {
                   templateUrl: 'Views/tables/Table1.html',
-                  controller: 'TableController'
+                  controller: 'Table1Controller'
               })
               .when('/tables/2', {
                   templateUrl: 'Views/tables/Table2.html',
-                  controller: 'TableController'
+                  controller: 'Table2Controller'
               })
                 //The table3 page                
               .when('/tables/3', {
                   templateUrl: 'Views/Tables/Table3.html',
-                  controller: 'TableController'
+                  controller: 'Table3Controller'
               })
 
               .when('/tables/4', {
                   templateUrl: 'Views/Tables/Table4.html',
-                  controller: 'TableController'
+                  controller: 'Table4Controller'
               })
                 //The table1 page
               .when('/tables/5', {
                   templateUrl: 'Views/Tables/Table5.html',
-                  controller: 'TableController'
+                  controller: 'Table5Controller'
               })
                 //The table1 page
               .when('/tables/6', {
                   templateUrl: 'Views/Tables/Table6.html',
-                  controller: 'TableController'
+                  controller: 'Table6Controller'
               })
                 //The table1 page
               .when('/tables/7', {
                   templateUrl: 'Views/Tables/Table7.html',
-                  controller: 'TableController'
+                  controller: 'Table7Controller'
               })
                 //The table1 page
               .when('/tables/8', {
                   templateUrl: 'Views/Tables/Table8.html',
-                  controller: 'TableController'
+                  controller: 'Table8Controller'
               })
                 //The table1 page
               .when('/tables/9', {
                   templateUrl: 'Views/Tables/Table9.html',
-                  controller: 'TableController'
+                  controller: 'Table9Controller'
               })
                 //The table1 page
               .when('/tables/10', {
                   templateUrl: 'Views/Tables/Table10.html',
-                  controller: 'TableController'
+                  controller: 'Table10Controller'
               })
                 //The table1 page
               .when('/tables/11', {
                   templateUrl: 'Views/Tables/Table11.html',
-                  controller: 'TableController'
+                  controller: 'Table11Controller'
               })
                 //The table1 page
               .when('/tables/12', {
                   templateUrl: 'Views/Tables/Table12.html',
-                  controller: 'TableController'
+                  controller: 'Table12Controller'
               })
                //Go to home if no route found
                .otherwise({ 

@@ -3,32 +3,32 @@
         <div class="col-md-12">
             <h3 class="text-center">
                 <b>Table Name</b>
-            </h3>
+</h3>
             <div class="row">
                 <div class="col-md-4">
                     <h3 class="text-center">
                         <b>Customers</b>
-                    </h3>
+</h3>
                     <table class="table table-condensed table-hover">
-                        <tbody>
+                        <tbody ng-repeat="name in Name">
                             <tr class="success">
                                 <td>
-                                    Customer 1
+                                   {{name.Name}}
                                 </td>
                             </tr>
-
+                            
                         </tbody>
                     </table>
                 </div>
                 <div class="col-md-4">
                     <h3 class="text-center">
                         <b>Status</b>
-                    </h3>
-                    <table class="table table-condensed table-hover">
-                        <tbody ng-repeat="table10 in Table10">
+</h3>
+                    <table class="table table-condensed table-hover" >
+                        <tbody ng-repeat="table2 in Table2">
                             <tr class="success">
                                 <td>
-                                    {{table10.Status}}
+                                   {{table2.Status}}
                                 </td>
                                 <td>
                             </tr>
@@ -39,7 +39,7 @@
                 <div class="col-md-4">
                     <h3 class="text-center">
                         <b>Refills</b>
-                    </h3>
+</h3>
                     <table class="table table-condensed table-hover">
                         <tbody>
                             <tr class="success">
@@ -77,8 +77,8 @@
         <div class="col-md-12">
             <h3>
                 <b>Comments</b>
-            </h3>
-            <p ng-repeat="help in Help">
+</h3>
+            <p  ng-repeat="help in Help">
                 <strong>{{help.Request}}</strong>
             </p>
         </div>

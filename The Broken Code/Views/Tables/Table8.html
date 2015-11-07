@@ -10,10 +10,10 @@
                         <b>Customers</b>
                     </h3>
                     <table class="table table-condensed table-hover">
-                        <tbody>
+                        <tbody ng-repeat="name in Name">
                             <tr class="success">
                                 <td>
-                                    Customer 1
+                                    {{name.Name}}
                                 </td>
                             </tr>
 
@@ -25,10 +25,10 @@
                         <b>Status</b>
                     </h3>
                     <table class="table table-condensed table-hover">
-                        <tbody ng-repeat="table9 in Table9">
+                        <tbody ng-repeat="table2 in Table2">
                             <tr class="success">
                                 <td>
-                                    {{table9.Status}}
+                                    {{table2.Status}}
                                 </td>
                                 <td>
                             </tr>
