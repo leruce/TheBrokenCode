@@ -14,11 +14,11 @@
                     </p>
                 </div>
                 <div class="col-md-6">
-                    <button type="button" class="btn" ng-click="DeleteItem(order)">
+                    <button type="button" class="btn" ng-click="DeleteItem(OrderStuff)">
                         Delete Item
                     </button>
                     <textarea class="form-control noresize" cols="30" rows="5" id="{{foodItem.id}}"> </textarea>
-                    <button type="button" class="btn" ng-click="SendOrderOut(order)">
+                    <button type="button" class="btn" ng-click="SendOrderOut(OrderStuff)">
                         Save Comment
                     </button>
                 </div>
@@ -26,7 +26,7 @@
         </div>
         <div class="col-md-6">
             <p>Cost: <span ng-bind="Cost"></span> </p>
-            <button type="button" class="btn btn-default" ng-click="SendOrderOut(order)">
+            <button type="button" class="btn btn-default" ng-click="Submit(OrderStuff)">
                 Submit
             </button>
         </div>

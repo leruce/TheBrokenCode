@@ -91,7 +91,8 @@ restaurantApp.controller('ViewOrderController',
                                     OrderExpanded.push({
                                         FoodName: result.get("Name"),
                                         Price: result.get("Price"),
-                                        FoodID: result.get("FoodID")
+                                        FoodID: result.get("FoodID"),
+                                        OrderID: Ordered.id
                                     });
                                 }
                             }
@@ -117,6 +118,17 @@ restaurantApp.controller('ViewOrderController',
                 .catch(function (error) {
                     alert("WEEEE");
                 });
+            }
+            $scope.DeleteItem = function (ItemToDelete) {
+                console.log("We clicked DeleteItemFunction");
+                //Goal: Get the Order ID stuff
+                console.log(ItemToDelete);
+            }
+            $scope.SendOrderOut = function (OrderSend) {
+
+            }
+            $scope.Submit = function (OrderSubmit) {
+
             }
             
         }
