@@ -58,7 +58,7 @@
 
                  var nameList = [];
                  var cust = Parse.Object.extend("User");
-
+                 var TableDfd3 = $q.defer();
                  var queryCust = new Parse.Query(cust);
                  queryCust.equalTo("objectId", list[0].Customer.id);
 
@@ -85,19 +85,25 @@
 
 
                  .then(function (data) {
-
-                     TableDfd2.resolve(data);
+                     
+                     TableDfd3.resolve(data);
 
 
 
                  },
              function (error) {
-                 TableDfd2.reject(data);
+                 TableDfd3.reject(data);
 
              });
-                 $scope.Table2 = list;
-                 $scope.Name = nameList;
 
+                 TableDfd3.promise
+                 .then(function (List) {
+                 $scope.Name = nameList;
+                 
+                 $scope.Table2 = list;
+                
+             })
+                 
              })
 
 

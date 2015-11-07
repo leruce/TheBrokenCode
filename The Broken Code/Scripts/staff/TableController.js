@@ -279,8 +279,7 @@
          MenuDfd5.promise
          .then(function (All) {
            
-             $scope.MenuAll = menuItem5;
-             $scope.Revenue = revenueList; //revenue list that contains revenue, taxes and gratuity
+             //revenue list that contains revenue, taxes and gratuity
              var revenue = 0;
              var taxes = 0;
 
@@ -290,7 +289,7 @@
                  revenue +=menuItem5[i].Price * menuItem5[i].Amount;
              }
 
-             var result = Math.round(revenue * 100) / 100;  //Get rid of everything past second decimal
+            var result = Math.round(revenue * 100) / 100;  //Get rid of everything past second decimal
              
              taxes = Math.round(result * (0.0825) * 100) / 100; //Get taxes and round to two decimal places
 
@@ -307,6 +306,9 @@
                  Tax: taxes,
                  Tip: gratuity
              });
+
+             $scope.MenuAll = menuItem5;
+             $scope.Revenue = revenueList;
                          
          })
          .catch(function (error) {
