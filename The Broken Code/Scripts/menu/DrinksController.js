@@ -95,6 +95,7 @@ restaurantApp.controller('DrinkMenuController',
              order.set("Completed", false);
              order.set("InProgress", false);
              order.set("Paid", false);
+             order.set("OrderComment", []);
              //order.set("TableID", findTable($rootScope.currentUser))
              //We need to create a function for this later Right now we get this shit to work
              order.save(null, {
