@@ -21,6 +21,7 @@ restaurantApp.controller('DrinkMenuController',
                          NutritionInfo: result.get("NutritionInfo"),
                          Price: result.get("Price"),
                          FoodID: result.get("FoodID"),
+                         FoodObject: result.id,
                          FoodImg: result.get("ItemPhoto").url()
                      });
                      //alert("Food: " + result.get("Name"));
@@ -102,6 +103,8 @@ restaurantApp.controller('DrinkMenuController',
                  success: function (order) {
                      console.log("SAVED");
                      alert("You added " + _foodObject.FoodName);
+                     findTable(order);
+                     addAmount(_foodObject);
                  },
                  error: function (order, error) {
                      console.log("Failed " + error.code + error.message);
@@ -123,9 +126,57 @@ restaurantApp.controller('DrinkMenuController',
                  success: function (orderObject) {
                      console.log("Saved");
                      alert("You added " + _foodObject.FoodName);
+                     addAmount(_foodObject);
                  },
                  error: function (orderObject, error) {
                      console.log("FAILED");
+                 }
+             });
+         }
+         function addAmount(FoodObject) {
+             console.log(FoodObject);
+             console.log("We managed to get in addAmount " + FoodObject.FoodObject);
+             var FoodTable = Parse.Object.extend("MenuItem");
+             var query = new Parse.Query(FoodTable);
+             query.get(FoodObject.FoodObject, {
+                 success: function (Object) {
+                     console.log(Object);
+                     Object.set("AmountSold", (Object.get("AmountSold") + 1));
+                     Object.save();
+
+                 }
+             })
+
+         }
+         function findTable(orderTable) {
+             //In order to find the table, we need to access the table class it seem
+             //We know th efollowing things, We know the CUtomer ID
+             //console.log("We breaking here?");
+             var TableList = Parse.Object.extend("Table");
+             var TableQuery = new Parse.Query(TableList);
+             TableQuery.equalTo("Customer", $rootScope.currentUser);
+             TableQuery.first({
+                 success: function (TableCustomer) {
+                     if (TableCustomer == null) {
+                         //          console.log("We returning NULL")
+                     }
+                     else {
+                         //        console.log("We need to save the Customer Table here");
+                         console.log(TableCustomer.id);
+                         orderTable.set("TableID", TableCustomer);
+                         console.log(orderTable);
+                         orderTable.save(null, {
+                             success: function (orderObject) {
+                                 //              console.log("We saved te orderTable.set");
+                             },
+                             error: function (orderObject, error) {
+                                 console.log("failed" + error.code + error.message);
+                             }
+                         });
+
+
+                     }
+                     console.log("We should see something above this that not a Object");
                  }
              });
          }
