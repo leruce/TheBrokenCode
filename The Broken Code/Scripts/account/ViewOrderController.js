@@ -178,8 +178,23 @@ restaurantApp.controller('ViewOrderController',
                     if (OrderSend.FoodIDarray[x] == OrderSend.FoodID) {
                         console.log("We EDIT THIS SHIT BROTHER");
                         //var CommentStuff = $scope.CommentArea;
+                        
                         OrderSend.OrderComment.splice(x, 0, TextBoxComments);
-                        console.log(TextBoxComments);
+                        console.log(OrderSend.OrderComment);
+                        var NewOrder = Parse.Object.extend("Order");
+                        var OrderQuery = new Parse.Query(NewOrder);
+                        OrderQuery.get(OrderSend.OrderID, {
+                            success: function (TempOrder) {
+                                console.log(TempOrder);
+                                TempOrder.set("OrderComment", OrderSend.OrderComment);
+                                TempOrder.save(null, {
+                                    success: function (Stuff) {
+                                        console.log("We saved it?");
+                                    }
+                                });
+                            }
+                        });
+
                     }
                 }
             }
