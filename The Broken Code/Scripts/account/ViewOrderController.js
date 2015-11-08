@@ -26,6 +26,7 @@ restaurantApp.controller('ViewOrderController',
     ['$rootScope', '$scope', '$http', '$location', '$window', '$q', 'ParseService',
         function ($rootScope, $scope, $http, $location, $window, $q, ParseService) {
             //console.log("We have enter the controller");
+            //$scope.CommentArea = "";
             var Defered = $q.defer();
             var Order = Parse.Object.extend("Order");
             var viewOrderQuery = new Parse.Query(Order);
@@ -93,6 +94,7 @@ restaurantApp.controller('ViewOrderController',
                                         Price: result.get("Price"),
                                         FoodID: result.get("FoodID"),
                                         OrderID: Ordered.id,
+                                        OrderComment: Ordered.get("OrderComment"),
                                         FoodIDarray: Ordered.get("ItemsOrdered"),
                                         Cost: Ordered.get("Cost")
                                     });
@@ -167,13 +169,17 @@ restaurantApp.controller('ViewOrderController',
 
 
             }
-            $scope.SaveComment = function (OrderSend) {
+            $scope.SaveComment = function (OrderSend, TextBoxComments) {
                 //We take in the Textbox save the value in the fucking textbox then store the shit in the god damn database and we done
                 //IN order to do this shit we need to Pull the fucking thing
                 console.log("We got into SaveComment");
+                console.log(TextBoxComments);
                 for (var x = 0; x < OrderSend.FoodIDarray.length; x++) {
                     if (OrderSend.FoodIDarray[x] == OrderSend.FoodID) {
                         console.log("We EDIT THIS SHIT BROTHER");
+                        //var CommentStuff = $scope.CommentArea;
+                        OrderSend.OrderComment.splice(x, 0, TextBoxComments);
+                        console.log(TextBoxComments);
                     }
                 }
             }
