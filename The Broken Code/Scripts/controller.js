@@ -11,14 +11,80 @@ restaurantApp.controller('MainController',
           
           //Called when user clicks Sign in button
           $scope.login = function () {
-               var username = $scope.login.username;
-               var password = $scope.login.password;
+              var username = $scope.login.username;
+              var password = $scope.login.password;
 
-               Parse.User.logIn(username, password, {
-                    success: loginSuccessful,
-                    error: loginUnsuccessful
-               });
-          };
+              Parse.User.logIn(username, password, {
+                  success: loginSuccessful,
+                  error: loginUnsuccessful
+              });
+              console.log("user: " + username + " pw: " + password);
+              
+              var UserList = Parse.Object.extend("_User");
+              var queryUser = new Parse.Query(UserList);
+              var user;
+              queryUser.equalTo("username", username);
+              queryUser.find({
+                  success: function (data) {
+                      angular.forEach(data, function (result) {
+                          var update = result.get("updatedAt");
+                          var birthday = result.get("Birthday");
+                          var lastVisit = result.get("lastVisitTime");
+                          var hasRewards = result.get("hasRewards");
+                          var points = result.get("rewardPoints");
+                          var visits = result.get("numVisits");
+                          console.log("bday: " + birthday + " update: " + update);
+
+                          var dt = new Date();
+
+                          // Display the month, day, and year. getMonth() returns a 0-based number.
+                          var monthToday = dt.getMonth() + 1;
+                          var dayToday = dt.getDate();
+                          var yearToday = dt.getFullYear();
+                          dt.setFullYear(yearToday, monthToday, dayToday);
+
+                          var month = lastVisit.getMonth();
+                          var day = lastVisit.getDate();
+                          var year = lastVisit.getFullYear();
+
+                          //var bmonth = birthday.getMonth();
+                          //var bday = birthday.getDate();
+                          //var byear = birthday.getFullYear();
+
+                          // Output: current month, day, year
+                          console.log(dt);
+                          console.log(lastVisit);
+                          console.log("Month: " + month + " Today Month: " + monthToday);
+                          console.log("Day: " + day + " Today Day: " + dayToday);
+                          console.log("Year: " + year + " Today Year: " + yearToday);
+
+                          if (day != dayToday && month != monthToday && year != yearToday)
+                          {
+                              user = data[0];
+                              user.set("lastVisitTime", dt);
+                              user.set("numVisits", visits + 1);
+                              if (hasRewards)
+                              {
+                                  //if (bday == dayToday && bmonth == monthToday && byear == yearToday)
+                                      //points += 10;
+                                  
+                                  var test = (visits + 1) % 5;
+                                  if (test == 0)
+                                  {
+                                      points += Math.floor((Math.random() * 10) + 1);
+                                  }
+                                  user.set("rewardPoints", points + 1);
+                              }
+
+                              user.save();
+                          }
+                      });
+                  }
+
+              });
+
+
+          }
           
           //Called when user clicks Register button
           $scope.register = function () {
@@ -27,7 +93,20 @@ restaurantApp.controller('MainController',
                user.set("username", $scope.newuser.username);
                user.set("password", $scope.newuser.password);
                user.set("email", $scope.newuser.email);
-               //user.set("Birthday", $scope.newuser.birthday);
+               user.set("Birthday", $scope.newuser.Birthday);
+               user.set("hasRewards", false);
+               user.set("rewardPoints", 0);
+               
+               var dt = new Date();
+
+               // Display the month, day, and year. getMonth() returns a 0-based number.
+               var monthToday = dt.getMonth() + 1;
+               var dayToday = dt.getDate();
+               var yearToday = dt.getFullYear();
+               dt.setFullYear(yearToday, monthToday, dayToday);
+
+               user.set("lastVisitTime", dt);
+               user.set("numVisits", 1);
                user.signUp(null, {
                     success: function (user) {                        
                          // Welcome the user and close the modal window

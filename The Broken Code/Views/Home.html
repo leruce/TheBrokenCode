@@ -153,12 +153,20 @@
                          <input type="password" id="inputPassword" class="form-control"
                                 ng-model="newuser.password" placeholder="Password">
                          <!-- Ask user to input their birthday -->
-
-                         <!-- Ask user to input their email-->
-                         <label for="inputEmail" class="sr-only">Email Address</label>
-                         <input type="email" id="inputEmail" class="form-control"
-                                ng-model="newuser.email" placeholder="User@email.com">
-               </form>
+                         <label for="inputBirthday" class="sr-only">Password</label>
+                         <input type="date" id="inputBirthday" class="form-control"
+                                ng-model="newuser.birthday" placeholder="Birthday">
+                         <script>
+                             $(document).ready(function ()
+                             {
+                                 $("#inputBirthday").datepicker();
+                             });
+                            </script>
+                            <!-- Ask user to input their email-->
+                            <label for="inputEmail" class="sr-only">Email Address</label>
+                            <input type="email" id="inputEmail" class="form-control"
+                                   ng-model="newuser.email" placeholder="User@email.com">
+</form>
           </div>
           <!-- Modal footer with Cancel and Register buttons -->
           <div class="modal-footer">
