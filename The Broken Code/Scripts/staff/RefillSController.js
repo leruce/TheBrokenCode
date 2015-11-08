@@ -1,16 +1,16 @@
-restaurantApp.controller('RefillsSController',
+restaurantApp.controller('RefillSController',
      ['$rootScope', '$scope', '$http', 'ParseService', '$location', '$q',
      function ($rootScope, $scope, $http, $location, ParseService, $q) {
-         var refillsList = [];
-         var RefillsDfd = $q.defer();
-         var Refills = Parse.Object.extend("Refills");
-         var queryRefills = new Parse.Query(Refills);
-         queryRefills.find({
+         var refillList = [];
+         var WaitstaffDfd = $q.defer();
+         var Refill = Parse.Object.extend("Refill");
+         var queryRefill = new Parse.Query(Refill);
+         queryRefill.find({
              success: function (data) {
                  angular.forEach(data, function (result) {
-                     refillsList.push({
+                     refillList.push({
                          Request: result.get("RefillRequest"),
-                         String: result.get("RefillID",refillsList)
+                         String: result.get("RefillStatus")
                      });
 
                  });
@@ -20,21 +20,19 @@ restaurantApp.controller('RefillsSController',
              }
          }).then(function (data) {
 
-             RefillsDfd.resolve(data);
+             WaitstaffDfd.resolve(data);
 
          },
          function (error) {
-             Refills.reject(data);
+             Waitstaff.reject(data);
 
          });
-         RefillsDfd.promise
-         .then(function (Refills) {
-              console.log(Refills);
-             console.log(Refills);
-             $scope.Refills = refillsList;
+         WaitstaffDfd.promise
+         .then(function (Refill) {
+             $scope.Refill = refillList;
          })
          .catch(function (error) {
 
          });
-         $scope.headingCaption = 'Refills';
+         $scope.headingCaption = 'Refill';
      }]);

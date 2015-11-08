@@ -1,4 +1,3 @@
-
 function HelpF() 
 {
             var Help = Parse.Object.extend("Help");
