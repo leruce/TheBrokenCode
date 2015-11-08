@@ -954,8 +954,8 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="a98e73b8-4ad1-46a6-bc02-57e1edfa2f26"
-                LastKnownName="string"
+                Id="b1388eb4-6e18-472c-8002-b8759710be5d"
+                LastKnownName="list"
                 LastKnownLocation="ModelingProject1.uml" />
             </type_NamedElement>
           </property>
@@ -1034,6 +1034,24 @@
           <property
             Id="804164a5-fa5c-4b65-b818-4143c0a3de0b"
             name="Payed"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="377621d5-7cf4-4a15-aadb-657d4eabcf73"
+                LastKnownName="boolean"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="739fcfa1-810c-4b43-a47c-5872680445d7"
+            name="InProgress"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1463,6 +1481,17 @@
                 LastKnownLocation="ModelingProject1.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="f03de399-2292-40b0-b0a0-f100aa845eea"
+            name="ObjectID"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -1530,58 +1559,6 @@
         isLeaf="false"
         isActiveClass="false">
         <targetEnds>
-          <association
-            Id="d0841ad8-c4d6-455e-aa61-d2c3f4307449"
-            isDerived="false"
-            sourceEndRoleName="Customer"
-            targetEndRoleName="Coupon"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="23f965e6-3258-4245-a6d0-5dea6077ef93"
-              LastKnownName="Coupon"
-              LastKnownLocation="ModelingProject1.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="fb13198b-4c89-4ea2-bdef-f4598b362998"
-                  name="Customer"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Shared"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="99a00531-3a30-4e51-8fba-b35e9178c076"
-                  name="Coupon"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="16a4ed74-4e8b-472d-a7b2-390faba43add"
-                      name="Lower"
-                      value="0" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="1387c3a8-9513-481c-9592-b3752a4f7417"
-                      name="Upper"
-                      value=".*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
           <association
             Id="37b8648e-ec07-4343-b096-c6e271e4fefa"
             isDerived="false"
@@ -1674,26 +1651,6 @@
             </relationshipOwnedElementsInternal>
           </association>
         </targetEnds>
-        <ownedAttributesInternal>
-          <property
-            Id="e0795e9e-cab7-438b-9502-a72852d4a84c"
-            name="CustomerID"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="a98e73b8-4ad1-46a6-bc02-57e1edfa2f26"
-                LastKnownName="string"
-                LastKnownLocation="ModelingProject1.uml" />
-            </type_NamedElement>
-          </property>
-        </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1959,14 +1916,14 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="6eb4a14d-9a4e-420d-9ffa-0a46b9f0bda0"
-                LastKnownName="string?"
+                Id="7ed0b2ea-9db4-420e-8f57-5f4d1efae3f3"
+                LastKnownName="pointer"
                 LastKnownLocation="ModelingProject1.uml" />
             </type_NamedElement>
           </property>
           <property
             Id="9d23606e-6810-4f02-b0e5-6f1e70393552"
-            name="SOMETHING_ID"
+            name="FoodID"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -2067,7 +2024,7 @@
           </property>
           <property
             Id="9b8d3935-3d70-4535-8383-a4e4b64a2c33"
-            name="AmmountSold"
+            name="AmountSold"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -2207,8 +2164,8 @@
             </type_NamedElement>
           </property>
           <property
-            Id="4f5ac841-2f0a-4c66-a93c-d062cf637396"
-            name="TableStatus"
+            Id="27137979-30e5-4557-8b8b-afde9d840426"
+            name="Available"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -2219,26 +2176,8 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="4b78633f-4b60-40c5-940d-f7498aeacd6a"
-                LastKnownName="int"
-                LastKnownLocation="ModelingProject1.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="ad189c4d-b7ac-4a1d-85b4-d32ea07b6de9"
-            name="TableNotification"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="a98e73b8-4ad1-46a6-bc02-57e1edfa2f26"
-                LastKnownName="string"
+                Id="377621d5-7cf4-4a15-aadb-657d4eabcf73"
+                LastKnownName="boolean"
                 LastKnownLocation="ModelingProject1.uml" />
             </type_NamedElement>
           </property>
@@ -2393,6 +2332,17 @@
           <property
             Id="b94609c5-6f48-44e7-8d03-eb4db880df6f"
             name="Payment_ID"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="6e28f6f2-4267-4ccb-8ea0-138c42ceb476"
+            name="Tip"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -2606,7 +2556,7 @@
           </property>
           <property
             Id="628eaaae-350e-436a-8e77-96c300bd1673"
-            name="Ammount"
+            name="Amount"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -2635,8 +2585,8 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="4b78633f-4b60-40c5-940d-f7498aeacd6a"
-                LastKnownName="int"
+                Id="a98e73b8-4ad1-46a6-bc02-57e1edfa2f26"
+                LastKnownName="string"
                 LastKnownLocation="ModelingProject1.uml" />
             </type_NamedElement>
           </property>
@@ -2705,6 +2655,35 @@
                 LastKnownLocation="ModelingProject1.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="cf0d9a8b-f497-45c7-b1ef-319ba1875a8f"
+            name="Reason"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a98e73b8-4ad1-46a6-bc02-57e1edfa2f26"
+                LastKnownName="string"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a71bb2bb-ddde-4d3d-bc5b-63f04f7f07f5"
+            name="ObjectID"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -2873,6 +2852,294 @@
         name="UseCase1"
         isAbstract="false"
         isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="7ed0b2ea-9db4-420e-8f57-5f4d1efae3f3"
+        name="pointer" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="55821eda-8d7d-4340-9fbe-e2369eb63b19"
+        name="Survey"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="a290fb15-6ab9-4f5f-a746-773144afab46"
+            name="ObjectID"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a98e73b8-4ad1-46a6-bc02-57e1edfa2f26"
+                LastKnownName="string"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3ded7508-9447-4c1d-a3d7-422e7d5c2afa"
+            name="Answer"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b1388eb4-6e18-472c-8002-b8759710be5d"
+                LastKnownName="list"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c681add8-e06e-48f6-9577-44c9d6dcbfe3"
+            name="name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a98e73b8-4ad1-46a6-bc02-57e1edfa2f26"
+                LastKnownName="string"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="230484a1-23b0-424e-bf40-0fd976b00cae"
+            name="Date"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ef99ab2e-7e99-4ce8-8c8b-b1eb18409a94"
+                LastKnownName="date"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9a21cc88-0ca3-4c5d-81f4-13bca54cf5a8"
+        name="Refill"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="3c116703-e743-46a4-a0b1-feaea2a8435b"
+            isDerived="false"
+            sourceEndRoleName="Refill"
+            targetEndRoleName="Table"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="957b50d2-22c3-4286-a3d7-a1d53fc03bda"
+              LastKnownName="Table"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3222a711-62a0-4ce2-ab3d-03bacce4af75"
+                  name="Refill"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b6e12449-8e35-426c-9732-32bfd027c822"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="55eebc61-8464-4b32-85c1-35a571faa06e"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0a404b97-f508-41e3-adc0-a2401910b863"
+                  name="Table"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="2b418d2a-db77-484d-813c-21cf2cad1719"
+            name="RefillRequest"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a98e73b8-4ad1-46a6-bc02-57e1edfa2f26"
+                LastKnownName="string"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f8040945-7e49-4922-b9f6-dac85b225fde"
+            name="Customer"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="7ed0b2ea-9db4-420e-8f57-5f4d1efae3f3"
+                LastKnownName="pointer"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="aff3c285-1756-4ce5-a083-4202897a4f16"
+            name="ObjectID"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a98e73b8-4ad1-46a6-bc02-57e1edfa2f26"
+                LastKnownName="string"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="29d2b5fc-604f-413d-98a0-389dae8fc898"
+        name="TableStatus"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="672943af-7022-4ae5-b8de-54fe3f1164ac"
+            isDerived="false"
+            sourceEndRoleName="TableStatus"
+            targetEndRoleName="Table"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="957b50d2-22c3-4286-a3d7-a1d53fc03bda"
+              LastKnownName="Table"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9ecf7748-10ee-48ad-9ee0-d75feb47cee1"
+                  name="TableStatus"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4e8b0ecb-75e0-48e1-bfb0-ad560d95f2b0"
+                  name="Table"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="627ce842-b048-4344-9532-6ee372563638"
+            name="ObjectID"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="1189f6c0-11c5-42f7-b0c8-d303d484d219"
+            name="State"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a98e73b8-4ad1-46a6-bc02-57e1edfa2f26"
+                LastKnownName="string"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
