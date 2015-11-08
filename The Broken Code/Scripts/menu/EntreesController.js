@@ -12,6 +12,7 @@ restaurantApp.controller('EntreeMenuController',
          var MenuEntree = Parse.Object.extend("MenuItem");
          var queryEntree = new Parse.Query(MenuEntree);
          queryEntree.equalTo("CategoryPointer", MenuC);
+         queryEntree.equalTo("Active", true);
          queryEntree.find({
              success: function (data) {
                  angular.forEach(data, function (result) {

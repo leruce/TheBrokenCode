@@ -18,6 +18,7 @@ restaurantApp.controller('AppetizerMenuController',
          var MenuAppetizer = Parse.Object.extend("MenuItem");
          var queryAppetizer = new Parse.Query(MenuAppetizer);
          queryAppetizer.equalTo("CategoryPointer", MenuC);
+         queryAppetizer.equalTo("Active", true);
          queryAppetizer.find({
              success: function (data) {
                  angular.forEach(data, function (result) {
@@ -196,7 +197,7 @@ restaurantApp.controller('AppetizerMenuController',
                      //    console.log("We managed to get into the open" + " " + _menuAppetizer.FoodName);
                          return _menuAppetizer;
                      }
-                     }
+                }
              });
          }
      }]);

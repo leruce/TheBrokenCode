@@ -12,6 +12,7 @@ restaurantApp.controller('KidsMenuController',
          var MenuKid = Parse.Object.extend("MenuItem");
          var queryKid = new Parse.Query(MenuKid);
          queryKid.equalTo("CategoryPointer", MenuC);
+         queryKid.equalTo("Active", true);
          queryKid.find({
              success: function (data) {
                  angular.forEach(data, function (result) {

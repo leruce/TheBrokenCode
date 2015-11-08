@@ -12,6 +12,7 @@ restaurantApp.controller('DrinkMenuController',
          var MenuDrink = Parse.Object.extend("MenuItem");
          var queryDrink = new Parse.Query(MenuDrink);
          queryDrink.equalTo("CategoryPointer", MenuC);
+         queryDrink.equalTo("Active", true);
          queryDrink.find({
              success: function (data) {
                  angular.forEach(data, function (result) {
