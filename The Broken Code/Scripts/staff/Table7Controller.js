@@ -4,18 +4,19 @@
          var list = [];
          var TableDfd2 = $q.defer();
          var Table2 = Parse.Object.extend("Table");
-             
+
          var queryList = new Parse.Query(Table2);
-             
+
          queryList.equalTo("TableID", 7);
-            
+
          queryList.find({
              success: function (data) {
                  angular.forEach(data, function (result) {
                      list.push({
                          ID: result.get("TableID"),
                          Customer: result.get("Customer"),
-                         Status: result.get("Status")
+                         Status: result.get("Status"),
+                         Object: result.get("objectId")
                      });
 
 
@@ -29,16 +30,20 @@
              }
          })
 
-             
 
 
-           .then(function (data) {
 
-               TableDfd2.resolve(data);
-               //next query based on _User class
-               //console.log(data.get("Customer"));
 
-           },
+
+
+
+         .then(function (data) {
+
+             TableDfd2.resolve(data);
+             //next query based on _User class
+             //console.log(data.get("Customer"));
+
+         },
          function (error) {
              TableDfd2.reject(data);
 
@@ -152,6 +157,60 @@
                      });
                  }
 
+
+
+
+                 var helpList = [];
+                 var TableDfd4 = $q.defer();
+                 var help = Parse.Object.extend("Help");
+                 var queryHelp = new Parse.Query(help);
+                 queryHelp.equalTo("customer", list[0].Customer.id);
+                 queryHelp.find({
+                     success: function (data) {
+                         angular.forEach(data, function (result) {
+                             helpList.push({
+
+                                 Help: result.get("HelpRequest"),
+
+
+                             });
+
+
+
+                         });
+                     },
+
+
+                     error: function (error) {
+                         alert("Error: " + error.code + " " + error.message);
+                     }
+                 })
+
+                 .then(function (data) {
+
+                     TableDfd4.resolve(data);
+
+
+
+
+
+                 },
+             function (error) {
+                 TableDfd4.reject(data);
+
+             });
+
+                 TableDfd4.promise
+                 .then(function (List) {
+                     $scope.Name = nameList;
+                     $scope.Help = helpList;
+                     $scope.Table2 = list;
+
+                 })
+
+
+
+
                  var nameList = [];
                  var cust = Parse.Object.extend("User");
                  var TableDfd3 = $q.defer();
@@ -183,6 +242,8 @@
                  .then(function (data) {
 
                      TableDfd3.resolve(data);
+
+
 
 
 
@@ -436,4 +497,7 @@
                  alert("Error: " + error.code + " " + error.message);
              }
          })
+
+
+
      }]);

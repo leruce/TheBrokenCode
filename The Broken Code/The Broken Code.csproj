@@ -192,6 +192,8 @@
     <Content Include="Scripts\staff\Table2Controller.js" />
     <Content Include="Scripts\staff\Table1Controller.js" />
     <Content Include="Scripts\staff\TableController.js" />
+    <Content Include="Views\customer\helppage.html" />
+    <Content Include="Views\customer\refillpage.html" />
     <Content Include="Views\staff\staffhelp.html" />
     <Content Include="Views\staff\staffrefill.html" />
     <Content Include="Scripts\ui-bootstrap-tpls-0.14.3.min.js" />
@@ -247,7 +249,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Scripts\summary\" />
-    <Folder Include="Views\customer\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
