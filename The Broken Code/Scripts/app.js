@@ -22,6 +22,11 @@ var restaurantApp = angular.module('restaurantApp',
                   templateUrl: 'Views/manager/dailyRevenue.html',
                   controller: 'TableController'
               })
+              //The Amount of Order been done so far
+              .when('/manager/numberoforder', {
+                  templateUrl: 'Views/manager/OrderNumber.html',
+                  controller: 'TableController'
+              })
               //The manager top items page
                .when('/manager/tops', {
                    templateUrl: 'Views/manager/topItems.html',

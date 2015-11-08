@@ -353,6 +353,16 @@
 
          });
 
+         //This is total Order detail
+         var OrderAmount = Parse.Object.extend("Order");
+         var OrderAmountQuery = new Parse.Query(OrderAmount);
+         OrderAmountQuery.count({
+             success: function (count) {
+                 $scope.Count = count;
+             }
+         });
+         
+
 
         
      }]);
