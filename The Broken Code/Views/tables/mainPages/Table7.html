@@ -35,40 +35,27 @@
 
                         </tbody>
                     </table>
+
                 </div>
                 <div class="col-md-4">
                     <h3 class="text-center">
                         <b>Refills</b>
                     </h3>
                     <table class="table table-condensed table-hover">
-                        <tbody>
+                        <tbody ng-repeat="refill in Refill">
                             <tr class="success">
                                 <td>
-                                    Sprite
+                                    {{refill.Refill}}
                                 </td>
-                                <td>
-                                    x1
-                                </td>
+
                             </tr>
 
-                            <tr class="success">
-                                <td>
-                                    Vodka Sour
-                                </td>
-                                <td>
-                                    x7
-                                </td>
-                            </tr>
-                            <tr class="success">
-                                <td>
-                                    Dr. Pepper
-                                </td>
-                                <td>
-                                    x2
-                                </td>
-                            </tr>
+
                         </tbody>
                     </table>
+                    <button type="button" class="btn btn-default">
+                        Clear
+                    </button>
                 </div>
             </div>
         </div>
@@ -76,17 +63,29 @@
     <div class="row">
         <div class="col-md-12">
             <div class="row">
-                <div class="col-md-6">
-                    <h2>
-                        Comments
-                    </h2>
-                    <p ng-repeat="help in Help">
-                        {{help.Help}}
-                    </p>
-                </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
+                    <h3>Comments:</h3>
+                    <table class="table table-condensed table-hover">
 
-                    <a href="#/tables/7/order" class="btn btn-lg" role="button" align="center">Order Bitch!</a>
+                        <tbody ng-repeat="help in Help">
+                            <tr class="success">
+                                <td>
+                                    {{help.Help}}
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button type="button" class="btn btn-default">
+                        Clear
+                    </button>
+                </div>
+                <div class="col-md-4">
+                    <a href="#/tables/7/order" class="btn btn-lg" role="button" align="center">Order</a>
+                </div>
+                <div class="col-md-4">
+
+
                 </div>
             </div>
         </div>
