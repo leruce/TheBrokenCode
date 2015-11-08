@@ -4,18 +4,19 @@
          var list = [];
          var TableDfd2 = $q.defer();
          var Table2 = Parse.Object.extend("Table");
-             
+
          var queryList = new Parse.Query(Table2);
-             
+
          queryList.equalTo("TableID", 3);
-            
+
          queryList.find({
              success: function (data) {
                  angular.forEach(data, function (result) {
                      list.push({
                          ID: result.get("TableID"),
                          Customer: result.get("Customer"),
-                         Status: result.get("Status")
+                         Status: result.get("Status"),
+                         Object: result.get("objectId")
                      });
 
 
@@ -29,17 +30,20 @@
              }
          })
 
-             
 
 
-             
-      .then(function (data) {
 
-          TableDfd2.resolve(data);
-          //next query based on _User class
-          //console.log(data.get("Customer"));
 
-      },
+
+
+
+         .then(function (data) {
+
+             TableDfd2.resolve(data);
+             //next query based on _User class
+             //console.log(data.get("Customer"));
+
+         },
          function (error) {
              TableDfd2.reject(data);
 
@@ -154,6 +158,62 @@
                  }
 
 
+
+
+                 var refillList = [];
+                 var TableDfd5 = $q.defer();
+                 var refill = Parse.Object.extend("Refill");
+                 var queryRefill = new Parse.Query(refill);
+                 queryRefill.equalTo("customer", list[0].Customer.id);
+                 queryRefill.find({
+                     success: function (data) {
+                         angular.forEach(data, function (result) {
+                             refillList.push({
+
+                                 Refill: result.get("RefillRequest"),
+
+
+                             });
+
+
+
+                         });
+                     },
+
+
+                     error: function (error) {
+                         alert("Error: " + error.code + " " + error.message);
+                     }
+                 })
+
+                 .then(function (data) {
+
+                     TableDfd5.resolve(data);
+
+
+
+
+
+                 },
+             function (error) {
+                 TableDfd5.reject(data);
+
+             });
+
+                 TableDfd5.promise
+                 .then(function (List) {
+                     $scope.Refill = refillList;
+                     $scope.Name = nameList;
+                     $scope.Help = helpList;
+                     $scope.Table2 = list;
+
+                 })
+
+
+
+
+
+
                  var helpList = [];
                  var TableDfd4 = $q.defer();
                  var help = Parse.Object.extend("Help");
@@ -203,6 +263,70 @@
                  })
 
 
+                 $scope.deleteHelp = function (helpObject) {
+
+                     var hDeleteQuery = new Parse.Query("Help");
+
+
+
+                     hDeleteQuery.equalTo("customer", list[0].Customer.id);
+                     hDeleteQuery.find({
+                         success: function (data) {
+                             angular.forEach(data, function (data) {
+                                 return Parse.Object.destroyAll(data);
+
+
+                             });
+
+
+
+
+                         },
+
+
+                         error: function (error) {
+                             alert("Error: " + error.code + " " + error.message);
+                         }
+                     })
+                 }
+
+
+                 $scope.deleteRefill = function (refillObject) {
+
+                     var rDeleteQuery = new Parse.Query("Refill");
+
+
+
+                     rDeleteQuery.equalTo("customer", list[0].Customer.id);
+                     rDeleteQuery.find({
+                         success: function (data) {
+                             angular.forEach(data, function (data) {
+                                 return Parse.Object.destroyAll(data);
+
+
+                             });
+
+
+
+
+                         },
+
+
+                         error: function (error) {
+                             alert("Error: " + error.code + " " + error.message);
+                         }
+                     })
+                 }
+
+
+
+
+
+
+
+
+
+
 
 
                  var nameList = [];
@@ -236,6 +360,8 @@
                  .then(function (data) {
 
                      TableDfd3.resolve(data);
+
+
 
 
 
@@ -489,4 +615,9 @@
                  alert("Error: " + error.code + " " + error.message);
              }
          })
+
+
+
+
+
      }]);

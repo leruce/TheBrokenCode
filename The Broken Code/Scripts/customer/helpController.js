@@ -14,6 +14,7 @@ restaurantApp.controller('helpController',
              var help = new Help();
              var String = document.getElementById('helptext').value;
             
+             
            
              help.set("HelpRequest", String);
              help.set("customer", $rootScope.currentUser.id);

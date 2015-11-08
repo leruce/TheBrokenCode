@@ -263,6 +263,70 @@
                  })
 
 
+                 $scope.deleteHelp = function (helpObject) {
+
+                     var hDeleteQuery = new Parse.Query("Help");
+                  
+
+                    
+                    hDeleteQuery.equalTo("customer", list[0].Customer.id);
+                    hDeleteQuery.find({
+                         success: function (data) {
+                             angular.forEach(data, function (data) {
+                                 return Parse.Object.destroyAll(data);
+
+
+                                 });
+
+
+
+                             
+                         },
+
+
+                         error: function (error) {
+                             alert("Error: " + error.code + " " + error.message);
+                         }
+                     })
+                 }
+
+
+                 $scope.deleteRefill = function (refillObject) {
+
+                     var rDeleteQuery = new Parse.Query("Refill");
+
+
+                    
+                     rDeleteQuery.equalTo("customer", list[0].Customer.id);
+                     rDeleteQuery.find({
+                         success: function (data) {
+                             angular.forEach(data, function (data) {
+                                 return Parse.Object.destroyAll(data);
+
+
+                             });
+
+
+
+
+                         },
+
+
+                         error: function (error) {
+                             alert("Error: " + error.code + " " + error.message);
+                         }
+                     })
+                 }
+
+
+
+
+
+
+
+
+
+
 
 
                  var nameList = [];
@@ -553,5 +617,7 @@
          })
 
 
+
+        
 
      }]);
