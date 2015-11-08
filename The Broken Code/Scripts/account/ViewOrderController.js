@@ -149,6 +149,7 @@ restaurantApp.controller('ViewOrderController',
                                 TempOrder.save(null, {
                                     success: function (Stuff) {
                                         console.log("We saved it?");
+                                        $window.location.reload()
                                     }
                                 });
                             }
