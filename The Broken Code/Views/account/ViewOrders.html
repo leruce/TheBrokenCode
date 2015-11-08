@@ -1,33 +1,37 @@
 ﻿<div class="container-fluid">
     <div class="row">
+        <h1 class="text-left">
+            View Order You will not be able to change the order once Submitted!
+        </h1>
+    </div>
+    <div class="row">
         <div class="col-md-6">
-            <h3 class="text-left">
-                View Order
-            </h3>
-            <div class="row" ng-repeat="OrderStuff in OrderThings">
+            <div class="row top-buffer" ng-repeat="OrderStuff in OrderThings">
                 <div class="col-md-6">
                     <h3>
                         {{OrderStuff.FoodName}}
                     </h3>
                     <p>
-                        Price {{OrderStuff.Price}}
+                        Price ${{OrderStuff.Price}}
                     </p>
-                </div>
-                <div class="col-md-6">
                     <button type="button" class="btn" ng-click="DeleteItem(OrderStuff)">
                         Delete Item
                     </button>
-                    <textarea class="form-control noresize" cols="30" rows="5" id="{{foodItem.id}}"> </textarea>
-                    <button type="button" class="btn" ng-click="SendOrderOut(OrderStuff)">
+                </div>
+                <div class="col-md-6">
+                    <textarea class="form-control noresize" cols="30" rows="4" id="{{OrderStuff.FoodID}}" ng-model="CommentArea"> </textarea>
+                    <button type="button" class="btn" ng-click="SaveComment(OrderStuff, CommentArea)">
                         Save Comment
                     </button>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="row">
         <div class="col-md-6">
-            <p>Cost: <span ng-bind="Cost"></span> </p>
-            <button type="button" class="btn btn-default" ng-click="Submit(OrderStuff)">
-                Submit
+            <h3>Cost: $<span ng-bind="Cost"></span> </h3>
+            <button type="button" class="btn btn-default" ng-click="Submit(OrderThings)">
+                Submit Order
             </button>
         </div>
     </div>

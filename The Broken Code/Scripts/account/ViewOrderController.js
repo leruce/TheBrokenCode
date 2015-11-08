@@ -26,6 +26,7 @@ restaurantApp.controller('ViewOrderController',
     ['$rootScope', '$scope', '$http', '$location', '$window', '$q', 'ParseService',
         function ($rootScope, $scope, $http, $location, $window, $q, ParseService) {
             //console.log("We have enter the controller");
+            //$scope.CommentArea = "";
             var Defered = $q.defer();
             var Order = Parse.Object.extend("Order");
             var viewOrderQuery = new Parse.Query(Order);
@@ -81,7 +82,7 @@ restaurantApp.controller('ViewOrderController',
                 var menuItem = Parse.Object.extend("MenuItem");
                 var menuQuery = new Parse.Query(menuItem);
                 var FoodIDArray = Ordered.get("ItemsOrdered")
-                
+
                 menuQuery.find({
                     success: function (OrderExpand) {
                         angular.forEach(OrderExpand, function (result) {
@@ -92,7 +93,10 @@ restaurantApp.controller('ViewOrderController',
                                         FoodName: result.get("Name"),
                                         Price: result.get("Price"),
                                         FoodID: result.get("FoodID"),
-                                        OrderID: Ordered.id
+                                        OrderID: Ordered.id,
+                                        OrderComment: Ordered.get("OrderComment"),
+                                        FoodIDarray: Ordered.get("ItemsOrdered"),
+                                        Cost: Ordered.get("Cost")
                                     });
                                 }
                             }
@@ -111,8 +115,8 @@ restaurantApp.controller('ViewOrderController',
                 });
                 SecondDeffered.promise
                 .then(function (OrderStuff) {
-                        $rootScope.OrderThings = OrderExpanded;
-                        //console.log("In the 2nd Promise! " + $rootScope.OrderThings);
+                    $rootScope.OrderThings = OrderExpanded;
+                    //console.log("In the 2nd Promise! " + $rootScope.OrderThings);
                     //return OrderExpanded;
                 })
                 .catch(function (error) {
@@ -123,14 +127,99 @@ restaurantApp.controller('ViewOrderController',
                 console.log("We clicked DeleteItemFunction");
                 //Goal: Get the Order ID stuff
                 console.log(ItemToDelete);
-            }
-            $scope.SendOrderOut = function (OrderSend) {
+                //Query for that item
+                //Remove that Item
+                //We first need to find the index value
+                for (var x = 0; x < ItemToDelete.FoodIDarray.length; x++) {
+                    if (ItemToDelete.FoodID == ItemToDelete.FoodIDarray[x]) {
+                        //console.log("We show up ONE TIME");
+                        //Now we delete 
+                        console.log(ItemToDelete.FoodIDarray);
+                        ItemToDelete.FoodIDarray.splice(x, 1);
+                        console.log(ItemToDelete.FoodIDarray);
+                        var NewOrder = Parse.Object.extend("Order");
+                        var OrderQuery = new Parse.Query(NewOrder);
+                        OrderQuery.get(ItemToDelete.OrderID, {
+                            success: function (TempOrder) {
+                                console.log(TempOrder);
+                                TempOrder.set("ItemsOrdered", ItemToDelete.FoodIDarray);
+                                console.log(ItemToDelete.Cost);
+                                console.log(ItemToDelete.Price);
+                                TempOrder.set("Cost", (ItemToDelete.Cost - ItemToDelete.Price));
+                                TempOrder.save(null, {
+                                    success: function (Stuff) {
+                                        console.log("We saved it?");
+                                    }
+                                });
+                            }
+                        });
 
+                        //  OrderQuery.equalTo("objectId", OrderIdAdded);
+                        //OrderQuery.find({
+                        //  success: function (DeletedOrder) {
+                        //    console.log(DeletedOrder);
+                        //  DeletedOrder.set("ItemOrdered", ItemToDelete.FoodIDarray);
+                        //DeletedOrder.save();
+                        // }
+
+                        //                        })
+                        break;
+                    }
+                }
+
+
+            }
+            $scope.SaveComment = function (OrderSend, TextBoxComments) {
+                //We take in the Textbox save the value in the fucking textbox then store the shit in the god damn database and we done
+                //IN order to do this shit we need to Pull the fucking thing
+                console.log("We got into SaveComment");
+                console.log(TextBoxComments);
+                for (var x = 0; x < OrderSend.FoodIDarray.length; x++) {
+                    if (OrderSend.FoodIDarray[x] == OrderSend.FoodID) {
+                        //console.log("We EDIT THIS SHIT BROTHER");
+                        //var CommentStuff = $scope.CommentArea;
+
+                        OrderSend.OrderComment.splice(x, 0, TextBoxComments);
+                        ///console.log(OrderSend.OrderComment);
+                        var NewOrder = Parse.Object.extend("Order");
+                        var OrderQuery = new Parse.Query(NewOrder);
+                        OrderQuery.get(OrderSend.OrderID, {
+                            success: function (TempOrder) {
+                           ///     console.log(TempOrder);
+                                TempOrder.set("OrderComment", OrderSend.OrderComment);
+                                TempOrder.save(null, {
+                                    success: function (Stuff) {
+                              //          console.log("We saved it?");
+                                    }
+                                });
+                            }
+                        });
+
+                    }
+                }
             }
             $scope.Submit = function (OrderSubmit) {
-
+                //Goal is to get the Order then flip the True/False value
+                //Flip Ordered
+                //Flip InProgress
+                console.log("We get into Submit");
+                console.log(OrderSubmit);
+                var NewOrder = Parse.Object.extend("Order");
+                var OrderQuery = new Parse.Query(NewOrder);
+                console.log(OrderSubmit[0].OrderID);
+                OrderQuery.get(OrderSubmit[0].OrderID, {
+                    success: function (OrderS) {
+                        OrderS.set("Ordered", true);
+                        OrderS.set("InProgress", true);
+                        OrderS.save(null, {
+                            success: function (Stuff) {
+                                console.log("We saved it?");
+                            }
+                        });
+                    }
+                });
             }
-            
+
         }
     ])
 

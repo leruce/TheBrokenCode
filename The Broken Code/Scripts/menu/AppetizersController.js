@@ -101,12 +101,14 @@ restaurantApp.controller('AppetizerMenuController',
              order.set("Completed", false);
              order.set("InProgress", false);
              order.set("Paid", false);
-             //order.set("TableID", findTable($rootScope.currentUser))
+             order.set("OrderComment", []);
+             //order.set("TableID", findTable($rootScope.currentUser));
              //We need to create a function for this later Right now we get this shit to work
              order.save(null, {
                  success: function (order) {
                      console.log("SAVED");
                      alert("You added " + _foodObject.FoodName);
+                     findTable(order);
                  },
                  error: function (order, error) {
                      console.log("Failed " +  error.code + error.message);
@@ -131,6 +133,39 @@ restaurantApp.controller('AppetizerMenuController',
                  },
                  error: function (orderObject, error) {
                      console.log("FAILED");
+                 }
+             });
+         }
+         function findTable(orderTable) {
+             //In order to find the table, we need to access the table class it seem
+             //We know th efollowing things, We know the CUtomer ID
+             console.log("We breaking here?");
+             var TableList = Parse.Object.extend("Table");
+             var TableQuery = new Parse.Query(TableList);
+             TableQuery.equalTo("Customer", $rootScope.currentUser);
+             TableQuery.first({
+                 success: function (TableCustomer) {
+                     if (TableCustomer == null) {
+                         console.log("We returning NULL")
+                     }
+                     else {
+                         console.log("We need to save the Customer Table here");
+                         console.log(TableCustomer.id);
+                         
+                         orderTable.set("TableID", TableCustomer);
+                         console.log(orderTable);
+                         orderTable.save(null, {
+                             success: function (orderObject) {
+                                 console.log("We saved te orderTable.set");
+                             },
+                             error: function (orderObject, error) {
+                                 console.log("failed" + error.code + error.message);
+                             }
+                         });
+
+                         
+                     }
+                     console.log("We should see something above this that not a Object");
                  }
              });
          }
