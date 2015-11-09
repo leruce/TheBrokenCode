@@ -110,7 +110,6 @@
     <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="packages.config" />
     <Content Include="Resources\Logo.ico" />
-    <Content Include="Scripts\account\accountController.js" />
     <Content Include="Scripts\account\ViewOrderController.js" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
@@ -178,7 +177,10 @@
     <Content Include="Scripts\menu\MenuController.js" />
     <Content Include="Scripts\menu\MenuService.js" />
     <Content Include="Scripts\parse\parseService.js" />
+    <Content Include="Scripts\payment\PaymentController.js" />
     <Content Include="Scripts\payment\surveyController.js" />
+    <Content Include="Scripts\staff\HelpSController.js" />
+    <Content Include="Scripts\staff\RefillSController.js" />
     <Content Include="Scripts\staff\Table3Controller.js" />
     <Content Include="Scripts\staff\Table4Controller.js" />
     <Content Include="Scripts\staff\Table5Controller.js" />
@@ -194,6 +196,9 @@
     <Content Include="Scripts\staff\TableController.js" />
     <Content Include="Views\customer\helppage.html" />
     <Content Include="Views\customer\refillpage.html" />
+    <Content Include="Views\game\Othello\Othello.html" />
+    <Content Include="Views\game\Trivia\Trivia.html" />
+    <Content Include="Views\payment\payment.html" />
     <Content Include="Views\staff\staffhelp.html" />
     <Content Include="Views\staff\staffrefill.html" />
     <Content Include="Scripts\ui-bootstrap-tpls-0.14.3.min.js" />
@@ -218,6 +223,8 @@
     <Content Include="Views\manager\manager.html" />
     <Content Include="Views\staff\staffOrder.html" />
     <Content Include="Views\staff\tables.html" />
+    <Content Include="Views\staff\waitstaff.html" />
+    <Content Include="Views\summary\summary.html" />
     <Content Include="Views\tables\mainPages\Table2.html" />
     <Content Include="Views\tables\mainPages\Table3.html" />
     <Content Include="Views\tables\mainPages\Table4.html" />
@@ -249,6 +256,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Scripts\summary\" />
+    <Folder Include="Scripts\Tables\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

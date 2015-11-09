@@ -185,26 +185,39 @@ restaurantApp.controller('MainController',
 
           //Function to get the user a table
           function getTable(user) {
-               $rootScope.table;
+               var Defered = $q.defer();
                var Table = Parse.Object.extend("Table");
                var tableQuery = new Parse.Query(Table);
                tableQuery.equalTo("Available", true);
                //Looks for and assigns the first free table to the user
                tableQuery.first({
                     success: function (data) {
-                         $rootScope.table = data;
-                         $rootScope.table.set("Available", false);
-                         $rootScope.table.set("Customer", user);
-                         $rootScope.table.save();
-                                             },
+                         $window.sessionStorage.table = data;
+                         $window.table.set("Available", false);
+                         $window.table.set("Customer", user);
+                         //$window.$apply;
+                    },
                     error: function (error) {
                          alert("Error: " + error.code + " " + error.message);
                     }
-               }).then(function (data) {
-                   console.log("This is the end");
-                   return $rootScope.table;
-               });// End tableQuery.first;// End tableQuery.first              
-          }
+               })
+               .then(function (orders) {
+                    Defered.resolve(orders);
+               },
+               function (error) {
+                    Defered.reject(orders);
+               });
+               Defered.promise
+                    .then(function (orders) {
+                         $window.sessionStorage.table.table.save();
+                    })
+                    .catch(function (error) {
+                         //Catch errors
+                        // alert("Error: " + error.code + " " + error.message);
+                        // alert("An error has occured. Staff has been notified and will be with you shortly.");
+                    });
+               
+          };
 
 }]);
 

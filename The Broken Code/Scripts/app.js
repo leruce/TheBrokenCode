@@ -42,7 +42,6 @@ var restaurantApp = angular.module('restaurantApp',
                   templateUrl: 'Views/kitchen/remove.html',
                   controller: 'removeController'
               })
-
               //The main manager page
               .when('/manager', {
                   templateUrl: 'Views/manager/manager.html',
@@ -77,14 +76,17 @@ var restaurantApp = angular.module('restaurantApp',
               .when('/refill', {
                    templateUrl: 'Views/customer/refillpage.html',
                    controller: 'refillController'
-              })
-        
+              })      
               //The payment page
               .when('/payment', {
-                  templateUrl: 'Views/payment/survey.html',
-                  controller: 'TableController'
+                  templateUrl: 'Views/payment/payment.html',
+                  controller: 'PaymentController'
               })
-             
+              //The survery page
+              .when('/survey', {
+                   templateUrl: 'Views/payment/survey.html',
+                   controller: 'TableController'
+              })             
               //The menu page
                .when('/menu', {
                     templateUrl: 'Views/Menu/menu.html',
@@ -138,7 +140,6 @@ var restaurantApp = angular.module('restaurantApp',
                .when('/LotteryGame', {
                     templateUrl: 'Views/game/Lottery.html'
                })
-
                //The tables page
               .when('/tables', {
                   templateUrl: 'Views/staff/tables.html',
@@ -287,7 +288,12 @@ var restaurantApp = angular.module('restaurantApp',
      }) //end .config
 
      .run(function ($rootScope, $location, ParseService) {
-          $rootScope.sessionUser = Parse.User.current();
+          $rootScope.currentUser = Parse.User.current();
+          // redirect to login page if not logged in and trying to access a restricted page
+          var restrictedPage = $.inArray($location.path(), ['/login', '/register']) === -1;
+          if (restrictedPage && !$rootScope.currentUser) {
+               $location.path('/login');
+          }
      })//end .run
 
 
