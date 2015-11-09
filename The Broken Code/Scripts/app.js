@@ -91,9 +91,9 @@ var restaurantApp = angular.module('restaurantApp',
 
               //Receipt pahe
               .when('/receipt', {
-                  templateUrl: 'Views/payment/Receipt.html',
-                  controller: 'ReceiptController'
-
+                   templateUrl: 'Views/payment/Receipt.html',
+                   controller: 'ReceiptController'
+              })
               //The split 2 ways page
               .when('/payment/2', {
                   templateUrl: 'Views/payment/pay2.html',
