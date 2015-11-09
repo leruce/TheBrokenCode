@@ -180,6 +180,7 @@
     <Content Include="Scripts\menu\MenuService.js" />
     <Content Include="Scripts\parse\parseService.js" />
     <Content Include="Scripts\payment\PaymentController.js" />
+    <Content Include="Scripts\payment\ReceiptController.js" />
     <Content Include="Scripts\payment\surveyController.js" />
     <Content Include="Scripts\staff\HelpSController.js" />
     <Content Include="Scripts\staff\RefillSController.js" />
@@ -201,6 +202,7 @@
     <Content Include="Views\game\Othello\Othello.html" />
     <Content Include="Views\game\Trivia\Trivia.html" />
     <Content Include="Views\payment\payment.html" />
+    <Content Include="Views\payment\Receipt.html" />
     <Content Include="Views\staff\staffhelp.html" />
     <Content Include="Views\staff\staffrefill.html" />
     <Content Include="Scripts\ui-bootstrap-tpls-0.14.3.min.js" />
