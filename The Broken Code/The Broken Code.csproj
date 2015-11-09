@@ -175,6 +175,7 @@
     <Content Include="Scripts\menu\DessertsController.js" />
     <Content Include="Scripts\menu\DrinksController.js" />
     <Content Include="Scripts\menu\EntreesController.js" />
+    <Content Include="Scripts\menu\InfoController.js" />
     <Content Include="Scripts\menu\KidsController.js" />
     <Content Include="Scripts\menu\MenuController.js" />
     <Content Include="Scripts\menu\MenuService.js" />
@@ -201,6 +202,7 @@
     <Content Include="Views\customer\refillpage.html" />
     <Content Include="Views\game\Othello\Othello.html" />
     <Content Include="Views\game\Trivia\Trivia.html" />
+    <Content Include="Views\menu\Info.html" />
     <Content Include="Views\payment\payment.html" />
     <Content Include="Views\payment\Receipt.html" />
     <Content Include="Views\staff\staffhelp.html" />

@@ -188,17 +188,9 @@ restaurantApp.controller('AppetizerMenuController',
              });
          }
          $scope.open = function (_menuAppetizer) {
-             //console.log("We get into the modal open");
-             var modalInstance = $uibModal.open({
-                 templateUrl: "Views/menu/myModal.html",
-                 controller: 'ModalInstanceCtrl',
-                 resolve: {
-                     MenuAppetizers: function () {
-                     //    console.log("We managed to get into the open" + " " + _menuAppetizer.FoodName);
-                         return _menuAppetizer;
-                     }
-                }
-             });
+             //We need to Reroute
+             $rootScope.Detail = _menuAppetizer.NutritionInfo;
+             $location.path("/info");
          }
      }]);
 

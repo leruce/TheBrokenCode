@@ -13,34 +13,9 @@
                   <!-- Add Item to Order -->
                   <button type="button" class="btn btn-sm" ng-click="addToOrder(menuKids)"> Order </button>
                   <!-- Trigger the modal with a button -->
-                  <button type="button" class="btn btn-sm"
-                          data-toggle="modal" data-target="#myModal">
-                       Nutrition Info
-                  </button>
+                 <button type="button" class="btn btn-sm" ng-click="open(menuKids)">Nutrition Info</button>
              </p>
         </div>
-    </div>
-</div>
-
-
-<!-- Entrees Modal -->
-<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Nutrition Info</h4>
-            </div>
-            <div class="modal-body">
-                <p>Calories: {{Calories}}</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-
     </div>
 </div>
 

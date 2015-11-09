@@ -8,12 +8,16 @@ var restaurantApp = angular.module('restaurantApp',
      ['ngRoute', "ui.bootstrap"])
 
      .config(function ($routeProvider) {
-          $routeProvider
-               //The main page 
-               .when('/', {
-                    templateUrl: 'Views/Home.html',
-                    controller: 'MainController'
-               })
+         $routeProvider
+              //The main page 
+              .when('/', {
+                  templateUrl: 'Views/Home.html',
+                  controller: 'MainController'
+              })
+             .when('/info', {
+                 templateUrl: 'Views/menu/Info.html',
+                 controller: 'InfoController'
+              })
               //The manager adjusment report
                .when('/manager/report', {
                    templateUrl: 'Views/manager/adjustments.html',
