@@ -154,7 +154,7 @@ restaurantApp.controller('PaymentController',
                          //Set the order as complete
                          order.set("Paid", true);
                          order.get("TableID").set("Available", true);
-                         alert("Thank you for dining with us at The Broken Code! Your staff has been notified and will be with you shortly!");
+                         alert("Thank you for dining with us at The Broken Code!");
                     },
                     error: function (order, error) {
                          alert("An error has occured. Staff has been notified and will be with you shortly.");
