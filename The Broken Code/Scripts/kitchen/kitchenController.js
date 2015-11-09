@@ -41,73 +41,6 @@ restaurantApp.controller('KitchenController',
              });
 
          };
-         $scope.getItem = function (item) {
-             switch (item) {
-                 case 38:
-                     return "Kids Cheese Burger";
-                     break;
-                 case 37:
-                     return "Kids Grilled Chicken Meal";
-                     break;
-                 case 36:
-                     return "Classic Bacon Burger";
-                     break;
-                 case 35:
-                     return "Hamburger with Cheese";
-                     break;
-                 case 34:
-                     return "Original Ribs";
-                     break;
-                 case 33:
-                     return "Classic Ribeye";
-                     break;
-                 case 32:
-                     return "Classic Sirloin";
-                     break;
-                 case 31:
-                     return "Grilled Ranch Chicken Sandwich";
-                     break;
-                 case 30:
-                     return "Classic Turkey Toasted Sandwich";
-                     break;
-                 case 29:
-                     return "Southwestern BLT Toasted Sandwich";
-                     break;
-                 case 28:
-                     return "Chicken Caesar Salad";
-                     break;
-                 case 27:
-                     return "Grilled Chicken Salad";
-                     break;
-                 case 26:
-                     return "Fresh Salad";
-                     break;
-                 case 25:
-                     return "Sprite";
-                     break;
-                 case 24:
-                     return "Water";
-                     break;
-                 case 23:
-                     return "Strawberry Lemonade";
-                     break;
-                 case 22:
-                     return "Black Raspberry Lemonade";
-                     break;
-                 case 21:
-                     return "Raspberry Lemonade";
-                     break;
-                 case 20:
-                     return "Lemonade";
-                     break;
-                 case 19:
-                     return "Sweet Tea";
-                     break;
-                 default:
-                     return "INVALID ITEM CODE";
-                     break;
-             }
-         };
          var getItemNames = function (items) {
              var result = [];
              var nextItem;
@@ -181,92 +114,6 @@ restaurantApp.controller('KitchenController',
              return result;
 
          };
-         $scope.getTableNum = function (id) {
-             switch (id) {
-                 case "74p9C7x1VN":
-                     return 12;
-                     break;
-                 case "oBu4CM64Rh":
-                     return 11;
-                     break;
-                 case "7usNCJ65Wl":
-                     return 10;
-                     break;
-                 case "DF1azaLd1y":
-                     return 9;
-                     break;
-                 case "mrxsgVokDI":
-                     return 8;
-                     break;
-                 case "QnFuEtm9XR":
-                     return 7;
-                     break;
-                 case "2hwgXm5pmq":
-                     return 6;
-                     break;
-                 case "PzgulOQHLD":
-                     return 5;
-                     break;
-                 case "jXOFzJb617":
-                     return 4;
-                     break;
-                 case "87JeiHgWhe":
-                     return 3;
-                     break;
-                 case "5JFFG3fRUE":
-                     return 2;
-                     break;
-                 case "wXtdGwjvuP":
-                     return 1;
-                     break;
-                 default:
-                     return 0;
-             }
-             return -1;
-         };
-         var getTableNum = function (id) {
-             switch (id) {
-                 case "74p9C7x1VN":
-                     return 12;
-                     break;
-                 case "oBu4CM64Rh":
-                     return 11;
-                     break;
-                 case "7usNCJ65Wl":
-                     return 10;
-                     break;
-                 case "DF1azaLd1y":
-                     return 9;
-                     break;
-                 case "mrxsgVokDI":
-                     return 8;
-                     break;
-                 case "QnFuEtm9XR":
-                     return 7;
-                     break;
-                 case "2hwgXm5pmq":
-                     return 6;
-                     break;
-                 case "PzgulOQHLD":
-                     return 5;
-                     break;
-                 case "jXOFzJb617":
-                     return 4;
-                     break;
-                 case "87JeiHgWhe":
-                     return 3;
-                     break;
-                 case "5JFFG3fRUE":
-                     return 2;
-                     break;
-                 case "wXtdGwjvuP":
-                     return 1;
-                     break;
-                 default:
-                     return 0;
-             }
-             return -1;
-         };
          $scope.orders = [/*
              {
                  id: '0',
@@ -303,11 +150,11 @@ restaurantApp.controller('KitchenController',
                      angular.forEach(data, function (result) {
                          orderObjects.push({
                              id: result.get("ObjectId"),
-                             table: result.get("TableID"),
+                             table: result.get("TableID").get("TableID"),
                              comments: result.get("OrderComment"),
                              placedTime: result.get("createdAt"),
                              waitTime: 0,
-                             items: result.get("ItemsOrdered")
+                             items: getItemNames(result.get("ItemsOrdered"))
                          });
                      });
                  },

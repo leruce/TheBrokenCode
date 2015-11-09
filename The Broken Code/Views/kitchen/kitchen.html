@@ -21,7 +21,7 @@
                 <tbody>
                     <tr ng-repeat="item in order.items">
                         <td>{{item}} </td>
-                        <td> Comment </td>
+                        <td> {{order.comments[$index]}} </td>
                     </tr>
                 </tbody>
             </table>
