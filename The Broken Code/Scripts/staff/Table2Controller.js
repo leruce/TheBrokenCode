@@ -8,7 +8,7 @@
          var queryList = new Parse.Query(Table2);
 
          queryList.equalTo("TableID", 2);
-
+         //get table info
          queryList.find({
              success: function (data) {
                  angular.forEach(data, function (result) {
@@ -40,8 +40,7 @@
          .then(function (data) {
 
              TableDfd2.resolve(data);
-             //next query based on _User class
-             //console.log(data.get("Customer"));
+
 
          },
          function (error) {
@@ -91,7 +90,7 @@
                              }
                              else {
                                  console.log("we get into the query first order " + orders.id);
-                                 //We need to check if order exist or not. since it can return a 0.
+
                                  addItem(orders, foodObject);
                              }
                          }
@@ -112,8 +111,7 @@
                      var OrderC = new Order();
                      var OrderID = id;
                      OrderC.id = OrderID;
-                     //console.log("food Name " + _foodObject.FoodName);
-                     //order.set("ItemsOrdered", [__foodID]);
+
                      order.set("Customer", OrderC);
                      order.set("ItemsOrdered", [_foodObject.FoodID]);
                      order.set("Cost", _foodObject.Price);
@@ -121,10 +119,7 @@
                      order.set("Completed", false);
                      order.set("InProgress", false);
                      order.set("Paid", false);
-                     //order.set("TableID", list[0].Object);
-                     //console.log(list[0].Customer.id + list[0].Object)
-                     //order.set("TableID", findTable($rootScope.currentUser))
-                     //We need to create a function for this later Right now we get this shit to work
+
                      order.save(null, {
                          success: function (order) {
                              console.log("SAVED");
@@ -137,7 +132,7 @@
 
                  }
                  function addItem(orderObject, _foodObject) {
-                     //We need to add price value
+
                      //Append the  itemsOrdered
                      var cost = orderObject.get("Cost") + _foodObject.Price;
                      var ItemsOrdered = orderObject.get("ItemsOrdered");
@@ -159,7 +154,7 @@
 
 
 
-
+                 //list of refills for a table.
                  var refillList = [];
                  var TableDfd5 = $q.defer();
                  var refill = Parse.Object.extend("Refill");
@@ -200,6 +195,7 @@
 
              });
 
+                 //scopes to use
                  TableDfd5.promise
                  .then(function (List) {
                      $scope.Refill = refillList;
@@ -213,7 +209,7 @@
 
 
 
-
+                 //list of help requests for a table
                  var helpList = [];
                  var TableDfd4 = $q.defer();
                  var help = Parse.Object.extend("Help");
@@ -254,6 +250,7 @@
 
              });
 
+                 //redfine scopes (some stuff doesn't show up if they are redefined)
                  TableDfd4.promise
                  .then(function (List) {
                      $scope.Name = nameList;
@@ -262,7 +259,7 @@
 
                  })
 
-
+                 //function to delete help requests for a table when complete
                  $scope.deleteHelp = function (helpObject) {
 
                      var hDeleteQuery = new Parse.Query("Help");
@@ -273,7 +270,7 @@
                      hDeleteQuery.find({
                          success: function (data) {
                              angular.forEach(data, function (data) {
-                                 return Parse.Object.destroyAll(data);
+                                 return Parse.Object.destroyAll(data); //destroy row
 
 
                              });
@@ -290,7 +287,7 @@
                      })
                  }
 
-
+                 //function to delete refill requests when complete
                  $scope.deleteRefill = function (refillObject) {
 
                      var rDeleteQuery = new Parse.Query("Refill");
@@ -301,7 +298,7 @@
                      rDeleteQuery.find({
                          success: function (data) {
                              angular.forEach(data, function (data) {
-                                 return Parse.Object.destroyAll(data);
+                                 return Parse.Object.destroyAll(data); //destroy row
 
 
                              });
@@ -328,6 +325,7 @@
 
 
 
+                 //list of customers at a table
 
                  var nameList = [];
                  var cust = Parse.Object.extend("User");

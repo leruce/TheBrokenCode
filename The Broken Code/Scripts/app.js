@@ -88,10 +88,27 @@ var restaurantApp = angular.module('restaurantApp',
                   templateUrl: 'Views/payment/payment.html',
                   controller: 'PaymentController'
               })
+
               //Receipt pahe
               .when('/receipt', {
                   templateUrl: 'Views/payment/Receipt.html',
                   controller: 'ReceiptController'
+
+              //The split 2 ways page
+              .when('/payment/2', {
+                  templateUrl: 'Views/payment/pay2.html',
+                  controller: 'PaymentController'
+              })
+              //The split 3 ways page
+              .when('/payment/3', {
+                  templateUrl: 'Views/payment/pay3.html',
+                  controller: 'PaymentController'
+              })
+              //The split 4 ways page
+              .when('/payment/4', {
+                  templateUrl: 'Views/payment/pay4.html',
+                  controller: 'PaymentController'
+
               })
               //The survery page
               .when('/survey', {
