@@ -112,7 +112,7 @@ restaurantApp.controller('MainController',
                          $rootScope.currentUser = Parse.User.current();
                          alert("Welcome " + user.getUsername() + "!");
                          $('#registerModal').modal('hide');
-                         $window.location.reload()
+                         $window.location.reload();
                          getTable(user);
                     },
                     error: function(user, error) {

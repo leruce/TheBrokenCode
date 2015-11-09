@@ -1,8 +1,8 @@
 ﻿'use strict';
 
 restaurantApp.controller('PaymentController',
-     ['$rootScope', '$scope', '$http', '$location', '$window', 'ParseService',  '$q',
-     function ($rootScope, $scope, $http, $location, $window, ParseService, $q) {
+     ['$rootScope', '$scope', '$http', '$location', '$window', '$uibModal', 'ParseService',  '$q',
+     function ($rootScope, $scope, $http, $location, $window, $uibModal, ParseService, $q) {
           var Defered = $q.defer();
           var Order = Parse.Object.extend("Order");
           var getOrderQuery = new Parse.Query(Order);
@@ -115,17 +115,18 @@ restaurantApp.controller('PaymentController',
                .then(function (order) {
                     Defered.resolve(order);
                },
-          function (error) {
-               Defered.reject(order);
-          });
-          Defered.promise
+               function (error) {
+                    Defered.reject(order);
+               });
+               Defered.promise
                .then(function (order) {
                     //Update the database
                     order.save();
+                    alert("If you have the time, please fill out the following survey letting us know how we did. Thanks!.");
                     //Reset the currentUser, log the user out, and go back to the home page
                     $rootScope.currentUser = null;
                     Parse.User.logOut();
-                    $location.path("/");
+                    $location.path("/survey");
                })
                .catch(function (error) {
                     //Catch errors

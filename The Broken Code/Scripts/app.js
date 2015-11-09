@@ -96,7 +96,7 @@ var restaurantApp = angular.module('restaurantApp',
               //The survery page
               .when('/survey', {
                    templateUrl: 'Views/payment/survey.html',
-                   controller: 'TableController'
+                   controller: 'SurveyController'
               })             
               //The menu page
                .when('/menu', {
