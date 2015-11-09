@@ -1,10 +1,6 @@
-﻿
-{{works}}
-<br />
-<div ng-repeat="order in orders">
+﻿<div ng-repeat="order in orders">
     <div class="row">
         <div class="col-md-1">
-            {{order.waitTime | date:'mm:ss'}}
         </div>
         <div class="col-md-10" style="background-color: aliceblue; border: dotted">
             <!--{{ now | date:'HH:mm:ss'}} -->
@@ -24,7 +20,7 @@
                 </thead>
                 <tbody>
                     <tr ng-repeat="item in order.items">
-                        <td>{{getItemNames(item)}} </td>
+                        <td>{{item}} </td>
                         <td> Comment </td>
                     </tr>
                 </tbody>
