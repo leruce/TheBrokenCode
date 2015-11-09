@@ -27,6 +27,9 @@ function LotteryPlay() {
                 }
             });
         }
+        else {
+            alert("You did NOT win a free Coupon!");
+        }
     }
     window.name++;
     console.log(window.name);

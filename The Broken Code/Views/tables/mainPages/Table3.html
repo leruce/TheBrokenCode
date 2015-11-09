@@ -1,0 +1,89 @@
+﻿<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="text-center">
+                <b>Table Name</b>
+            </h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <h3 class="text-center">
+                        <b>Customers</b>
+                    </h3>
+                    <table class="table table-condensed table-hover">
+                        <tbody ng-repeat="name in Name">
+                            <tr class="success">
+                                <td>
+                                    {{name.Name}}
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="text-center">
+                        <b>Status</b>
+                    </h3>
+                    <table class="table table-condensed table-hover">
+                        <tbody ng-repeat="table2 in Table2">
+                            <tr class="success">
+                                <td>
+                                    {{table2.Status}}
+                                </td>
+                                <td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="col-md-4">
+                    <h3 class="text-center">
+                        <b>Refills</b>
+                    </h3>
+                    <table class="table table-condensed table-hover">
+                        <tbody ng-repeat="refill in Refill">
+                            <tr class="success">
+                                <td>
+                                    {{refill.Refill}}
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                    <button ng-click="deleteRefill(refill)" align="center" class="btn btn-sm">Clear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Comments:</h3>
+                    <table class="table table-condensed table-hover">
+
+                        <tbody ng-repeat="help in Help">
+                            <tr class="success">
+                                <td>
+                                    {{help.Help}}
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button ng-click="deleteHelp(help)" align="center" class="btn btn-sm">Clear</button>
+                </div>
+                <div class="col-md-4">
+                    <a href="#/tables/3/order" class="btn btn-lg" role="button" align="center">Order</a>
+                </div>
+                <div class="col-md-4">
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

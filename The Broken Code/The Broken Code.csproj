@@ -110,7 +110,7 @@
     <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="packages.config" />
     <Content Include="Resources\Logo.ico" />
-    <Content Include="Scripts\account\accountController.js" />
+    <Content Include="Scripts\account\ViewOrderController.js" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
@@ -129,9 +129,13 @@
     <Content Include="Scripts\angular-touch.min.js.map" />
     <Content Include="Scripts\angular-route.min.js.map" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\customer\helpController.js" />
+    <Content Include="Scripts\customer\refillController.js" />
     <Content Include="Scripts\game\ConnectFour\ConnectFour.js" />
     <Content Include="Scripts\game\Lottery.js" />
+    <Content Include="Scripts\game\Othello\Othello.js" />
     <Content Include="Scripts\game\TicTacToe\TicTacToe.js" />
+    <Content Include="Scripts\game\Trivia\Trivia.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
@@ -165,6 +169,7 @@
     <Content Include="Scripts\jquery-ui-1.11.4.js" />
     <Content Include="Scripts\jquery-ui-1.11.4.min.js" />
     <Content Include="Scripts\kitchen\kitchenController.js" />
+    <Content Include="Scripts\kitchen\removeController.js" />
     <Content Include="Scripts\manager\ManagerController.js" />
     <Content Include="Scripts\menu\AppetizersController.js" />
     <Content Include="Scripts\menu\DessertsController.js" />
@@ -174,16 +179,44 @@
     <Content Include="Scripts\menu\MenuController.js" />
     <Content Include="Scripts\menu\MenuService.js" />
     <Content Include="Scripts\parse\parseService.js" />
-    <Content Include="Scripts\staff\helppage.js" />
-    <Content Include="Scripts\staff\PageRController.js" />
-    <Content Include="Scripts\staff\TableControler.js" />
+    <Content Include="Scripts\payment\PaymentController.js" />
+    <Content Include="Scripts\payment\ReceiptController.js" />
+    <Content Include="Scripts\payment\surveyController.js" />
+    <Content Include="Scripts\staff\HelpSController.js" />
+    <Content Include="Scripts\staff\RefillSController.js" />
+    <Content Include="Scripts\staff\Table3Controller.js" />
+    <Content Include="Scripts\staff\Table4Controller.js" />
+    <Content Include="Scripts\staff\Table5Controller.js" />
+    <Content Include="Scripts\staff\Table6Controller.js" />
+    <Content Include="Scripts\staff\Table7Controller.js" />
+    <Content Include="Scripts\staff\Table8Controller.js" />
+    <Content Include="Scripts\staff\Table9Controller.js" />
+    <Content Include="Scripts\staff\Table10Controller.js" />
+    <Content Include="Scripts\staff\Table11Controller.js" />
+    <Content Include="Scripts\staff\Table12Controller.js" />
+    <Content Include="Scripts\staff\Table2Controller.js" />
+    <Content Include="Scripts\staff\Table1Controller.js" />
+    <Content Include="Scripts\staff\TableController.js" />
+    <Content Include="Views\customer\helppage.html" />
+    <Content Include="Views\customer\refillpage.html" />
+    <Content Include="Views\game\Othello\Othello.html" />
+    <Content Include="Views\game\Trivia\Trivia.html" />
+    <Content Include="Views\payment\payment.html" />
+    <Content Include="Views\payment\Receipt.html" />
+    <Content Include="Views\staff\staffhelp.html" />
+    <Content Include="Views\staff\staffrefill.html" />
     <Content Include="Scripts\ui-bootstrap-tpls-0.14.3.min.js" />
+    <Content Include="Views\account\ViewOrders.html" />
     <Content Include="Views\game\ConnectFour\ConnectFour.html" />
     <Content Include="Views\game\GameList.html" />
     <Content Include="Views\game\Lottery.html" />
     <Content Include="Views\game\TicTacToe\TicTacToe.html" />
     <Content Include="Views\Home.html" />
     <Content Include="Views\kitchen\kitchen.html" />
+    <Content Include="Views\kitchen\remove.html" />
+    <Content Include="Views\manager\adjustments.html" />
+    <Content Include="Views\manager\dailyRevenue.html" />
+    <Content Include="Views\manager\topItems.html" />
     <Content Include="Views\menu\desserts.html" />
     <Content Include="Views\menu\entrees.html" />
     <Content Include="Views\menu\appetizers.html" />
@@ -191,21 +224,41 @@
     <Content Include="Views\menu\kids.html" />
     <Content Include="Views\menu\menu.html" />
     <Content Include="Views\payment\survey.html" />
-    <Content Include="Views\staff\helppage.html" />
     <Content Include="Views\manager\manager.html" />
-    <Content Include="Views\staff\PageR.html" />
+    <Content Include="Views\staff\staffOrder.html" />
     <Content Include="Views\staff\tables.html" />
+    <Content Include="Views\staff\waitstaff.html" />
+    <Content Include="Views\summary\summary.html" />
+    <Content Include="Views\tables\mainPages\Table2.html" />
+    <Content Include="Views\tables\mainPages\Table3.html" />
+    <Content Include="Views\tables\mainPages\Table4.html" />
+    <Content Include="Views\tables\mainPages\Table5.html" />
+    <Content Include="Views\tables\mainPages\Table6.html" />
+    <Content Include="Views\tables\mainPages\Table7.html" />
+    <Content Include="Views\tables\mainPages\Table8.html" />
+    <Content Include="Views\tables\mainPages\Table9.html" />
+    <Content Include="Views\tables\mainPages\Table10.html" />
+    <Content Include="Views\tables\mainPages\Table11.html" />
+    <Content Include="Views\tables\mainPages\Table12.html" />
+    <Content Include="Views\tables\mainPages\Table1.html" />
+    <Content Include="Views\tables\orderPage\Table2Order.html" />
+    <Content Include="Views\tables\orderPage\Table3Order.html" />
+    <Content Include="Views\tables\orderPage\Table4Order.html" />
+    <Content Include="Views\tables\orderPage\Table5Order.html" />
+    <Content Include="Views\tables\orderPage\Table6Order.html" />
+    <Content Include="Views\tables\orderPage\Table7Order.html" />
+    <Content Include="Views\tables\orderPage\Table8Order.html" />
+    <Content Include="Views\tables\orderPage\Table9Order.html" />
+    <Content Include="Views\tables\orderPage\Table10Order.html" />
+    <Content Include="Views\tables\orderPage\Table11Order.html" />
+    <Content Include="Views\tables\orderPage\Table12Order.html" />
+    <Content Include="Views\tables\orderPage\Table1Order.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Scripts\customer\" />
-    <Folder Include="Scripts\summary\" />
-    <Folder Include="Views\account\" />
-    <Folder Include="Views\customer\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

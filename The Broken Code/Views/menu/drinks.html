@@ -1,21 +1,24 @@
 ﻿<div class="container-fluid">
     <div class="row">
         <div class="col-md-4 top-buffer" ng-repeat="menuDrinks in MenuDrinks">
-            <h3>
-                {{menuDrinks.FoodName}}
-            </h3>
-            <!--Need to Show the Food Pic. We need to pull from Parse. -->
-            <img class="img-thumbnail image-format" alt="Item Image" src="{{menuDrinks.FoodImg}}" />
-            <p>
-                {{menuDrinks.Description}}
-            </p>
-          <!-- Add Item to Order -->
-          <!-- TODO: Implement this -->
-          <button type="button" class="btn btn-default btn-sm"> Order </button>
-          <!-- Trigger the modal with a button -->
-          <button type="button" class="btn btn-default btn-sm"
-               data-toggle="modal" data-target="#myModal">Nutrition Info</button>
-        </div>
+          <h3>
+               <b>{{menuDrinks.FoodName}}</b>
+          </h3>
+          <!--Need to Show the Food Pic. We need to pull from Parse. -->
+          <img class="img-thumbnail image-format" alt="Item Image" src="{{menuDrinks.FoodImg}}" />
+             <p>
+                  <strong>{{menuDrinks.Description}} - ${{menuDrinks.Price}}</strong>
+             </p>
+             <p>
+                  <!-- Add Item to Order -->
+                  <button type="button" class="btn btn-sm" ng-click="addToOrder(menuDrinks)"> Order </button>
+                  <!-- Trigger the modal with a button -->
+                  <button type="button" class="btn btn-sm"
+                          data-toggle="modal" data-target="#myModal">
+                       Nutrition Info
+                  </button>
+             </p>
+</div>
     </div>
 </div>
 
@@ -34,7 +37,7 @@
                     <p>Calories: {{Calories}}</p>
                </div>
                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn" data-dismiss="modal">Close</button>
                </div>
           </div>
 

@@ -1,35 +1,17 @@
-﻿<div class="container-fluid">
+﻿
+
+
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-3" ng-repeat="table in Table">
             <p>&nbsp;</p>
-            <p class="full-circle"></p>
+            <p class="full-circle">{{table.Status}}</p>
+           <!--Want to be able to change color, but can't get chaning a css element to work.-->
            
-            <p>&nbsp;</p>
-
+            
             <div class="container">
                 <!-- Trigger the modal with a button -->
-                <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">Table {{table.ID}}</button>
-
-                <!-- Modal -->
-                <div class="modal fade" id="myModal" role="dialog">
-                    <div class="modal-dialog">
-
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Table {{table.ID}}</h4>
-                            </div>
-                            <div class="modal-body">
-                                <p>Status: {{table.Status}}</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+                <a href="#/tables/{{table.ID}}" class="btn" role="button" align="center">Table {{table.ID}}</a>
 
             </div>
 

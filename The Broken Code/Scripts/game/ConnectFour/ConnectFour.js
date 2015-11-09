@@ -166,7 +166,7 @@ function C4GameClick(e) {
         alert("Game is a TIE!");
     }
     if (TestWin == true) {
-        alert("WINNER IS X");
+        alert("WINNER IS " +C4GlobalPlayer);
     }
     if (TestWin == true || C4Clicked == 42) {
         C4Grid = [[0, 0, 0, 0, 0, 0, 0],

@@ -29,7 +29,7 @@
 	
         <div class="jumbotron">
             <div class="container" align="center">
-                <h1>Welcome To The Broken Code Resturant</h1>
+                <h1>Welcome</h1>
                 <p>
                 The Broken Code opened its doors to the city of Denton in the Fall of 2015. The Broken Code brings you what has been called “Upscale Comfort” food. Thanks to our community and to our customers for growing with us and for your constant support. We hope you enjoy your meal as much as we have enjoyed preparing it for you.
                 </p>
@@ -44,32 +44,32 @@
 
     <div class="col-md-4" align="center">
         <h2 align="center">
-            Appetizers
+            <b>Appetizers</b>
         </h2>
          <img class="img-thumbnail image-format" src="http://files.parsetfss.com/bc6b651f-2039-4fe4-b62c-51c48199dc40/tfss-a432e801-d630-497b-98a9-d2740ea2dda1-imgres.jpg">
           <p>
-               <a href="#/appetizers" class="btn btn-info" role="button" align= "center"> View Appetizers</a>
+               <a href="#/appetizers" class="btn" role="button" align= "center"> View Appetizers</a>
           </p>
         
     </div>
 
     <div class="col-md-4" align="center">
         <h2 align="center">
-            Entrees
+            <b>Entrees</b>
         </h2>
         <img class="img-thumbnail image-format" src="http://files.parsetfss.com/bc6b651f-2039-4fe4-b62c-51c48199dc40/tfss-9a202032-924b-4bbb-8472-628b5710c788-3512_steaks_classicribeye_600x400.jpg">
         <p>
-               <a href="#/entrees" class="btn btn-info" role="button" align= "center"> View Entrees</a>
+               <a href="#/entrees" class="btn" role="button" align= "center"> View Entrees</a>
           </p>
     </div>
 
     <div class="col-md-4" align="center">
         <h2 align="center">
-            Desserts
+            <b>Desserts</b>
         </h2>
          <img class="img-thumbnail image-format" src="http://files.parsetfss.com/bc6b651f-2039-4fe4-b62c-51c48199dc40/tfss-5b7edf23-fef6-4a97-b29f-554bbc5f22c4-images-2.jpg">
         <p>
-               <a href="#/desserts" class="btn btn-info" role="button" align= "center"> View Desserts</a>
+               <a href="#/desserts" class="btn" role="button" align= "center"> View Desserts</a>
           </p>
     </div>
 
@@ -78,11 +78,11 @@
 <div class="row" align="center" ng-show="currentUser">
      <div class="col-md-12" align="center">
           <h2 align="center">
-               Drinks
+               <b>Drinks</b>
           </h2>
           <img class="img-thumbnail image-format" src="https://41.media.tumblr.com/21600c59c28104dc8b32a90a3da30cb8/tumblr_nrj06b588y1sx5lcto1_500.jpg">
           <p>
-          <a href="#/drinks" class="btn btn-info" role="button" align= "center"> View Drinks</a>
+          <a href="#/drinks" class="btn" role="button" align= "center"> View Drinks</a>
           </p>
      </div>  
 </div>
@@ -111,14 +111,14 @@
           <input type="password" id="inputPassword" class="form-control"
                  ng-model="login.password" placeholder="Password">
           <!-- Sign in button runs login function in the controller -->
-          <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+          <button class="btn btn-lg btn-block" type="submit">Sign in</button>
           <!-- Register button opens up modal for registration -->
-          <button class="btn btn-lg btn-primary btn-block" type="button"
+          <button class="btn btn-lg btn-block" type="button"
                   data-toggle="modal" data-target="#registerModal">
                Register
           </button>
           <!-- Guest Button for users who do not wish to log in or create an account -->
-          <button class="btn btn-lg btn-primary btn-block" ng-click="guestLogin()" type="button" >
+          <button class="btn btn-lg btn-block" ng-click="guestLogin()" type="button" >
                Continue as Guest
           </button>
      </form>
@@ -153,17 +153,25 @@
                          <input type="password" id="inputPassword" class="form-control"
                                 ng-model="newuser.password" placeholder="Password">
                          <!-- Ask user to input their birthday -->
-
-                         <!-- Ask user to input their email-->
-                         <label for="inputEmail" class="sr-only">Email Address</label>
-                         <input type="email" id="inputEmail" class="form-control"
-                                ng-model="newuser.email" placeholder="User@email.com">
-               </form>
+                         <label for="inputBirthday" class="sr-only">Password</label>
+                         <input type="date" id="inputBirthday" class="form-control"
+                                ng-model="newuser.birthday" placeholder="Birthday">
+                         <script>
+                             $(document).ready(function ()
+                             {
+                                 $("#inputBirthday").datepicker();
+                             });
+                            </script>
+                            <!-- Ask user to input their email-->
+                            <label for="inputEmail" class="sr-only">Email Address</label>
+                            <input type="email" id="inputEmail" class="form-control"
+                                   ng-model="newuser.email" placeholder="User@email.com">
+</form>
           </div>
           <!-- Modal footer with Cancel and Register buttons -->
           <div class="modal-footer">
-               <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-               <button type="button" class="btn btn-primary" ng-click="register()">Register</button>
+               <button type="button" class="btn" data-dismiss="modal">Cancel</button>
+               <button type="button" class="btn" ng-click="register()">Register</button>
           </div>
      </div>
 </div>

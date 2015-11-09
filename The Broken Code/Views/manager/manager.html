@@ -1,10 +1,28 @@
 ﻿<div class="container-fluid">
     <div class="row">
-        <div class="col-md-3" ng-repeat="report in Report">
-        
-        <p>{{report.ID}} made a ${{report.Reduced}} reduction because {{report.Reason}}.</p>
-        
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+            <ul class="nav nav-stacked nav-pills">
+                <li class="alert-success"> 
+                    <a href="/#/manager/tops"><b><font color="black">Top Items</font></b></a>
+                </li>
+                <li class="alert-success">
+                    <a href="/#/manager/revenue"><b><font color="black">Daily Revenue</font></b></a>
+                </li>
+                <li class="alert-success">
+                    <a href="/#/manager/report"><b><font color="black">Adjustments</font></b></a>
+                </li>
+                <li class="alert-success">
+                    <a href="/#/manager/numberoforder"><b><font color="black">Number of Orders</font></b></a>
+                </li>
+                <li class="alert-success">
+                    <a href="/#/manager/remove"><b><font color="black">Remove Ingredient</font></b></a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="col-md-3">
         </div>
     </div>
-
 </div>
