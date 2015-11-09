@@ -151,6 +151,9 @@ var restaurantApp = angular.module('restaurantApp',
                .when('/LotteryGame', {
                     templateUrl: 'Views/game/Lottery.html'
                })
+              .when('/rewards', {
+                  templateUrl: 'Views/account/rewards.html'
+              })
                //The tables page
               .when('/tables', {
                   templateUrl: 'Views/staff/tables.html',

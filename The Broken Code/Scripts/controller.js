@@ -17,8 +17,7 @@ restaurantApp.controller('MainController',
                   success: loginSuccessful,
                   error: loginUnsuccessful
               });
-              console.log("user: " + username + " pw: " + password);
-              
+
               var UserList = Parse.Object.extend("_User");
               var queryUser = new Parse.Query(UserList);
               var user;
@@ -32,7 +31,6 @@ restaurantApp.controller('MainController',
                           var hasRewards = result.get("hasRewards");
                           var points = result.get("rewardPoints");
                           var visits = result.get("numVisits");
-                          console.log("bday: " + birthday + " update: " + update);
 
                           var dt = new Date();
 
@@ -181,6 +179,28 @@ restaurantApp.controller('MainController',
                Parse.User.logOut();
                $location.path("/");
           };
+
+          $rootScope.addRewards = function () {
+              $rootScope.currentUser = Parse.User.current();
+
+              var UserList = Parse.Object.extend("_User");
+              var queryUser = new Parse.Query(UserList);
+              var user;
+              queryUser.equalTo("username", $scope.login.username);
+              queryUser.find({
+                  success: function (data) {
+                      angular.forEach(data, function (result) {
+                          var hasRewards = result.get("hasRewards");
+
+                          console.log(hasRewards);
+                          user = data[0];
+                          user.set("hasRewards", true);
+                          user.save();
+                      });
+                  }
+
+              });
+          }
 
           //Function to get the user a table
           function getTable(user) {

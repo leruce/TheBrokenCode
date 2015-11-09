@@ -198,6 +198,7 @@
     <Content Include="Scripts\staff\Table2Controller.js" />
     <Content Include="Scripts\staff\Table1Controller.js" />
     <Content Include="Scripts\staff\TableController.js" />
+    <Content Include="Views\account\rewards.html" />
     <Content Include="Views\customer\helppage.html" />
     <Content Include="Views\customer\refillpage.html" />
     <Content Include="Views\game\Othello\Othello.html" />
