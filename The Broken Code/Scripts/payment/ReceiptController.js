@@ -27,10 +27,10 @@
                     "key": "Q80VI0BUNKGKuIsIHEIP1g",
                     "message": {
                         "html": "<p>Receipt</p>",
-                        "text": "Receipt",
+                        "text": "Receipt from Broken Code",
                         "subject": "YOUR RECEIPT DETAIL",
-                        "from_email": "YourLord@LocalHost.com",
-                        "from_name": "Your Lord",
+                        "from_email": "BrokenCode@LocalHost.com",
+                        "from_name": "BrokenCode",
                         "to": [
                              {
                                  "email": EmailTextbox,
