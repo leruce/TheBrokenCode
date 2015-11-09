@@ -7,12 +7,9 @@
           <!--Need to Show the Food Pic. We need to pull from Parse. -->
           <img class="img-thumbnail image-format" alt="Item Image" src="{{menuDrinks.FoodImg}}" />
           <p>
-              <strong>{{menuDrinks.Description}}</strong>
-</p>
-          <p>
-               <strong>${{menuDrinks.Price}}</strong>
+              <strong>{{menuDrinks.Description}} - ${{menuDrinks.Price}}</strong>
                <!-- Add Item to Order -->
-               <button type="button" class="btnbtn-sm" ng-click="addToOrder(menuDrinks)"> Order </button>
+               <button type="button" class="btn btn-sm" ng-click="addToOrder(menuDrinks)"> Order </button>
                <!-- Trigger the modal with a button -->
                <button type="button" class="btn btn-sm"
                          data-toggle="modal" data-target="#myModal">

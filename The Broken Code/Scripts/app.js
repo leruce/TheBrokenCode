@@ -1,3 +1,5 @@
+/// <reference path="C:\Users\User\Git\The Broken Code\The Broken Code\Views/kitchen/kitchen.html" />
+/// <reference path="C:\Users\User\Git\The Broken Code\The Broken Code\Views/kitchen/kitchen.html" />
 'use strict';
 
 /* App Module */

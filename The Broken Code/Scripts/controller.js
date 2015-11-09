@@ -192,10 +192,10 @@ restaurantApp.controller('MainController',
                //Looks for and assigns the first free table to the user
                tableQuery.first({
                     success: function (data) {
-                         $window.sessionStorage.table = data;
-                         $window.table.set("Available", false);
-                         $window.table.set("Customer", user);
-                         //$window.$apply;
+                         $rootScope.table = data;
+                         $rootScope.table.set("Available", false);
+                         $rootScope.table.set("Customer", user);
+                         $rootScope.$apply;
                     },
                     error: function (error) {
                          alert("Error: " + error.code + " " + error.message);
@@ -209,7 +209,7 @@ restaurantApp.controller('MainController',
                });
                Defered.promise
                     .then(function (orders) {
-                         $window.sessionStorage.table.table.save();
+                         $rootScope.table.save();
                     })
                     .catch(function (error) {
                          //Catch errors

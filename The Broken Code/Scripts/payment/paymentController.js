@@ -3,8 +3,6 @@
 restaurantApp.controller('PaymentController',
      ['$rootScope', '$scope', '$http', '$location', '$window', 'ParseService',  '$q',
      function ($rootScope, $scope, $http, $location, $window, ParseService, $q) {
-          console.log($window.sessionStorage.table);
-          console.log($rootScope.currentUser);
           var Defered = $q.defer();
           var Order = Parse.Object.extend("Order");
           var getOrderQuery = new Parse.Query(Order);
@@ -104,9 +102,10 @@ restaurantApp.controller('PaymentController',
                completeOrderQuery.equalTo("Customer", $rootScope.currentUser);
                completeOrderQuery.equalTo("Paid", false);
                completeOrderQuery.first({
-                    success: function (orders) {
+                    success: function (order) {
                          //Set the order as complete
-                         orders.set("Paid", true);
+                         order.set("Paid", true);
+                         order.get("TableID").set("Available", true);
                          alert("Thank you for dining with us at The Broken Code! Your staff has been notified and will be with you shortly!");
                     },
                     error: function (orders, error) {
@@ -134,4 +133,5 @@ restaurantApp.controller('PaymentController',
                });
 
           };
+          
      }]);
