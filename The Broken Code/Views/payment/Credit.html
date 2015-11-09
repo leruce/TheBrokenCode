@@ -1,0 +1,63 @@
+<div class="container-fluid">
+    <div class="row top-buffer">
+        <!-- Dispay the order to the customer -->
+        <div class="col-md-12" ng-repeat="OrderStuff in OrderThings">
+            <h3>
+                {{OrderStuff.FoodName}}
+            </h3>
+            <p>
+                Price ${{OrderStuff.Price}}
+            </p>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Cost: $<span ng-bind="Cost"></span></h3>
+            <label for="customerName">Credit Card Number: </label>
+            <input type= "text" name="customerName" id="customerName">
+            <br/>
+            <label for="customerPhone">CCV Number: </label>
+            <input type= "text" name="customerPhone" id="customerPhone">
+            <br/>
+             <select name="card">
+                <option value="" >Experation Month</option>
+                    <option value="jan">January</option>
+                    <option value= "feb">Febuary</option>
+                    <option value= "mar">March</option>
+                    <option value= "apr">April</option>
+                    <option value= "ma">May</option>
+                    <option value= "jun">June</option>
+                    <option value= "jul">July</option>
+                    <option value= "aug">August</option>
+                    <option value= "sep">September</option>
+                    <option value= "oct">October</option>
+                    <option value= "nov">November</option>
+                    <option value= "dec">December</option>
+              </select>
+            </br>
+            <select name="card">
+                <option value="" >Experation Year</option>
+                    <option value="jan25">2025</option>
+                    <option value= "feb24">2024</option>
+                    <option value= "mar23">2023</option>
+                    <option value= "apr22">2022</option>
+                    <option value= "apr21">2021</option>
+                    <option value= "ma20">2020</option>
+                    <option value= "jun19">2019</option>
+                    <option value= "jul18">2018</option>
+                    <option value= "aug17">2017</option>
+                    <option value= "sep16">2016</option>
+                    <option value= "oct15">2015</option>
+              </select>
+            <br/>
+            <button type="button" class="btn btn-default" ng-click="CreditPayment()">
+                Process Payment
+            </button>
+            
+        </div>
+    </div>
+
+   </div>

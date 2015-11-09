@@ -1,4 +1,4 @@
-﻿'use strict';
+'use strict';
 
 restaurantApp.controller('PaymentController',
      ['$rootScope', '$scope', '$http', '$location', '$window', '$uibModal', 'ParseService',  '$q',
@@ -45,6 +45,7 @@ restaurantApp.controller('PaymentController',
                $scope.Cost2 = (FoodItem[0].Cost) / 2;
                $scope.Cost3 = (FoodItem[0].Cost) / 3;
                $scope.Cost4 = (FoodItem[0].Cost) / 4;
+
                CheckOrder(orders);
           })
           .catch(function (error) {
@@ -141,6 +142,45 @@ restaurantApp.controller('PaymentController',
           };
           
           $scope.CreditPayment = function () {
+              var Defered = $q.defer();
+               var Order = Parse.Object.extend("Order");
+               //Create query
+               var completeOrderQuery = new Parse.Query(Order);
+               //Parameters are for a customer order that has NOT been completed
+               completeOrderQuery.equalTo("Customer", $rootScope.currentUser);
+               completeOrderQuery.equalTo("Paid", false);
+               completeOrderQuery.first({
+                    success: function (order) {
+                         //Set the order as complete
+                         order.set("Paid", true);
+                         order.get("TableID").set("Available", true);
+                         alert("Thank you for dining with us at The Broken Code! Your staff has been notified and will be with you shortly!");
+                    },
+                    error: function (order, error) {
+                         alert("An error has occured. Staff has been notified and will be with you shortly.");
+                    }
+               })
+               .then(function (order) {
+                    Defered.resolve(order);
+               },
+               function (error) {
+                    Defered.reject(order);
+               });
+               Defered.promise
+               .then(function (order) {
+                    //Update the database
+                    order.save();
+                    alert("If you have the time, please fill out the following survey letting us know how we did. Thanks!.");
+                    //Reset the currentUser, log the user out, and go back to the home page
+                    $rootScope.currentUser = null;
+                    Parse.User.logOut();
+                    $location.path("/survey");
+               })
+               .catch(function (error) {
+                    //Catch errors
+                    alert("An error has occured. Staff has been notified and will be with you shortly.");
+               });
+
 
 
               
@@ -149,20 +189,11 @@ restaurantApp.controller('PaymentController',
 
          
 
-          
-
-
-
-
-
          //variables for keeping track of number of split order paid.
 
           var i = 0; 
           var j = 0;
           var k = 0;
-
-
-
 
 
           $scope.CashPayment2 = function () {

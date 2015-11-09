@@ -88,7 +88,11 @@ var restaurantApp = angular.module('restaurantApp',
                   templateUrl: 'Views/payment/payment.html',
                   controller: 'PaymentController'
               })
-
+              //The credit payment
+              .when('/payment/Credit', {
+                  templateUrl: 'Views/payment/Credit.html',
+                  controller: 'PaymentController'
+              })
               //Receipt pahe
               .when('/receipt', {
                    templateUrl: 'Views/payment/Receipt.html',
