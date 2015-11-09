@@ -46,8 +46,9 @@ restaurantApp.controller('SurveyController',
 
               survey.save(null, {
                   success: function (survey) {
-                       alert("Thank you! Your request has been sent!");
-                       $window.location.reload();
+                      alert("Thank you! Your request has been sent!");
+                      $location.path('/receipt');
+                       //$window.location.reload();
                   },
                   error: function (survey, error) {
                       //  alert("Failed to create!");
