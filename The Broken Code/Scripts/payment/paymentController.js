@@ -108,20 +108,20 @@ restaurantApp.controller('PaymentController',
                          order.get("TableID").set("Available", true);
                          alert("Thank you for dining with us at The Broken Code! Your staff has been notified and will be with you shortly!");
                     },
-                    error: function (orders, error) {
+                    error: function (order, error) {
                          alert("An error has occured. Staff has been notified and will be with you shortly.");
                     }
                })
-               .then(function (orders) {
-                    Defered.resolve(orders);
+               .then(function (order) {
+                    Defered.resolve(order);
                },
           function (error) {
-               Defered.reject(orders);
+               Defered.reject(order);
           });
           Defered.promise
-               .then(function (orders) {
+               .then(function (order) {
                     //Update the database
-                    orders.save();
+                    order.save();
                     //Reset the currentUser, log the user out, and go back to the home page
                     $rootScope.currentUser = null;
                     Parse.User.logOut();
@@ -134,4 +134,12 @@ restaurantApp.controller('PaymentController',
 
           };
           
+          $scope.CreditPayment = function () {
+
+          };
+
+          $scope.SplitPayment = function () {
+
+          };
+
      }]);

@@ -1,5 +1,4 @@
-﻿
-function SurveyF() {
+﻿function SurveyF() {
     var Survey = Parse.Object.extend("Survey");
     var survey = new Survey();
     var String = document.getElementById('RESULT_RadioButton-2');

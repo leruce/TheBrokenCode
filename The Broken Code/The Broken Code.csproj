@@ -133,7 +133,9 @@
     <Content Include="Scripts\customer\refillController.js" />
     <Content Include="Scripts\game\ConnectFour\ConnectFour.js" />
     <Content Include="Scripts\game\Lottery.js" />
+    <Content Include="Scripts\game\Othello\Othello.js" />
     <Content Include="Scripts\game\TicTacToe\TicTacToe.js" />
+    <Content Include="Scripts\game\Trivia\Trivia.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
@@ -254,10 +256,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Scripts\summary\" />
-    <Folder Include="Scripts\Tables\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

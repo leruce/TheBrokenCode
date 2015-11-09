@@ -5,7 +5,6 @@
 restaurantApp.controller('MainController',
      ['$rootScope', '$scope', '$http', '$location', '$window', '$q', 'ParseService',
      function ($rootScope, $scope, $http, $location, $window, $q, ParseService) {
-
           //Get the current user
           $rootScope.currentUser = Parse.User.current();
           
