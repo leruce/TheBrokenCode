@@ -60,12 +60,12 @@ var restaurantApp = angular.module('restaurantApp',
              //The waitstaff help page
               .when('/waitstaff/refill', {
                    templateUrl: 'Views/staff/staffrefill.html',
-                   controller: 'RefillController'
+                   controller: 'RefillSController'
               })  
               //The waitstaff refill page
               .when('/waitstaff/help', {
                    templateUrl: 'Views/staff/staffhelp.html',
-                   controller: 'HelpController'
+                   controller: 'HelpSController'
               })
                //The customer refill page
               .when('/help', {
