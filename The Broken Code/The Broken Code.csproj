@@ -203,17 +203,13 @@
     <Content Include="Views\customer\refillpage.html" />
     <Content Include="Views\game\Othello\Othello.html" />
     <Content Include="Views\game\Trivia\Trivia.html" />
-
     <Content Include="Views\menu\Info.html" />
     <Content Include="Views\payment\payment.html" />
     <Content Include="Views\payment\Receipt.html" />
-
     <Content Include="Views\payment\Pay2.html" />
     <Content Include="Views\payment\Pay4.html" />
     <Content Include="Views\payment\Pay3.html" />
     <Content Include="Views\payment\payment.html" />
-    <Content Include="Views\payment\splitPayment.html" />
-
     <Content Include="Views\staff\staffhelp.html" />
     <Content Include="Views\staff\staffrefill.html" />
     <Content Include="Scripts\ui-bootstrap-tpls-0.14.3.min.js" />
