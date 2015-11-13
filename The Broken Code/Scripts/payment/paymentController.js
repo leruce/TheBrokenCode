@@ -172,7 +172,7 @@ restaurantApp.controller('PaymentController',
                     order.save();
                     alert("If you have the time, please fill out the following survey letting us know how we did. Thanks!.");
                     //Reset the currentUser, log the user out, and go back to the home page
-                    $rootScope.currentUser = null;
+                    
                     Parse.User.logOut();
                     $location.path("/survey");
                })

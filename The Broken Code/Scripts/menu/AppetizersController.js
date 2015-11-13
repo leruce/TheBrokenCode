@@ -111,7 +111,7 @@ restaurantApp.controller('AppetizerMenuController',
                      console.log("SAVED");
                      alert("You added " + _foodObject.FoodName);
                      findTable(order);
-                     AddAmount(_foodObject);
+                     addAmount(_foodObject);
                  },
                  error: function (order, error) {
                      console.log("Failed " +  error.code + error.message);
