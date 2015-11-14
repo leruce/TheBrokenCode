@@ -1,11 +1,39 @@
-﻿<div class="row">
-    <div class="col-md-2">
+﻿<div class="row" align="center">
+    <button type="button" class="btn btn-default" onclick="inputHandler(0)">
+        <span class=" glyphicon glyphicon-arrow-up"></span>
+    </button>
+</div>
+<div class="row" align="center">
+    
+    <div class="col-md-12">
 
-    </div>
-    <div class="col-md-8">
+        <button type="button" class="btn btn-default" style="position:relative;left:-300px; top:255px;" onclick="inputHandler(2)">
+            <span class=" glyphicon glyphicon-arrow-left"></span>
+        </button>
+        <button type="button" class="btn btn-default" style="position:relative;left:300px; top:255px;" onclick="inputHandler(3)">
+            <span class=" glyphicon glyphicon-arrow-right"></span>
+        </button>
+        <div class="Content" align="center">
+            <canvas id="myCanvas" width="510" height="510" style="border:10px solid #000000;">
+                Your browser does not support the HTML5 canvas tag.
+            </canvas>
+            <script>
+                init2048();
+            </script>
 
+        </div>
+        
     </div>
-    <div class="col-md-2">
 
-    </div>
+</div>
+<div class="row" align="center">
+    <button type="button" class="btn btn-default" onclick="inputHandler(1)">
+        <span class=" glyphicon glyphicon-arrow-down"></span>
+    </button>
+</div>
+<br/>
+<div class="row" align="center">
+    <button type="button" class="btn btn-default" onclick="inputHandler(4)">
+        Reset
+    </button>
 </div>
