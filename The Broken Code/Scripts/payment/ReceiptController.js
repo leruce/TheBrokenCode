@@ -56,6 +56,7 @@
                     }).error(function (data, status, headers, config) {
                         console.log('error sending email.');
                         console.log('status: ' + status);
+                        $rootScope.currentUser = null;
 
                     });
             }

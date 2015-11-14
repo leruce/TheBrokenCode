@@ -8,12 +8,16 @@ var restaurantApp = angular.module('restaurantApp',
      ['ngRoute', "ui.bootstrap"])
 
      .config(function ($routeProvider) {
-          $routeProvider
-               //The main page 
-               .when('/', {
-                    templateUrl: 'Views/Home.html',
-                    controller: 'MainController'
-               })
+         $routeProvider
+              //The main page 
+              .when('/', {
+                  templateUrl: 'Views/Home.html',
+                  controller: 'MainController'
+              })
+             .when('/info', {
+                 templateUrl: 'Views/menu/Info.html',
+                 controller: 'InfoController'
+              })
               //The manager adjusment report
                .when('/manager/report', {
                    templateUrl: 'Views/manager/adjustments.html',
@@ -84,15 +88,36 @@ var restaurantApp = angular.module('restaurantApp',
                   templateUrl: 'Views/payment/payment.html',
                   controller: 'PaymentController'
               })
+              //The credit payment
+              .when('/payment/Credit', {
+                  templateUrl: 'Views/payment/Credit.html',
+                  controller: 'PaymentController'
+              })
               //Receipt pahe
               .when('/receipt', {
-                  templateUrl: 'Views/payment/Receipt.html',
-                  controller: 'ReceiptController'
+                   templateUrl: 'Views/payment/Receipt.html',
+                   controller: 'ReceiptController'
+              })
+              //The split 2 ways page
+              .when('/payment/2', {
+                  templateUrl: 'Views/payment/pay2.html',
+                  controller: 'PaymentController'
+              })
+              //The split 3 ways page
+              .when('/payment/3', {
+                  templateUrl: 'Views/payment/pay3.html',
+                  controller: 'PaymentController'
+              })
+              //The split 4 ways page
+              .when('/payment/4', {
+                  templateUrl: 'Views/payment/pay4.html',
+                  controller: 'PaymentController'
+
               })
               //The survery page
               .when('/survey', {
                    templateUrl: 'Views/payment/survey.html',
-                   controller: 'TableController'
+                   controller: 'SurveyController'
               })             
               //The menu page
                .when('/menu', {
@@ -147,11 +172,16 @@ var restaurantApp = angular.module('restaurantApp',
                .when('/LotteryGame', {
                     templateUrl: 'Views/game/Lottery.html'
                })
+<<<<<<< HEAD
               .when('/2048', {
                   templateUrl: 'Views/game/2048/2048.html'
               })
               .when('/Checkers', {
                   templateUrl: 'Views/game/Checkers/Checkers.html'
+=======
+              .when('/rewards', {
+                  templateUrl: 'Views/account/rewards.html'
+>>>>>>> 801421a5ac486027d63234ac61edd401952800d6
               })
                //The tables page
               .when('/tables', {

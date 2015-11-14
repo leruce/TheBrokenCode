@@ -213,11 +213,13 @@ restaurantApp.controller('ViewOrderController',
                             OrderS.set("InProgress", true);
                             OrderS.save(null, {
                                  success: function (Stuff) {
-                                      console.log("We saved it?");
+                                     console.log("We saved it?");
+                                     
                                  }
                             });
                        }
                   });
+                  $location.path('/');
              }
 
         }

@@ -119,11 +119,11 @@
                                         <a class="dropdown-toggle" data-toggle="dropdown">My Profile<strong class="caret"></strong></a>
                                         <ul class="dropdown-menu">
                                             <li>
-                                                <a href="/#/rewards">Register for Rewards</a>
+                                                <a ng-show="currentUser.hasRewards" ng-click="addRewards()">Register for Rewards</a>
                                             </li>
                                              <!-- Sends user to rewards view -->
                                              <li> <!-- TODO: Make this send user to login screen if not logged in -->
-                                                  <a href="/#/rewards">View Rewards</a>
+                                                  <a ng-hide="currentUser.hasRewards" href="/#/rewards">View Rewards</a>
                                              </li>
                                              <!-- Logs user out -->
                                              <li class="divider"> </li>
@@ -210,6 +210,7 @@
     <script src="Scripts/staff/Table10Controller.js"></script>
     <script src="Scripts/staff/Table11Controller.js"></script>
     <script src="Scripts/staff/Table12Controller.js"></script>
+    <script src="Scripts/menu/InfoController.js"></script>
      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
      <script src="Scripts/ie10-viewport-bug-workaround.js"></script>
 </body>

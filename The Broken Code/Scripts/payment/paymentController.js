@@ -1,8 +1,8 @@
-﻿'use strict';
+'use strict';
 
 restaurantApp.controller('PaymentController',
-     ['$rootScope', '$scope', '$http', '$location', '$window', 'ParseService',  '$q',
-     function ($rootScope, $scope, $http, $location, $window, ParseService, $q) {
+     ['$rootScope', '$scope', '$http', '$location', '$window', '$uibModal', 'ParseService',  '$q',
+     function ($rootScope, $scope, $http, $location, $window, $uibModal, ParseService, $q) {
           var Defered = $q.defer();
           var Order = Parse.Object.extend("Order");
           var getOrderQuery = new Parse.Query(Order);
@@ -38,8 +38,14 @@ restaurantApp.controller('PaymentController',
           });
           Defered.promise
           .then(function (orders) {
+
+             
                $scope.CrudeOrder = FoodItem;
                $scope.Cost = FoodItem[0].Cost.toFixed(2);
+               $scope.Cost2 = (FoodItem[0].Cost) / 2;
+               $scope.Cost3 = (FoodItem[0].Cost) / 3;
+               $scope.Cost4 = (FoodItem[0].Cost) / 4;
+
                CheckOrder(orders);
           })
           .catch(function (error) {
@@ -115,17 +121,18 @@ restaurantApp.controller('PaymentController',
                .then(function (order) {
                     Defered.resolve(order);
                },
-          function (error) {
-               Defered.reject(order);
-          });
-          Defered.promise
+               function (error) {
+                    Defered.reject(order);
+               });
+               Defered.promise
                .then(function (order) {
                     //Update the database
                     order.save();
+                    alert("If you have the time, please fill out the following survey letting us know how we did. Thanks!.");
                     //Reset the currentUser, log the user out, and go back to the home page
                     $rootScope.currentUser = null;
                     Parse.User.logOut();
-                    $location.path("/");
+                    $location.path("/survey");
                })
                .catch(function (error) {
                     //Catch errors
@@ -135,11 +142,254 @@ restaurantApp.controller('PaymentController',
           };
           
           $scope.CreditPayment = function () {
+              var Defered = $q.defer();
+               var Order = Parse.Object.extend("Order");
+               //Create query
+               var completeOrderQuery = new Parse.Query(Order);
+               //Parameters are for a customer order that has NOT been completed
+               completeOrderQuery.equalTo("Customer", $rootScope.currentUser);
+               completeOrderQuery.equalTo("Paid", false);
+               completeOrderQuery.first({
+                    success: function (order) {
+                         //Set the order as complete
+                         order.set("Paid", true);
+                         order.get("TableID").set("Available", true);
+                         alert("Thank you for dining with us at The Broken Code!");
+                    },
+                    error: function (order, error) {
+                         alert("An error has occured. Staff has been notified and will be with you shortly.");
+                    }
+               })
+               .then(function (order) {
+                    Defered.resolve(order);
+               },
+               function (error) {
+                    Defered.reject(order);
+               });
+               Defered.promise
+               .then(function (order) {
+                    //Update the database
+                    order.save();
+                    alert("If you have the time, please fill out the following survey letting us know how we did. Thanks!.");
+                    //Reset the currentUser, log the user out, and go back to the home page
+                    
+                    Parse.User.logOut();
+                    $location.path("/survey");
+               })
+               .catch(function (error) {
+                    //Catch errors
+                    alert("An error has occured. Staff has been notified and will be with you shortly.");
+               });
+
+
+
+              
 
           };
 
-          $scope.SplitPayment = function () {
+         
+
+         //variables for keeping track of number of split order paid.
+
+          var i = 0; 
+          var j = 0;
+          var k = 0;
+
+
+          $scope.CashPayment2 = function () {
+              var Defered = $q.defer();
+              var Order = Parse.Object.extend("Order");
+              
+              //Create query
+              var completeOrderQuery = new Parse.Query(Order);
+              //Parameters are for a customer order that has NOT been completed
+              completeOrderQuery.equalTo("Customer", $rootScope.currentUser);
+              completeOrderQuery.equalTo("Paid", false);
+              completeOrderQuery.first({
+                  success: function (order) {
+                      //divide cost of order into two
+                      var Cost = order.get("Cost") / 2;
+                      
+                      //first pay
+                      if (i == 0) {
+                          order.set("Cost", Cost);
+                          i++;
+                      }
+                          //second pay
+                      else {
+                          order.set("Cost", 0);                          
+                          order.set("Paid", true);
+                          i = 0;
+                      }
+                      alert("Thank you for dining with us at The Broken Code! Your staff has been notified and will be with you shortly!");
+                      
+                  },
+                  error: function (order, error) {
+                      alert("An error has occured. Staff has been notified and will be with you shortly.");
+                  }
+              })
+              .then(function (order) {
+                  Defered.resolve(order);
+              },
+         function (error) {
+             Defered.reject(order);
+         });
+              Defered.promise
+                   .then(function (order) {
+                       //Update the database
+                       order.save();
+                       //Reset the currentUser, log the user out, and go back to the home page
+                       if (order.get("Cost") == 0) {
+                           $rootScope.currentUser = null;
+                           Parse.User.logOut();
+                           $location.path("/");
+                       }
+                   })
+                   .catch(function (error) {
+                       //Catch errors
+                       alert("An error has occured. Staff has been notified and will be with you shortly.");
+                   });
 
           };
+
+          $scope.CashPayment3 = function () {
+              var Defered = $q.defer();
+              var Order = Parse.Object.extend("Order");
+
+              //Create query
+              var completeOrderQuery = new Parse.Query(Order);
+              //Parameters are for a customer order that has NOT been completed
+              completeOrderQuery.equalTo("Customer", $rootScope.currentUser);
+              completeOrderQuery.equalTo("Paid", false);
+              completeOrderQuery.first({
+                  success: function (order) {
+                      //divide cost of order into two
+                      
+                      
+                      
+                      //first pay
+                      if (j == 0) {
+                          var Cost = (order.get("Cost") * 2) / 3;
+                          order.set("Cost", Cost);
+                          j++;
+                      }
+                          //second pay
+                      else if (j == 1) {
+                          var Cost = order.get("Cost") / 2;
+                          order.set("Cost", Cost);
+                          
+                          j++;
+                      }
+                          //third pay
+                      else {
+
+                          order.set("Cost",0);
+                          order.set("Paid", true);
+                          j = 0;
+                      }
+                      alert("Thank you for dining with us at The Broken Code! Your staff has been notified and will be with you shortly!");
+
+                  },
+                  error: function (order, error) {
+                      alert("An error has occured. Staff has been notified and will be with you shortly.");
+                  }
+              })
+              .then(function (order) {
+                  Defered.resolve(order);
+              },
+         function (error) {
+             Defered.reject(order);
+         });
+              Defered.promise
+                   .then(function (order) {
+                       //Update the database
+                       order.save();
+                       //Reset the currentUser, log the user out, and go back to the home page
+                       if (order.get("Cost") == 0) {
+                           $rootScope.currentUser = null;
+                           Parse.User.logOut();
+                           $location.path("/");
+                       }
+                   })
+                   .catch(function (error) {
+                       //Catch errors
+                       alert("An error has occured. Staff has been notified and will be with you shortly.");
+                   });
+
+          };
+
+          $scope.CashPayment4 = function () {
+              var Defered = $q.defer();
+              var Order = Parse.Object.extend("Order");
+
+              //Create query
+              var completeOrderQuery = new Parse.Query(Order);
+              //Parameters are for a customer order that has NOT been completed
+              completeOrderQuery.equalTo("Customer", $rootScope.currentUser);
+              completeOrderQuery.equalTo("Paid", false);
+              completeOrderQuery.first({
+                  success: function (order) {
+                      //divide cost of order into four
+
+
+
+                      //first pay
+                      if (k == 0) {
+                          var Cost = (order.get("Cost") * 3) / 4;
+                          order.set("Cost", Cost);
+                          k++;
+                      }
+                          //second pay
+                      else if (k == 1) {
+                          var Cost = (order.get("Cost") * 2) / 3;
+                          order.set("Cost", Cost);
+
+                          k++;
+                      }
+                          //third pay
+                      else if (k == 2) {
+                          var Cost = order.get("Cost") / 2;
+                          order.set("Cost", Cost);
+
+                          k++;
+                      }
+                          //fourth pay
+                      else {
+
+                          order.set("Cost", 0);
+                          order.set("Paid", true);
+                          k = 0;
+                      }
+                      alert("Thank you for dining with us at The Broken Code! Your staff has been notified and will be with you shortly!");
+
+                  },
+                  error: function (order, error) {
+                      alert("An error has occured. Staff has been notified and will be with you shortly.");
+                  }
+              })
+              .then(function (order) {
+                  Defered.resolve(order);
+              },
+         function (error) {
+             Defered.reject(order);
+         });
+              Defered.promise
+                   .then(function (order) {
+                       //Update the database
+                       order.save();
+                       //Reset the currentUser, log the user out, and go back to the home page
+                       if (order.get("Cost") == 0) {
+                           $rootScope.currentUser = null;
+                           Parse.User.logOut();
+                           $location.path("/");
+                       }
+                   })
+                   .catch(function (error) {
+                       //Catch errors
+                       alert("An error has occured. Staff has been notified and will be with you shortly.");
+                   });
+
+          };
+
 
      }]);

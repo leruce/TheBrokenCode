@@ -182,6 +182,11 @@ restaurantApp.controller('DessertMenuController',
                   }
               });
           }
+          $scope.open = function (_menuAppetizer) {
+              //We need to Reroute
+              $rootScope.Detail = _menuAppetizer.NutritionInfo;
+              $location.path("/info");
+          }
      }]);
 
 /*
