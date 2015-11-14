@@ -131,6 +131,8 @@
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\customer\helpController.js" />
     <Content Include="Scripts\customer\refillController.js" />
+    <Content Include="Scripts\game\2048\2048.js" />
+    <Content Include="Scripts\game\Checkers\Checkers.js" />
     <Content Include="Scripts\game\ConnectFour\ConnectFour.js" />
     <Content Include="Scripts\game\Lottery.js" />
     <Content Include="Scripts\game\Othello\Othello.js" />
@@ -201,6 +203,8 @@
     <Content Include="Views\account\rewards.html" />
     <Content Include="Views\customer\helppage.html" />
     <Content Include="Views\customer\refillpage.html" />
+    <Content Include="Views\game\2048\2048.html" />
+    <Content Include="Views\game\Checkers\Checkers.html" />
     <Content Include="Views\game\Othello\Othello.html" />
     <Content Include="Views\game\Trivia\Trivia.html" />
     <Content Include="Views\menu\Info.html" />

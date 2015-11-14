@@ -1,15 +1,4 @@
 ﻿'use strict'
-/*
-function myPromise($timeout, $q) {
-    return $q(function () {
-        var defer = $q.defer()
-
-        $timeout(function() {
-            defer.resolve('data recieved!')
-        },2000)
-    })
-}
-*/
 
 restaurantApp.controller('KitchenController',
      ['$interval', '$rootScope', '$scope', 'ParseService', '$http', '$location', '$q',
@@ -19,17 +8,17 @@ restaurantApp.controller('KitchenController',
          var Order = Parse.Object.extend("Order");
          var KitchenQueue = Parse.Object.extend("kitchenQueue");
 
+         $scope.getNumber = function (num) {
+             return (new Array(num));
+         };
 
-
-         $scope.removeOrder = function (index) {
+         $scope.ReadyOrder = function (index) {
              //parse code here
 
              var query = new Parse.Query(Order);
 
 
-
              query.equalTo("objectID", $scope.orders[index].id);
-             $scope.orders.splice(index, 1);
              query.first({
                  success: function (object) {
                      object.set("Completed", true);
@@ -41,11 +30,50 @@ restaurantApp.controller('KitchenController',
              });
 
          };
+         $scope.InProgress = function (index) {
+             var query = new Parse.Query(Order);
+
+             query.equalTo("objectID", $scope.orders[index].id);
+             query.first({
+                 success: function (object) {
+                     object.set("inProgress", true);
+                     object.save();
+                 },
+                 error: function (error) {
+                     alert("Error: " + error.code + " " + error.message);
+                 }
+             });
+         };
+         $scope.ClaimedOrder = function (index) {
+             var query = new Parse.Query(Order);
+
+             query.equalTo("objectID", $scope.orders[index].id);
+             query.first({
+                 success: function (object) {
+                     object.set("Claimed", true);
+                     object.save();
+                 },
+                 error: function (error) {
+                     alert("Error: " + error.code + " " + error.message);
+                 }
+             });
+
+             $scope.orders.splice(index, 1);
+
+         };
+
          var getItemNames = function (items) {
              var result = [];
              var nextItem;
-             items.forEach(function (item) {
+             if (items.length < 1) {
+                 return result;
+             }
+             var item;
+             items.forEach(function(item){
                  switch (item) {
+                     case 39:
+                         result.push("Kid's Chicken Sandwich");
+                         break;
                      case 38:
                          result.push("Kids Cheese Burger");
                          break;
@@ -106,14 +134,19 @@ restaurantApp.controller('KitchenController',
                      case 19:
                          result.push("Sweet Tea");
                          break;
+                     case 1:
+                         result.push("This isn't an actual item code o_o")
                      default:
                          result.push("INVALID ITEM CODE");
                          break;
                  }
+             
              });
+                 
              return result;
 
          };
+
          $scope.orders = [/*
              {
                  id: '0',
@@ -134,23 +167,26 @@ restaurantApp.controller('KitchenController',
              {
                  id:'0',
                  table: '0',
-                 comments: "template comments",
+                 comments: ["these","are","examples"],
                  placedTime: new Date,
                  waitTime: 0,
-                 items: getItemNames([38, 37, 36])
+                 items: [38, 37, 36]
              }*/
          ];
          var orderObjects = [];
          var getOrders = function () {
              orderObjects = [];
              var queryOrder = new Parse.Query(Order);
-             queryOrder.equalTo("Completed", false);
+             queryOrder.equalTo("Ordered", true);
+             queryOrder.equalTo("Claimed", false);
+
              queryOrder.find({
                  success: function (data) {
+                     
                      angular.forEach(data, function (result) {
                          orderObjects.push({
-                             id: result.get("ObjectId"),
-                             table: result.get("TableID").get("TableID"),
+                             id: result.get("objectId"),
+                             table: result.get("TableID").get('TableID'),
                              comments: result.get("OrderComment"),
                              placedTime: result.get("createdAt"),
                              waitTime: 0,
@@ -173,51 +209,11 @@ restaurantApp.controller('KitchenController',
                  $scope.orders = orderObjects;
              })
              .catch(function (error) {
+                 console.log("Error saving orderObjects");
                  //Balh
              });
              tick();
          };
-
-         /*
-         var loadQueue = function () {
-             var orderObjects = [];
-             var queryQueue = new Parse.Query(KitchenQueue);
-             var queryOrder;
-             queryQueue.find({
-                 success: function (data) {
-                     angular.forEach(data, function (result) {
-                         orderObjects.push(result.orderID);
-                     });
-                 },
-                 error: function (error) {
-                     alert("Error: " + error.code + " " + error.message);
-                 }
-             }).then(function (data) {
-                 angular.forEach(orderObjects, function (id) {
-                     queryOrder = new Parse.Query(Order);
-                     queryOrder.equalTo(id);
-                     queryOrder.first({
-                         success: function (result) {
-                             $scope.orders.push({
-                                 id: result.get("ObjectId"),
-                                 table: getTableNum(result.get("TableID")),
-                                 comments: result.get("OrderComment"),
-                                 placedTime: result.get("createdAt"),
-                                 waitTime: 0,
-                                 items: getItemNames(result.get("ItemsOrdered"))
-                             });
-                         },
-                         error: function (error) {
-                             //error stuff
-                         }
-                     });
-                 });
-             },
-             function (error) {
-                 //error things
-                 alert("Error: " + error.code + " " + error.message);
-             });
-         };*/
 
          var tick = function () {
              $scope.orders.forEach(function (order) {
@@ -227,9 +223,10 @@ restaurantApp.controller('KitchenController',
 
          //loadQueue();
          getOrders();
-         //   $interval(getOrders, 10000);
+      //   $interval(getOrders, 30000);
          $interval(tick, 1000);
      }]);
+
 
 /*
 

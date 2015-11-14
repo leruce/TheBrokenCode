@@ -172,16 +172,14 @@ var restaurantApp = angular.module('restaurantApp',
                .when('/LotteryGame', {
                     templateUrl: 'Views/game/Lottery.html'
                })
-<<<<<<< HEAD
               .when('/2048', {
                   templateUrl: 'Views/game/2048/2048.html'
               })
               .when('/Checkers', {
                   templateUrl: 'Views/game/Checkers/Checkers.html'
-=======
+              })
               .when('/rewards', {
                   templateUrl: 'Views/account/rewards.html'
->>>>>>> 801421a5ac486027d63234ac61edd401952800d6
               })
                //The tables page
               .when('/tables', {
