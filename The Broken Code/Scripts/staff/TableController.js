@@ -1,4 +1,6 @@
-﻿restaurantApp.controller('TableController',
+﻿'use strict';
+
+restaurantApp.controller('TableController',
      ['$rootScope', '$scope', '$http', 'ParseService', '$location', '$q',
      function ($rootScope, $scope, $http, $location, ParseService, $q) {
          var TableName = [];

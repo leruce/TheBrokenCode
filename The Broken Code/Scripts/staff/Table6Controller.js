@@ -59,261 +59,261 @@
                  console.log(list[0].Customer.id);
                  var id = list[0].Customer.id;
                  $scope.addToOrder = function (foodObject) {
-                     //Goal is to do the following things
-                     //Check the Customer via currentUser
-                     //We check the order class if we have the following details
-                     //If the customer have an order created
-                     //If so, we check if Ordered is true or False
-                     //If it false then we append the _foodID to the ItemsOrdered
-                     //If not, we create a new order object
-                     //If not, we then create a new order Object.
-                     //That should resolve this problem and add orders into the system easily
+                      //Goal is to do the following things
+                      //Check the Customer via currentUser
+                      //We check the order class if we have the following details
+                      //If the customer have an order created
+                      //If so, we check if Ordered is true or False
+                      //If it false then we append the _foodID to the ItemsOrdered
+                      //If not, we create a new order object
+                      //If not, we then create a new order Object.
+                      //That should resolve this problem and add orders into the system easily
 
 
-                     console.log($rootScope.currentUser);
-                     console.log("le" + id);
-                     console.log("I'm in this stupid function");
-                     var Order = Parse.Object.extend("_User");
-                     var OrderC = new Order();
-                     var OrderID = id;
-                     OrderC.id = OrderID;
-                     var Order2 = Parse.Object.extend("Order")
-                     var checkOrderQuery = new Parse.Query(Order2);
-                     // checkOrderQuery.include("_User");
-                     checkOrderQuery.equalTo("Customer", OrderC);
-                     checkOrderQuery.equalTo("Ordered", false);
-                     checkOrderQuery.first({
-                         success: function (orders) {
-                             if (orders == null) {
-                                 console.log("We got no orders for this person sucka");
-                                 createOrder(foodObject);
-                             }
-                             else {
-                                 console.log("we get into the query first order " + orders.id);
+                      console.log($rootScope.currentUser);
+                      console.log("le" + id);
+                      console.log("I'm in this stupid function");
+                      var Order = Parse.Object.extend("_User");
+                      var OrderC = new Order();
+                      var OrderID = id;
+                      OrderC.id = OrderID;
+                      var Order2 = Parse.Object.extend("Order")
+                      var checkOrderQuery = new Parse.Query(Order2);
+                      // checkOrderQuery.include("_User");
+                      checkOrderQuery.equalTo("Customer", OrderC);
+                      checkOrderQuery.equalTo("Ordered", false);
+                      checkOrderQuery.first({
+                           success: function (orders) {
+                                if (orders == null) {
+                                     console.log("We got no orders for this person sucka");
+                                     createOrder(foodObject);
+                                }
+                                else {
+                                     console.log("we get into the query first order " + orders.id);
 
-                                 addItem(orders, foodObject);
-                             }
-                         }
-                     })
-                     //If either one of those are false, we just create a new object.
-                     //Being said, we need to create a new order if we have no customer. We need to create a new order if there no open OrderList
-                     //Now we get the first one, since we will ONLY have 1 of them open at the time we just append
-                     //Note, IT DOES NOT RETURN ERROR IF WE HAVE 0, SO WE NEED TO MAKE A CASE FOR THE 0 ITEMS
+                                     addItem(orders, foodObject);
+                                }
+                           }
+                      })
+                      //If either one of those are false, we just create a new object.
+                      //Being said, we need to create a new order if we have no customer. We need to create a new order if there no open OrderList
+                      //Now we get the first one, since we will ONLY have 1 of them open at the time we just append
+                      //Note, IT DOES NOT RETURN ERROR IF WE HAVE 0, SO WE NEED TO MAKE A CASE FOR THE 0 ITEMS
 
     
-                 function createOrder(_foodObject) {
-                     console.log("in createOrder");
-                     //What we do is create a object and save it here
-                     //We want to set customer, FoodID, Price, The Booleans
-                     var Order = Parse.Object.extend("Order");
-                     var order = new Order();
-                     var Order = Parse.Object.extend("_User");
-                     var OrderC = new Order();
-                     var OrderID = id;
-                     OrderC.id = OrderID;
+                      function createOrder(_foodObject) {
+                           console.log("in createOrder");
+                           //What we do is create a object and save it here
+                           //We want to set customer, FoodID, Price, The Booleans
+                           var Order = Parse.Object.extend("Order");
+                           var order = new Order();
+                           var Order = Parse.Object.extend("_User");
+                           var OrderC = new Order();
+                           var OrderID = id;
+                           OrderC.id = OrderID;
 
-                     order.set("Customer", OrderC);
-                     order.set("ItemsOrdered", [_foodObject.FoodID]);
-                     order.set("Cost", _foodObject.Price);
-                     order.set("Ordered", false);
-                     order.set("Completed", false);
-                     order.set("InProgress", false);
-                     order.set("Paid", false);
+                           order.set("Customer", OrderC);
+                           order.set("ItemsOrdered", [_foodObject.FoodID]);
+                           order.set("Cost", _foodObject.Price);
+                           order.set("Ordered", false);
+                           order.set("Completed", false);
+                           order.set("InProgress", false);
+                           order.set("Paid", false);
 
-                     order.save(null, {
-                         success: function (order) {
-                             console.log("SAVED");
-                             alert("You added " + _foodObject.FoodName);
-                         },
-                         error: function (order, error) {
-                             console.log("Failed " + error.code + error.message);
-                         }
-                     });
+                           order.save(null, {
+                                success: function (order) {
+                                     console.log("SAVED");
+                                     alert("You added " + _foodObject.FoodName);
+                                },
+                                error: function (order, error) {
+                                     console.log("Failed " + error.code + error.message);
+                                }
+                           });
 
-                 }
-                 function addItem(orderObject, _foodObject) {
+                      }
+                      function addItem(orderObject, _foodObject) {
 
-                     //Append the  itemsOrdered
-                     var cost = orderObject.get("Cost") + _foodObject.Price;
-                     var ItemsOrdered = orderObject.get("ItemsOrdered");
-                     ItemsOrdered.push(_foodObject.FoodID);
-                     console.log(cost);
-                     console.log(ItemsOrdered);
-                     orderObject.set("Cost", cost);
-                     orderObject.set("ItemsOrdered", ItemsOrdered);
-                     orderObject.save(null, {
-                         success: function (orderObject) {
-                             console.log("Saved");
-                             alert("You added " + _foodObject.FoodName);
-                         },
-                         error: function (orderObject, error) {
-                             console.log("FAILED");
-                         }
-                     });
-                 }
+                           //Append the  itemsOrdered
+                           var cost = orderObject.get("Cost") + _foodObject.Price;
+                           var ItemsOrdered = orderObject.get("ItemsOrdered");
+                           ItemsOrdered.push(_foodObject.FoodID);
+                           console.log(cost);
+                           console.log(ItemsOrdered);
+                           orderObject.set("Cost", cost);
+                           orderObject.set("ItemsOrdered", ItemsOrdered);
+                           orderObject.save(null, {
+                                success: function (orderObject) {
+                                     console.log("Saved");
+                                     alert("You added " + _foodObject.FoodName);
+                                },
+                                error: function (orderObject, error) {
+                                     console.log("FAILED");
+                                }
+                           });
+                      }
 
 
 
-                 //list of refills for a table.
-                 var refillList = [];
-                 var TableDfd5 = $q.defer();
-                 var refill = Parse.Object.extend("Refill");
-                 var queryRefill = new Parse.Query(refill);
-                 queryRefill.equalTo("customer", list[0].Customer.id);
-                 queryRefill.find({
-                     success: function (data) {
-                         angular.forEach(data, function (result) {
-                             refillList.push({
+                      //list of refills for a table.
+                      var refillList = [];
+                      var TableDfd5 = $q.defer();
+                      var refill = Parse.Object.extend("Refill");
+                      var queryRefill = new Parse.Query(refill);
+                      queryRefill.equalTo("customer", list[0].Customer.id);
+                      queryRefill.find({
+                           success: function (data) {
+                                angular.forEach(data, function (result) {
+                                     refillList.push({
 
-                                 Refill: result.get("RefillRequest"),
+                                          Refill: result.get("RefillRequest"),
 
 
-                             });
+                                     });
 
 
 
-                         });
-                     },
+                                });
+                           },
 
 
-                     error: function (error) {
-                         alert("Error: " + error.code + " " + error.message);
-                     }
-                 })
+                           error: function (error) {
+                                alert("Error: " + error.code + " " + error.message);
+                           }
+                      })
 
-                 .then(function (data) {
+                      .then(function (data) {
 
-                     TableDfd5.resolve(data);
+                           TableDfd5.resolve(data);
 
 
 
 
 
-                 },
-             function (error) {
-                 TableDfd5.reject(data);
+                      },
+                  function (error) {
+                       TableDfd5.reject(data);
 
-             });
+                  });
 
-                 //scopes to use
-                 TableDfd5.promise
-                 .then(function (List) {
-                     $scope.Refill = refillList;
-                     $scope.Name = nameList;
-                     $scope.Help = helpList;
-                     $scope.Table2 = list;
+                      //scopes to use
+                      TableDfd5.promise
+                      .then(function (List) {
+                           $scope.Refill = refillList;
+                           $scope.Name = nameList;
+                           $scope.Help = helpList;
+                           $scope.Table2 = list;
 
-                 })
+                      })
 
 
 
 
 
-                 //list of help requests for a table
-                 var helpList = [];
-                 var TableDfd4 = $q.defer();
-                 var help = Parse.Object.extend("Help");
-                 var queryHelp = new Parse.Query(help);
-                 queryHelp.equalTo("customer", list[0].Customer.id);
-                 queryHelp.find({
-                     success: function (data) {
-                         angular.forEach(data, function (result) {
-                             helpList.push({
+                      //list of help requests for a table
+                      var helpList = [];
+                      var TableDfd4 = $q.defer();
+                      var help = Parse.Object.extend("Help");
+                      var queryHelp = new Parse.Query(help);
+                      queryHelp.equalTo("customer", list[0].Customer.id);
+                      queryHelp.find({
+                           success: function (data) {
+                                angular.forEach(data, function (result) {
+                                     helpList.push({
 
-                                 Help: result.get("HelpRequest"),
+                                          Help: result.get("HelpRequest"),
 
 
-                             });
+                                     });
 
 
 
-                         });
-                     },
+                                });
+                           },
 
 
-                     error: function (error) {
-                         alert("Error: " + error.code + " " + error.message);
-                     }
-                 })
+                           error: function (error) {
+                                alert("Error: " + error.code + " " + error.message);
+                           }
+                      })
 
-                 .then(function (data) {
+                      .then(function (data) {
 
-                     TableDfd4.resolve(data);
+                           TableDfd4.resolve(data);
 
 
 
 
 
-                 },
-             function (error) {
-                 TableDfd4.reject(data);
+                      },
+                  function (error) {
+                       TableDfd4.reject(data);
 
-             });
+                  });
 
-                 //redfine scopes (some stuff doesn't show up if they are redefined)
-                 TableDfd4.promise
-                 .then(function (List) {
-                     $scope.Name = nameList;
-                     $scope.Help = helpList;
-                     $scope.Table2 = list;
+                      //redfine scopes (some stuff doesn't show up if they are redefined)
+                      TableDfd4.promise
+                      .then(function (List) {
+                           $scope.Name = nameList;
+                           $scope.Help = helpList;
+                           $scope.Table2 = list;
 
-                 })
+                      })
 
-                 //function to delete help requests for a table when complete
-                 $scope.deleteHelp = function (helpObject) {
+                      //function to delete help requests for a table when complete
+                      $scope.deleteHelp = function (helpObject) {
 
-                     var hDeleteQuery = new Parse.Query("Help");
+                           var hDeleteQuery = new Parse.Query("Help");
 
 
 
-                     hDeleteQuery.equalTo("customer", list[0].Customer.id);
-                     hDeleteQuery.find({
-                         success: function (data) {
-                             angular.forEach(data, function (data) {
-                                 return Parse.Object.destroyAll(data); //destroy row
+                           hDeleteQuery.equalTo("customer", list[0].Customer.id);
+                           hDeleteQuery.find({
+                                success: function (data) {
+                                     angular.forEach(data, function (data) {
+                                          return Parse.Object.destroyAll(data); //destroy row
 
 
-                             });
+                                     });
 
 
 
 
-                         },
+                                },
 
 
-                         error: function (error) {
-                             alert("Error: " + error.code + " " + error.message);
-                         }
-                     })
-                 }
+                                error: function (error) {
+                                     alert("Error: " + error.code + " " + error.message);
+                                }
+                           })
+                      }
 
-                 //function to delete refill requests when complete
-                 $scope.deleteRefill = function (refillObject) {
+                      //function to delete refill requests when complete
+                      $scope.deleteRefill = function (refillObject) {
 
-                     var rDeleteQuery = new Parse.Query("Refill");
+                           var rDeleteQuery = new Parse.Query("Refill");
 
 
 
-                     rDeleteQuery.equalTo("customer", list[0].Customer.id);
-                     rDeleteQuery.find({
-                         success: function (data) {
-                             angular.forEach(data, function (data) {
-                                 return Parse.Object.destroyAll(data); //destroy row
+                           rDeleteQuery.equalTo("customer", list[0].Customer.id);
+                           rDeleteQuery.find({
+                                success: function (data) {
+                                     angular.forEach(data, function (data) {
+                                          return Parse.Object.destroyAll(data); //destroy row
 
 
-                             });
+                                     });
 
 
 
 
-                         },
+                                },
 
 
-                         error: function (error) {
-                             alert("Error: " + error.code + " " + error.message);
-                         }
-                     })
-                 }
+                                error: function (error) {
+                                     alert("Error: " + error.code + " " + error.message);
+                                }
+                           })
+                      }
 
 
 
@@ -325,63 +325,57 @@
 
 
 
-                 //list of customers at a table
+                      //list of customers at a table
 
-                 var nameList = [];
-                 var cust = Parse.Object.extend("User");
-                 var TableDfd3 = $q.defer();
-                 var queryCust = new Parse.Query(cust);
-                 queryCust.equalTo("objectId", list[0].Customer.id);
+                      var nameList = [];
+                      var cust = Parse.Object.extend("User");
+                      var TableDfd3 = $q.defer();
+                      var queryCust = new Parse.Query(cust);
+                      queryCust.equalTo("objectId", list[0].Customer.id);
 
-                 queryCust.find({
-                     success: function (data) {
-                         angular.forEach(data, function (result) {
-                             nameList.push({
+                      queryCust.find({
+                           success: function (data) {
+                                angular.forEach(data, function (result) {
+                                     nameList.push({
 
-                                 Name: result.get("Name"),
+                                          Name: result.get("Name"),
 
 
-                             });
+                                     });
 
 
 
-                         });
-                     },
+                                });
+                           },
 
 
-                     error: function (error) {
-                         alert("Error: " + error.code + " " + error.message);
-                     }
-                 })
+                           error: function (error) {
+                                alert("Error: " + error.code + " " + error.message);
+                           }
+                      })
 
 
-                 .then(function (data) {
+                      .then(function (data) {
 
-                     TableDfd3.resolve(data);
+                           TableDfd3.resolve(data);
 
 
 
 
 
-                 },
-             function (error) {
-                 TableDfd3.reject(data);
+                      },
+                  function (error) {
+                       TableDfd3.reject(data);
 
-             });
+                  });
 
-                 TableDfd3.promise
-                 .then(function (List) {
-                     $scope.Name = nameList;
+                      TableDfd3.promise
+                      .then(function (List) {
+                           $scope.Name = nameList;
 
-                     $scope.Table2 = list;
+                           $scope.Table2 = list;
 
-                 })
-
-             })
-
-
-
-
+                      })
 
                  .catch(function (error) {
 

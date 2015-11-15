@@ -319,7 +319,16 @@ var restaurantApp = angular.module('restaurantApp',
                   templateUrl: 'Views/Tables/orderPage/Table12Order.html',
                   controller: 'Table12Controller'
               })
-
+              //The take-out order page
+               .when('/takeout', {
+                    templateUrl: 'Views/takeout/takeout.html',
+                    controller: 'TakeOutController'
+               })
+              //The take-out view order page
+               .when('/takeout/vieworder', {
+                    templateUrl: 'Views/takeout/takeoutOrder.html',
+                    controller: 'TakeOutController'
+               })
 
                //Go to home if no route found
                .otherwise({ 

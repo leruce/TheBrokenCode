@@ -133,6 +133,7 @@
     <Content Include="Scripts\customer\refillController.js" />
     <Content Include="Scripts\game\2048\2048.js" />
     <Content Include="Scripts\game\Checkers\Checkers.js" />
+    <Content Include="Scripts\takeout\takeoutController.js" />
     <Content Include="Scripts\game\ConnectFour\ConnectFour.js" />
     <Content Include="Scripts\game\Lottery.js" />
     <Content Include="Scripts\game\Othello\Othello.js" />
@@ -205,9 +206,12 @@
     <Content Include="Views\customer\refillpage.html" />
     <Content Include="Views\game\2048\2048.html" />
     <Content Include="Views\game\Checkers\Checkers.html" />
+    <Content Include="Views\takeout\takeout.html" />
     <Content Include="Views\game\Othello\Othello.html" />
     <Content Include="Views\game\Trivia\Trivia.html" />
+    <Content Include="Views\manager\OrderNumber.html" />
     <Content Include="Views\menu\Info.html" />
+    <Content Include="Views\payment\Credit.html" />
     <Content Include="Views\payment\payment.html" />
     <Content Include="Views\payment\Receipt.html" />
     <Content Include="Views\payment\Pay2.html" />
@@ -264,6 +268,7 @@
     <Content Include="Views\tables\orderPage\Table11Order.html" />
     <Content Include="Views\tables\orderPage\Table12Order.html" />
     <Content Include="Views\tables\orderPage\Table1Order.html" />
+    <Content Include="Views\takeout\takeoutOrder.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

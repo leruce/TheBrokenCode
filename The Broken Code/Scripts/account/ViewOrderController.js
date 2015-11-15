@@ -32,6 +32,7 @@ restaurantApp.controller('ViewOrderController',
              var viewOrderQuery = new Parse.Query(Order);
              viewOrderQuery.equalTo("Customer", $rootScope.currentUser);
              viewOrderQuery.equalTo("Ordered", false);
+             viewOrderQuery.equalTo("Takeout", false);
              var FoodItem = [];
              viewOrderQuery.first({
                   success: function (orders) {
