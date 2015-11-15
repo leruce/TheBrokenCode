@@ -4,8 +4,6 @@ restaurantApp.controller('TakeOutController',
      ['$rootScope', '$scope', '$http', '$location', '$q', 'ParseService', 
      function ($rootScope, $scope, $http, $location, $q, ParseService) {
 
-          //Create order variable
-
          //pull appetizers
          var menuItem = [];
          var MenuDfd = $q.defer();
@@ -511,10 +509,11 @@ restaurantApp.controller('TakeOutController',
                         OrderS.save(null, {
                              success: function (Stuff) {
                                   console.log("We saved it?");
-
+                                  alert("Your order has been submitted!");
                              }
                         });
                    }
+
               });
               $location.path('/');
          }
