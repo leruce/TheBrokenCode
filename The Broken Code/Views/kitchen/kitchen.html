@@ -1,13 +1,14 @@
 ﻿
+
 <div ng-repeat="order in orders track by $index">
     <div class="row">
         <div class="col-md-1">
-            <button type="button" class="btn" ng-click="getOrders()">Reload</button>
+            
         </div>
         <div class="col-md-10" style="background-color: aliceblue; border: dotted">
             <!--{{ now | date:'HH:mm:ss'}} -->
             <h3>
-                Table {{order.table}} has been waiting {{order.waitTime | date:'mm:ss'}}
+                Order {{$index + 1}} has been waiting {{order.waitTime | date:'mm:ss'}}
             </h3>
             <table class="table table-bordered">
                 <thead>
@@ -39,13 +40,16 @@
         </div>
         <div class="col-md-1">
             <div class="btn-group-vertical">
-                <button type="button" class="btn" ng-click="ClaimedOrder($index)">Claimed</button>
+                <button type="button" class="btn" ng-click="ClaimedOrder($index)">Claim</button>
                 <button type="button" class="btn" ng-click="ReadyOrder($index)">Ready</button>
-                <button type="button" class="btn" ng-click="InProgress($index)">In-Progress</button>
             </div>
             
 
         </div>
     </div>
     <br />
+</div>
+
+<div class="row" align="center">
+    <button type="button" class="btn" ng-click="getOrders()">Reload</button>
 </div>

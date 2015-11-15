@@ -28,29 +28,16 @@ restaurantApp.controller('KitchenController',
                      alert("Error: " + error.code + " " + error.message);
                  }
              });
-
+             $scope.orders.splice(index, 1);
          };
-         $scope.InProgress = function (index) {
-             var query = new Parse.Query(Order);
 
-             query.equalTo("objectID", $scope.orders[index].id);
-             query.first({
-                 success: function (object) {
-                     object.set("inProgress", true);
-                     object.save();
-                 },
-                 error: function (error) {
-                     alert("Error: " + error.code + " " + error.message);
-                 }
-             });
-         };
          $scope.ClaimedOrder = function (index) {
              var query = new Parse.Query(Order);
 
              query.equalTo("objectID", $scope.orders[index].id);
              query.first({
                  success: function (object) {
-                     object.set("Claimed", true);
+                     object.set("InProgress", true);
                      object.save();
                  },
                  error: function (error) {
@@ -58,7 +45,7 @@ restaurantApp.controller('KitchenController',
                  }
              });
 
-             $scope.orders.splice(index, 1);
+
 
          };
 
@@ -178,7 +165,7 @@ restaurantApp.controller('KitchenController',
              orderObjects = [];
              var queryOrder = new Parse.Query(Order);
              queryOrder.equalTo("Ordered", true);
-             queryOrder.equalTo("Claimed", false);
+             queryOrder.equalTo("Completed", false);
 
              queryOrder.find({
                  success: function (data) {
@@ -186,7 +173,7 @@ restaurantApp.controller('KitchenController',
                      angular.forEach(data, function (result) {
                          orderObjects.push({
                              id: result.get("objectId"),
-                             table: result.get("TableID").get('TableID'),
+                       //      table: result.get("TableID").get('TableID'),
                              comments: result.get("OrderComment"),
                              placedTime: result.get("createdAt"),
                              waitTime: 0,
