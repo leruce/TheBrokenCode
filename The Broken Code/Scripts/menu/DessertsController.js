@@ -94,7 +94,6 @@ restaurantApp.controller('DessertMenuController',
               order.set("ItemsOrdered", [_foodObject.FoodID]);
               order.set("Cost", _foodObject.Price);
               order.set("Ordered", false);
-              order.set("Claimed", false);
               order.set("Completed", false);
               order.set("InProgress", false);
               order.set("Paid", false);
