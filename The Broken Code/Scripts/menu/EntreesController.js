@@ -179,6 +179,11 @@ restaurantApp.controller('EntreeMenuController',
                  }
              });
          }
+         $scope.open = function (_menuAppetizer) {
+             //We need to Reroute
+             $rootScope.Detail = _menuAppetizer.NutritionInfo;
+             $location.path("/info");
+         }
          $scope.headingCaption = 'Menu';
      }]);
 
