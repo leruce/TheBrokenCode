@@ -32,6 +32,7 @@ restaurantApp.controller('ViewOrderController',
              var viewOrderQuery = new Parse.Query(Order);
              viewOrderQuery.equalTo("Customer", $rootScope.currentUser);
              viewOrderQuery.equalTo("Ordered", false);
+             viewOrderQuery.equalTo("Takeout", false);
              var FoodItem = [];
              viewOrderQuery.first({
                   success: function (orders) {
@@ -213,11 +214,13 @@ restaurantApp.controller('ViewOrderController',
                             OrderS.set("InProgress", true);
                             OrderS.save(null, {
                                  success: function (Stuff) {
-                                      console.log("We saved it?");
+                                      alert("Your order has been submitted!");
+                                     
                                  }
                             });
                        }
                   });
+                  $location.path('/');
              }
 
         }

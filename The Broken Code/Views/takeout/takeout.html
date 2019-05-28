@@ -1,0 +1,44 @@
+﻿<!--Page for take out ordering.-->
+
+<div class="container-fluid">
+     <div class="row">
+          <div class="col-md-3">
+               <div class="row">
+                    <p><b>Appetizers</b></p>
+                    <div class="col-md-12" ng-repeat="menuAppetizers in MenuAppetizers">
+                         <button type="button" class="btn btn-block" ng-click="addToOrder(menuAppetizers)">{{menuAppetizers.FoodName}}</button>
+                    </div>
+               </div>
+          </div>
+          <div class="col-md-3">
+               <div class="row">
+                    <p><b>Entrees</b></p>
+                    <div class="col-md-12" ng-repeat="menuEntree in MenuEntree">
+                         <button type="button" class="btn btn-block" ng-click="addToOrder(menuEntree)">{{menuEntree.FoodName}}</button>
+                    </div>
+               </div>
+          </div>
+          <div class="col-md-3">
+               <div class="row">
+                    <p><b>Deserts</b></p>
+                    <div class="col-md-12" ng-repeat="menuDesert in MenuDesert">
+                         <button type="button" class="btn btn-block" ng-click="addToOrder(menuDesert)">{{menuDesert.FoodName}}</button>
+                    </div>
+               </div>
+          </div>
+          <div class="col-md-3">
+               <div class="row">
+                    <p><b>Drinks</b></p>
+                    <div class="col-md-12" ng-repeat="menuDrinks in MenuDrinks">
+                         <button type="button" class="btn btn-block" ng-click="addToOrder(menuDrinks) ">{{menuDrinks.FoodName}}</button>
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>
+
+<div class="row">
+     <div class="col-md-12">
+          <a class="btn btn-lg btn-block" href="#/takeout/vieworder">View Take Out Order</a>
+     </div>
+</div>

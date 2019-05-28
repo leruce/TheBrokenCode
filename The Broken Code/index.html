@@ -102,6 +102,9 @@
                               <!-- TODO: Create Modals for them-->
                               <ul class="nav navbar-nav navbar-right" ng-show="currentUser">
                                    <li>
+                                        <a href="/#/takeout">Takeout</a>
+                                   </li>
+                                   <li>
                                         <a href="/#/refill">Refill</a>
                                    </li>
                                    <li>
@@ -119,11 +122,11 @@
                                         <a class="dropdown-toggle" data-toggle="dropdown">My Profile<strong class="caret"></strong></a>
                                         <ul class="dropdown-menu">
                                             <li>
-                                                <a href="/#/rewards">Register for Rewards</a>
+                                                <a ng-show="currentUser.hasRewards" ng-click="addRewards()">Register for Rewards</a>
                                             </li>
                                              <!-- Sends user to rewards view -->
                                              <li> <!-- TODO: Make this send user to login screen if not logged in -->
-                                                  <a href="/#/rewards">View Rewards</a>
+                                                  <a ng-hide="currentUser.hasRewards" href="/#/rewards">View Rewards</a>
                                              </li>
                                              <!-- Logs user out -->
                                              <li class="divider"> </li>
@@ -184,6 +187,8 @@
      <script src="Scripts/menu/DessertsController.js"></script>
      <script src="Scripts/menu/KidsController.js"></script>
      <script src="Scripts/manager/ManagerController.js"></script>
+    <script src="Scripts/game/2048/2048.js"></script>
+    <script src="Scripts/game/Checkers/Checkers.js"></script>
      <script src="Scripts/game/TicTacToe/TicTacToe.js"></script>
     <script src="Scripts/game/ConnectFour/ConnectFour.js"></script>     
     <script src="Scripts/game/Lottery.js"></script>
@@ -209,6 +214,10 @@
     <script src="Scripts/staff/Table11Controller.js"></script>
     <script src="Scripts/staff/Table12Controller.js"></script>
     <script src="Scripts/menu/InfoController.js"></script>
+<<<<<<< HEAD
+=======
+     <script src="Scripts/takeout/takeoutController.js"></script>
+>>>>>>> origin/master
      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
      <script src="Scripts/ie10-viewport-bug-workaround.js"></script>
 </body>

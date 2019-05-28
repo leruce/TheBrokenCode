@@ -1,4 +1,4 @@
-﻿<div class="container-fluid">
+<div class="container-fluid">
      <div class="row top-buffer">
           <!-- Dispay the order to the customer -->
           <div class="col-md-12" ng-repeat="OrderStuff in OrderThings">
@@ -17,12 +17,14 @@
                <button type="button" class="btn btn-default" ng-click="CashPayment()">
                     Cash
                </button>
-               <button type="button" class="btn btn-default" ng-click="CreditOrder()">
-                    Credit
-               </button>
-               <button type="button" class="btn btn-default" ng-click="SplitOrder()">
+               <a href="#/payment/Credit" class="btn btn-default" role="button" >Credit</a>
+               <button type="button" class="btn btn-default" ng-click="SplitPayment()">
                     Split
                </button>
+
           </div>
+         <a href="#/payment/2" class="btn" role="button" align="center">Split Order Two Ways</a>
+         <a href="#/payment/3" class="btn" role="button" align="center">Split Order Three Ways</a>
+         <a href="#/payment/4" class="btn" role="button" align="center">Split Order Four Ways</a>
      </div>
 </div>

@@ -88,15 +88,36 @@ var restaurantApp = angular.module('restaurantApp',
                   templateUrl: 'Views/payment/payment.html',
                   controller: 'PaymentController'
               })
+              //The credit payment
+              .when('/payment/Credit', {
+                  templateUrl: 'Views/payment/Credit.html',
+                  controller: 'PaymentController'
+              })
               //Receipt pahe
               .when('/receipt', {
-                  templateUrl: 'Views/payment/Receipt.html',
-                  controller: 'ReceiptController'
+                   templateUrl: 'Views/payment/Receipt.html',
+                   controller: 'ReceiptController'
+              })
+              //The split 2 ways page
+              .when('/payment/2', {
+                  templateUrl: 'Views/payment/pay2.html',
+                  controller: 'PaymentController'
+              })
+              //The split 3 ways page
+              .when('/payment/3', {
+                  templateUrl: 'Views/payment/pay3.html',
+                  controller: 'PaymentController'
+              })
+              //The split 4 ways page
+              .when('/payment/4', {
+                  templateUrl: 'Views/payment/pay4.html',
+                  controller: 'PaymentController'
+
               })
               //The survery page
               .when('/survey', {
                    templateUrl: 'Views/payment/survey.html',
-                   controller: 'TableController'
+                   controller: 'SurveyController'
               })             
               //The menu page
                .when('/menu', {
@@ -151,6 +172,15 @@ var restaurantApp = angular.module('restaurantApp',
                .when('/LotteryGame', {
                     templateUrl: 'Views/game/Lottery.html'
                })
+              .when('/2048', {
+                  templateUrl: 'Views/game/2048/2048.html'
+              })
+              .when('/Checkers', {
+                  templateUrl: 'Views/game/Checkers/Checkers.html'
+              })
+              .when('/rewards', {
+                  templateUrl: 'Views/account/rewards.html'
+              })
                //The tables page
               .when('/tables', {
                   templateUrl: 'Views/staff/tables.html',
@@ -289,7 +319,16 @@ var restaurantApp = angular.module('restaurantApp',
                   templateUrl: 'Views/Tables/orderPage/Table12Order.html',
                   controller: 'Table12Controller'
               })
-
+              //The take-out order page
+               .when('/takeout', {
+                    templateUrl: 'Views/takeout/takeout.html',
+                    controller: 'TakeOutController'
+               })
+              //The take-out view order page
+               .when('/takeout/vieworder', {
+                    templateUrl: 'Views/takeout/takeoutOrder.html',
+                    controller: 'TakeOutController'
+               })
 
                //Go to home if no route found
                .otherwise({ 
