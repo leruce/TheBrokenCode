@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README #
 
 This README would normally document whatever steps are necessary to get your application up and running.
@@ -31,3 +32,7 @@ This README would normally document whatever steps are necessary to get your app
 * Nick Keith 
 * Russell Elliott 
 * Thomas McCullough
+=======
+# TheBrokenCode
+This is my old school Project from 2015
+>>>>>>> c8a9200d8af81bf63af691dc2d6c431aa952d6bf
